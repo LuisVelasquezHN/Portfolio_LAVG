@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Onest Variable', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  /* background: #181818; */
+  /* background: -webkit-linear-gradient(90deg, #0a1a33,#00163d);                       
+  background: linear-gradient(90deg, #0a1a33,#00163d);        */
+  min-height: 100vh;
+}
+
