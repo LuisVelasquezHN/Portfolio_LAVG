@@ -51,7 +51,7 @@ export const Timeline = () => {
                             <div className="sticky top-0">
                                 <span className="text-[#0686ff] -left-[42px] absolute rounded-full text-5xl">•</span>
                                 <h3 className="text-xl font-bold text-[#0686ff]">Freelancer</h3>
-                                <time className="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">2024 - Actualidad</time>
+                                <time className="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Actualidad</time>
                             </div>
                         </div>
                         <div className="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
