@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward } from '@tabler/icons-react';
 import { Timeline } from '../components/Timeline';
+import { Proyectos } from '../components/Proyectos';
 
 export const Inicio = () => {
   return (
@@ -24,30 +25,30 @@ export const Inicio = () => {
               }} />
           </h1>
 
-          <p className='text-lg md:text-xl mt-6 p-2 md:p-0 pr-6 text-pretty'>
+          <p className='text-lg md:text-xl mt-6 p-2 md:p-0 pr-6 text-pretty hiddenObs'>
             <span className='text-[#009aff]'> Desarrollador Web </span> con más de 3 años de experiencia <span className='text-[#d0efff]'>en el diseño y desarrollo de sitios y aplicaciones web, </span>
             enfocado en rendimiento, accesibilidad y experiencia de usuario.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-2">
+          <div className="flex flex-col md:flex-row items-center gap-2 hiddenObs">
             <div className='flex flex-row gap-2'>
-              <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title='Descargar CV' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-blue-800 rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+              <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title='Descargar CV' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
                 <IconDownload stroke={2} width={20} height={20} />
                 Descargar CV
               </a>
 
-              <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title='Contáctame' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-blue-800 rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+              <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title='Contáctame' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
                 <IconMailForward stroke={2} width={20} height={20} />
                 Contáctame
               </a>
             </div>
 
             <div className='flex flex-row gap-2'>
-              <a href='https://www.linkedin.com/in/luis-velasquez-768072284' target='__blank' title='LinkedIn' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-blue-800 rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+              <a href='https://www.linkedin.com/in/luis-velasquez-768072284' target='__blank' title='LinkedIn' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
                 <IconBrandLinkedin stroke={2} width={20} height={20} />
               </a>
 
-              <a href='https://github.com/LuisVelasquezHN' target='__blank' title='GitHub' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-blue-800 rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+              <a href='https://github.com/LuisVelasquezHN' target='__blank' title='GitHub' className='flex text-sm flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
                 <IconBrandGithub stroke={2} width={20} height={20} />
               </a>
 
@@ -58,7 +59,7 @@ export const Inicio = () => {
 
         </div>
 
-        <div className="relative w-80 h-80 md:w-90 md-h-90 aspect-square flex justify-center items-center ">
+        <div className="hiddenObs relative w-80 h-80 md:w-90 md-h-90 aspect-square flex justify-center items-center ">
           <motion.div
             className="absolute w-full h-full rounded-full"
             style={{
@@ -78,6 +79,10 @@ export const Inicio = () => {
       </section>
 
       <Timeline />
+
+     
+
+      <Proyectos />
 
 
     </>

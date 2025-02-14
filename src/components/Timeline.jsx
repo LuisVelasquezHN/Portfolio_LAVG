@@ -55,8 +55,9 @@ export const Timeline = () => {
                             </div>
                         </div>
                         <div className="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-                            Responsable de la creación del sitio web oficial de Platinum Rent A Car, mostrando un catálogo de vehículos disponibles
-                            y realizando conexión mediante WhatsApp solicitando información de los vehículos seleccionados. 
+                        Como desarrollador freelance, he trabajado en la creación y optimización de sitios web para diversas industrias, 
+                        asegurando interfaces intuitivas, alto rendimiento y experiencias de usuario eficientes. 
+                        Mi enfoque se basa en el uso de tecnologías como React, JavaScript, Tailwind CSS, APIs REST y optimización SEO, adaptando cada solución a las necesidades específicas del cliente.
                         </div>
                     </div>
                 </li>
