@@ -1,10 +1,9 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandLinkedin, IconBriefcase2, IconDownload, IconMailForward, IconUserCode } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserCode } from '@tabler/icons-react';
 import { Timeline } from '../components/Timeline';
 import { Proyectos } from '../components/Proyectos';
-import { Skills } from '../components/skills';
 import { Skills2 } from '../components/Skills2';
 
 export const Inicio = () => {
