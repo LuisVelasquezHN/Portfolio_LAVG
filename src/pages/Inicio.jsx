@@ -27,8 +27,8 @@ export const Inicio = () => {
           </h1>
 
           <p className='text-base md:text-xl mt-4 md:mt-6 px-2 md:px-0 text-pretty hiddenObs'>
-            <span className='text-[#009aff]'>Desarrollador Web</span> con más de 3 años de experiencia <span className='text-[#d0efff]'>en el diseño y desarrollo de sitios y aplicaciones web,</span>
-            enfocado en rendimiento, accesibilidad y experiencia de usuario.
+            <span className='text-[#009aff]'>Desarrollador Web</span> con más de 3 años de experiencia <span className='text-[#d0efff]'> en el diseño y desarrollo de sitios y aplicaciones web,</span>
+            &nbsp;enfocado en rendimiento, accesibilidad y experiencia de usuario.
           </p>
 
           <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs">
