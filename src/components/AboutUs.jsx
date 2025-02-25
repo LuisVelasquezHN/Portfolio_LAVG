@@ -21,7 +21,7 @@ const tabs = [
   },
 ];
 
-export const About = () => {
+export const AboutUs = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
