@@ -24,8 +24,8 @@ const Slider = ({ images, width, height, quantity, reverse }) => {
                 width: width,
                 height: height,
                 left: "100%",
-                animation: `${reverse ? "reversePlay" : "autoRun"} 10s linear infinite`,
-                animationDelay: `calc((10s / ${quantity}) * ${index} - 10s)`,
+                animation: `${reverse ? "reversePlay" : "autoRun"} 15s linear infinite`,
+                animationDelay: `calc((15s / ${quantity}) * ${index} - 15s)`,
               }}
             >
               {img}
