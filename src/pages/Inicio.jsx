@@ -5,7 +5,7 @@ import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, Icon
 import { Timeline } from '../components/Timeline';
 import { Proyectos } from '../components/Proyectos';
 import { Skills2 } from '../components/Skills2';
-import { About } from '../components/about';
+import { About } from '../components/About';
 
 export const Inicio = () => {
   return (
