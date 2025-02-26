@@ -95,7 +95,9 @@ export const Inicio = () => {
         </h2>
 
         <AboutUs />
+        
       </section>
+
 
       {/* <Timeline /> */}
     </>
