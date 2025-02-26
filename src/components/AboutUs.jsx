@@ -22,11 +22,7 @@ const education = [
 ]
 
 const cursos = [
-  {
-    titulo: 'Ingles (Básico, Intermedio, Medio)',
-    lugar: 'INFOP',
-    icon: <Icons.INGLES />
-  },
+  
   {
     titulo: 'ReactJS',
     lugar: 'Udemy',
@@ -42,11 +38,18 @@ const cursos = [
     lugar: 'Udemy',
     icon: <Icons.OPENAI />
   },
-  
+
+
   {
     titulo: 'Photoshop',
     lugar: 'INFOP',
     icon: <Icons.PHOTOSHOP />
+  },
+
+  {
+    titulo: 'Ingles (Básico, Intermedio, Medio)',
+    lugar: 'INFOP',
+    icon: <Icons.INGLES />
   },
   
   {
