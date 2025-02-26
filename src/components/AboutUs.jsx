@@ -23,16 +23,6 @@ const education = [
 
 const cursos = [
   {
-    titulo: 'CCNA 1',
-    lugar: 'CISCO',
-    icon: <Icons.CISCO />
-  },
-  {
-    titulo: 'Photoshop',
-    lugar: 'INFOP',
-    icon: <Icons.PHOTOSHOP />
-  },
-  {
     titulo: 'Ingles (Básico, Intermedio, Medio)',
     lugar: 'INFOP',
     icon: <Icons.INGLES />
@@ -52,6 +42,13 @@ const cursos = [
     lugar: 'Udemy',
     icon: <Icons.OPENAI />
   },
+  
+  {
+    titulo: 'Photoshop',
+    lugar: 'INFOP',
+    icon: <Icons.PHOTOSHOP />
+  },
+  
   {
     titulo: 'Tester',
     lugar: 'Capacitate.org',
@@ -61,7 +58,12 @@ const cursos = [
     titulo: 'Técnico en Instalación y Reparación de equipo de cómputo',
     lugar: 'Capacitate.org',
     icon: <Icons.TECNICO />
-  }
+  },
+  {
+    titulo: 'CCNA 1',
+    lugar: 'CISCO',
+    icon: <Icons.CISCO />
+  },
 ]
 
 export const AboutUs = () => {
@@ -121,7 +123,7 @@ export const AboutUs = () => {
               {cursos.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#1010106c] rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center"
+                  className="bg-[#1010106c] rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
                 >
                   <div className="w-12 h-12 flex items-center justify-center">
                     {item.icon}
