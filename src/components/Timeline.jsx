@@ -31,7 +31,7 @@ export const Timeline = () => {
     ]
     return (
         <section id="experiencia" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
-            <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white hiddenObs">
+            <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
                 <IconBriefcase2 width={30} height={30} stroke={2} />
                 Experiencia
             </h2>

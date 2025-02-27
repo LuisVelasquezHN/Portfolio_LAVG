@@ -6,11 +6,13 @@ import { Timeline } from '../components/Timeline';
 import { Proyectos } from '../components/Proyectos';
 import { Skills2 } from '../components/Skills2';
 import { AboutUs } from '../components/AboutUs';
+import { ScrollDownIndicator } from '../components/ScrollDownIndicator';
 
 export const Inicio = () => {
   return (
     <>
-      <section className="flex flex-col-reverse md:flex-row justify-center mt-[15vh] md:mt-[30vh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
+      <section className="flex flex-col-reverse md:flex-row justify-center h-[100dvh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
+        {/* mt-[15vh] md:mt-[30vh] */}
         <div className="text-center md:text-left">
           <h1 className='text-2xl md:text-5xl font-bold'>
             <Typewriter
@@ -73,6 +75,8 @@ export const Inicio = () => {
             src="/personal.jpg"
             alt="foto_personal" />
         </div>
+
+        <ScrollDownIndicator/>
       </section>
 
       <Timeline />

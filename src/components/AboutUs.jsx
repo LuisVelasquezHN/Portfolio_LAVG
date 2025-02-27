@@ -22,11 +22,11 @@ const education = [
 ]
 
 const cursos = [
-  
+
   {
     titulo: 'ReactJS',
     lugar: 'Udemy',
-    icon: <Icons.REACT />
+    icon: <Icons.REACTV2 />
   },
   {
     titulo: 'AngularJS',
@@ -36,14 +36,14 @@ const cursos = [
   {
     titulo: 'OpenAI',
     lugar: 'Udemy',
-    icon: <Icons.OPENAI />
+    icon: <Icons.OPENAIV2 />
   },
 
 
   {
     titulo: 'Photoshop',
     lugar: 'INFOP',
-    icon: <Icons.PHOTOSHOP />
+    icon: <Icons.PHOTOSHOPV2 />
   },
 
   {
@@ -51,14 +51,14 @@ const cursos = [
     lugar: 'INFOP',
     icon: <Icons.INGLES />
   },
-  
+
   {
     titulo: 'Tester',
     lugar: 'Capacitate.org',
     icon: <Icons.TECNICO />
   },
   {
-    titulo: 'Técnico en Instalación y Reparación de equipo de cómputo',
+    titulo: 'Técnico en instalación y reparación de equipo de cómputo',
     lugar: 'Capacitate.org',
     icon: <Icons.TECNICO />
   },
@@ -97,7 +97,7 @@ export const AboutUs = () => {
               {education.map((item, index) => (
                 <>
                   <li key={index}>
-                    <div className="relative mx-12 pb-10 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 md:grid-cols-5 md:gap-10 md:space-x-4">
+                    <div className="relative hiddenObs mx-12 pb-10 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 md:grid-cols-5 md:gap-10 md:space-x-4">
                       <div className="relative md:col-span-4">
                         <div className="sticky top-0">
                           <span className="text-[#0686ff] -left-[42px] absolute rounded-full text-5xl">•</span>
@@ -126,18 +126,21 @@ export const AboutUs = () => {
               {cursos.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#1010106c] rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
+                  className="bg-[#1010106c] hiddenObs rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center">
-                    {item.icon}
-                  </div>
-                  <div className="flex flex-col flex-1 pl-4">
-                    <h2 className="dark:text-[#f4f4f4] text-gray-600 text-md font-semibold">
-                      {item.titulo}
-                    </h2>
-                    <h4 className="dark:text-white/80 text-gray-600/80 text-sm mt-1">
-                      {item.lugar}
-                    </h4>
+                  <div className="flex items-start pl-4">
+                    <div className="w-12 h-12 md:w-8 md:h-8 flex md:pt-2 items-center">
+                      {item.icon}
+                    </div>
+                    <div className="flex flex-col flex-1 pl-4">
+                      <h2 className="dark:text-[#f4f4f4] text-gray-600 text-md font-semibold">
+                        {item.titulo}
+                      </h2>
+                      <h4 className="dark:text-white/80 text-gray-600/80 text-sm mt-1">
+                        {item.lugar}
+                      </h4>
+                    </div>
+
                   </div>
                 </div>
               ))}
@@ -170,17 +173,16 @@ export const AboutUs = () => {
           <div
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`cursor-pointer h-[60px] sm:h-[70px] flex items-center px-5 py-2 text-[#f4f4f4] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${
-              activeTab === tab.id
+            className={`cursor-pointer h-[60px] sm:h-[70px] flex items-center px-5 py-2 text-[#f4f4f4] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${activeTab === tab.id
                 ? "bg-[#0073ff18] border-l-2 border-l-[#0073ff] shadow-md"
                 : "hover:bg-[#0073ff18] hover:border-l-[#0073ff]"
-            }`}
+              }`}
           >
             {tab.label}
           </div>
         ))}
       </div>
-  
+
       <div className="p-4 bg-[#1010106c] rounded-2xl border border-[#f4f4f40e] text-pretty">
         {renderContent()}
       </div>
