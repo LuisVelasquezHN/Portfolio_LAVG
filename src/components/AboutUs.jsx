@@ -77,8 +77,8 @@ export const AboutUs = () => {
       case "about":
         return (
           <div>
-            <h2 className="text-xl font-bold text-white">Hola</h2>
-            <p className="text-gray-300">
+            <h2 className="text-xl font-bold dark:text-[#f4f4f4] text-gray-600">Hola</h2>
+            <p className="dark:text-white/80 text-gray-600/80">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               aliquid quaerat, rerum laboriosam odio officiis ullam earum
               officia maiores aut veniam ad assumenda voluptates hic voluptas,
@@ -123,7 +123,7 @@ export const AboutUs = () => {
               {cursos.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#1010106c] hiddenObs rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
+                  className="dark:bg-[#1010106c] bg-[#f5f7f783] hiddenObs rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
                 >
                   <div className="flex items-start pl-4">
                     <div className="w-12 h-12 md:w-8 md:h-8 flex md:pt-2 items-center">
@@ -148,7 +148,7 @@ export const AboutUs = () => {
       case "contact":
         return (
           <div>
-            <p className="text-gray-300">
+            <p className="dark:text-white/80 text-gray-600/80">
               Contact
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               aliquid quaerat, rerum laboriosam odio officiis ullam earum
@@ -170,7 +170,7 @@ export const AboutUs = () => {
           <div
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`cursor-pointer h-[60px] sm:h-[70px] flex items-center px-5 py-2 text-[#f4f4f4] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${activeTab === tab.id
+            className={`cursor-pointer h-[60px] sm:h-[70px] flex items-center px-5 py-2 dark:text-[#f4f4f4] text-[#515151] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${activeTab === tab.id
                 ? "bg-[#0073ff18] border-l-2 border-l-[#0073ff] shadow-md"
                 : "hover:bg-[#0073ff18] hover:border-l-[#0073ff]"
               }`}
@@ -180,7 +180,7 @@ export const AboutUs = () => {
         ))}
       </div>
 
-      <div className="p-4 bg-[#1010106c] rounded-2xl border border-[#f4f4f40e] text-pretty">
+      <div className="p-4 dark:bg-[#1010106c] bg-[#f6f5f783]  rounded-2xl border border-[#f4f4f40e] text-pretty">
         {renderContent()}
       </div>
     </div>

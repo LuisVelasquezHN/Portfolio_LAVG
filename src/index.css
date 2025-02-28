@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Onest Variable', sans-serif;
@@ -19,6 +21,10 @@ body{
   /* background: -webkit-linear-gradient(90deg, #0a1a33,#00163d);                       
   background: linear-gradient(90deg, #0a1a33,#00163d);        */
   min-height: 100dvh;
+  height: 100%;
+  background-repeat: no-repeat; /* Evita que se repita el fondo */
+  background-size: cover; /* Hace que el gradiente cubra toda la pantalla */
+  background-attachment: fixed;
 }
 
 .hiddenObs {

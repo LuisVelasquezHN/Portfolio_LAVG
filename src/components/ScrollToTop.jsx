@@ -31,7 +31,7 @@ export const ScrollToTop = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <IconCircleArrowUp stroke={2} className="h-6 w-6" />
+      <IconCircleArrowUp stroke={2} className="h-6 w-6 text-[#0073ffca] dark:text-[#f4f4f4]" />
     </button>
   );
 };

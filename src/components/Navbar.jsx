@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { IconDeviceDesktop, IconMenu4, IconMoonStars, IconSun, IconXboxX } from "@tabler/icons-react";
 
 export const Navbar = () => {
@@ -8,10 +9,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolling(window.scrollY > 100);
-    };
-
+    const handleScroll = () => setScrolling(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -29,9 +27,7 @@ export const Navbar = () => {
   }, [darkMode]);
 
   const toggleTheme = () => {
-    setDarkMode((prev) =>
-      prev === "light" ? "dark" : prev === "dark" ? "system" : "light"
-    );
+    setDarkMode((prev) => (prev === "light" ? "dark" : prev === "dark" ? "system" : "light"));
   };
 
   const toggleLanguage = () => {
@@ -40,45 +36,76 @@ export const Navbar = () => {
     localStorage.setItem("language", newLang);
   };
 
-  return (
-    <nav
-      className={`fixed z-50 top-0 md:top-2 left-0 w-full transition-all duration-300`}
-    >
-      <div className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 bg-[#041121d4] ${
-        scrolling ? "md:bg-[#041121d4] bg-opacity-80 shadow-lg md:rounded-full" : "md:bg-transparent"
-      }`}>
-        {/* Logo */}
-        <h1 className="md:hidden text-xl font-bold text-white">LAVG</h1>
+  const navLinks = [
+    { id: "experiencia", label: "Experiencia" },
+    { id: "projects", label: "Proyectos" },
+    { id: "skills", label: "Skills" },
+    { id: "about", label: "Sobre mí" },
+  ];
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex text-sm space-x-6 text-white">
-          <a href="#experiencia" className="hover:text-gray-300">Experiencia</a>
-          <a href="#proyectos" className="hover:text-gray-300">Proyectos</a>
-          <a href="#skills" className="hover:text-gray-300">Skills</a>
-          <a href="#about" className="hover:text-gray-300">Sobre mí</a>
-          <button onClick={toggleLanguage} className="hover:text-gray-300">
-            {language === "es" ? "ES" : "EN"}
-          </button>
-          <button onClick={toggleTheme} className="hover:text-gray-300">
-            {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-5 h-5" /> : darkMode === "light" ? <IconSun stroke={2} className="w-5 h-5" /> : <IconDeviceDesktop stroke={2} className="w-5 h-5" />}
+  return (
+    <nav className="fixed z-50 top-0 md:top-2 left-0 w-full transition-all duration-300">
+      <div
+        className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 ${
+          scrolling ? "dark:bg-[#041121d4] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg md:rounded-full border border-[#f4f4f40e]" : "bg-transparent"
+        }`}
+      >
+        <h1 className="md:hidden text-xl font-bold dark:text-white text-[#515151]">LAVG</h1>
+
+        <div className="hidden md:flex text-sm space-x-6 dark:text-white text-[#515151]">
+          {navLinks.map((link) => (
+            <motion.a
+              key={link.id}
+              href={`#${link.id}`}
+              className="relative overflow-hidden group dark:text-white text-[#515151]"
+              onClick={() => setMenuOpen(false)}
+              initial={{ opacity: 0.8 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#c6c6c6] via-[#c0c0c0] to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <motion.span
+                className="block"
+                initial={{ y: "0%" }}
+                whileHover={{ y: "0%" }}
+                transition={{ duration: 0.3 }}
+              >
+                {link.label}
+              </motion.span>
+            </motion.a>
+          ))}
+
+          <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{language === "es" ? "ES" : "EN"}</button>
+          <button onClick={toggleTheme} className="hover:text-[#969696] cursor-pointer">
+            {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-4 h-4" /> : darkMode === "light" ? <IconSun stroke={2} className="w-4 h-4" /> : <IconDeviceDesktop stroke={2} className="w-4 h-4" />}
           </button>
         </div>
 
-        <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden dark:text-[#e2e0e0] text-[#515151]" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <IconXboxX stroke={2} className="w-6 h-6" /> : <IconMenu4 stroke={2} className="w-6 h-6" />}
         </button>
       </div>
 
       <div
-        className={`absolute top-12 left-0 w-full bg-[#041121d4] bg-opacity-90 text-white p-6 space-y-4 flex flex-col items-center transition-all duration-300 ${
+        className={`absolute top-12 left-0 w-full bg-opacity-90 dark:text-[#e2e0e0] text-[#515151] p-6 space-y-4 flex flex-col items-left transition-all duration-300 ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        } ${scrolling ? "dark:bg-[#041121d4] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg" : "bg-transparent"}`}
       >
-        <a href="#experiencia" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>Experiencia</a>
-        <a href="#proyectos" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>Proyectos</a>
-        <a href="#skills" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>Skills</a>
-        <a href="#about" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>Sobre mí</a>
-        <button onClick={toggleLanguage} className="hover:text-gray-300">
+        {navLinks.map((link) => (
+          <motion.a
+            key={link.id}
+            href={`#${link.id}`}
+            className="hover:text-gray-300"
+            onClick={() => setMenuOpen(false)}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 * navLinks.indexOf(link) }}
+          >
+            {link.label}
+          </motion.a>
+        ))}
+
+        <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
           {language === "es" ? "ES" : "EN"}
         </button>
         <button onClick={toggleTheme} className="hover:text-gray-300">
@@ -88,4 +115,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-

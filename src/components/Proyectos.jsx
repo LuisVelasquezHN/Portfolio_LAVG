@@ -71,19 +71,19 @@ export const Proyectos = () => {
     <>
       {isDesktop && (
         <>
-          <div ref={stackAreaRef} id="proyectos" className="w-full h-[300vh] relative flex flex-col-reverse sm:flex-row hiddenObs">
+          <div ref={stackAreaRef} id="projects" className="w-full h-[300vh] relative flex flex-col-reverse sm:flex-row hiddenObs">
             <div className="h-screen flex-1 sticky top-0 flex flex-col justify-center">
               <h1 className="flex items-center mb-6 text-4xl font-semibold gap-x-3 text-black/80 dark:text-white hiddenObs">
                 <IconCode width={30} height={30} stroke={2} />
                 Proyectos
               </h1>
-              <p className="w-[420px] text-2xl font-semibold mt-6 text-[#4484bf]">
+              <p className="w-[420px] text-2xl font-semibold mt-6 dark:text-[#4484bf] text-[#0686ff]">
                 {cardsData[activeCardIndex]?.title}
               </p>
               <div className="tech flex flex-row gap-2 items-center">
                 {cardsData[activeCardIndex]?.type == 'same' && (
                   <>
-                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] bg-[#1f2729] p-1 rounded-2xl w-[80px]">
+                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] dark:bg-[#1f2729] bg-[#576b70] p-1 rounded-2xl w-[80px]">
                       <svg width="15" height="15" viewBox="0 0 569 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                         <g fill="none" fillRule="evenodd">
                           <g transform="translate(-227, -256)" fill="#58C4DC" fillRule="nonzero">
@@ -96,7 +96,7 @@ export const Proyectos = () => {
                       </svg>
                       React
                     </span>
-                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] bg-[#39262f] p-1 rounded-2xl w-[80px]">
+                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] dark:bg-[#39262f] bg-[#6a4757] p-1 rounded-2xl w-[80px]">
                       <svg viewBox="0 0 512 384" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#CF649A" d="M441 221c-18 0-34 4-47 10-5-9-9-17-10-24s-2-11-1-20 6-21 6-22c0 0-1-5-11-5-11 0-20 2-21 5l-4 15c-2 9-20 43-31 60-4-7-7-13-7-17-1-8-2-12-1-21s6-20 6-21-1-6-11-6c-11 0-20 2-21 5l-4 15-34 76-8 18c-2 4 0 0 0 1l-3 5-4 5s-1-7 1-16c3-19 12-49 12-51 0 0 2-5-6-8-7-3-9 2-10 2l-1 1s8-34-16-34c-14 0-35 17-45 31l-34 19-17 9-1-1c-29-31-82-52-79-93 0-15 6-54 101-102 79-39 141-28 152-4 16 34-33 97-115 106-31 3-47-9-51-13-4-5-5-5-7-4s-1 5 0 8c3 6 13 17 30 23 15 5 51 8 95-9 49-19 88-72 77-117-12-45-87-60-157-35-43 15-88 39-121 70-39 36-45 68-43 81 10 47 74 78 100 100l-3 2c-13 7-63 33-75 60-14 31 2 53 13 56 33 10 68-7 86-34 18-28 16-64 8-80l-1-1 11-6 18-10c-3 9-5 19-6 34-2 17 6 40 15 49 4 4 9 4 12 4 11 0 16-9 22-20l13-28s-8 41 13 41c7 0 15-9 18-14l1-1 1-2 20-37 25-57 5 20c2 8 7 16 10 24l-4 7-8 10c-10 12-23 26-24 30-2 5-2 8 2 11 3 2 8 2 13 2l18-4 17-9c10-7 16-18 15-32 0-7-3-15-6-22l3-4c16-23 28-49 28-49l5 21 9 20a89 89 0 0 0-27 36c-6 17-2 24 7 26 4 1 10-1 14-3 5-1 11-4 17-8 10-8 20-18 19-32 0-6-2-13-4-19 12-5 29-8 49-5 45 5 54 33 52 44-2 12-11 18-14 20l-4 4c1 2 2 2 5 2 3-1 23-10 24-31 1-28-25-58-71-57zM97 336c-14 16-35 23-44 17-9-5-6-29 13-46 11-10 25-20 34-26l9-5 1-1 3-1c6 24 0 45-16 62zm108-73c-5 13-16 45-22 43-6-1-9-26-2-50 4-12 13-26 18-32 8-9 17-12 19-8 3 5-10 39-13 47zm89 43-5 1v-2l16-17 9-11v1c0 14-14 24-20 28zm68-16c-2-1-1-5 4-16 2-5 7-13 15-20l2 9c0 18-13 24-21 27z" /></svg>
                       Sass
                     </span>
@@ -104,7 +104,7 @@ export const Proyectos = () => {
                 )}
 
                 {cardsData[activeCardIndex]?.title == 'ISG Communications' && (
-                  <span className="flex flex-row gap-2 items-center justify-center text-[11px] bg-[#1e2e1d] p-1 rounded-2xl w-[80px]">
+                  <span className="flex flex-row gap-2 items-center justify-center text-[11px] dark:bg-[#1e2e1d] bg-[#41633f] p-1 rounded-2xl w-[80px]">
                     <svg viewBox="0 0 256 292" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="16" height="16"><defs><linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%"><stop offset="0%" stopColor="#41873F" /><stop offset="32.88%" stopColor="#418B3D" /><stop offset="63.52%" stopColor="#419637" /><stop offset="93.19%" stopColor="#3FA92D" /><stop offset="100%" stopColor="#3FAE2A" /></linearGradient><linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%"><stop offset="13.76%" stopColor="#41873F" /><stop offset="40.32%" stopColor="#54A044" /><stop offset="71.36%" stopColor="#66B848" /><stop offset="90.81%" stopColor="#6CC04A" /></linearGradient><linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%"><stop offset="9.192%" stopColor="#6CC04A" /><stop offset="28.64%" stopColor="#66B848" /><stop offset="59.68%" stopColor="#54A044" /><stop offset="86.24%" stopColor="#41873F" /></linearGradient><path id="b" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /><path id="e" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /></defs><path fill="url(#a)" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /><mask id="d" fill="#fff"><use xlinkHref="#b" /></mask><path fill="url(#c)" d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z" mask="url(#d)" /><mask id="g" fill="#fff"><use xlinkHref="#e" /></mask><path fill="url(#f)" d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z" mask="url(#g)" /></svg>
                     Node.js
                   </span>
@@ -113,12 +113,12 @@ export const Proyectos = () => {
                 {cardsData[activeCardIndex]?.title == 'Cable Color' && (
                   <>
 
-                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] bg-[#1e2e1d] p-1 rounded-2xl w-[80px]">
+                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] dark:bg-[#1e2e1d] bg-[#41633f] p-1 rounded-2xl w-[80px]">
                       <svg viewBox="0 0 256 292" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="16" height="16"><defs><linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%"><stop offset="0%" stopColor="#41873F" /><stop offset="32.88%" stopColor="#418B3D" /><stop offset="63.52%" stopColor="#419637" /><stop offset="93.19%" stopColor="#3FA92D" /><stop offset="100%" stopColor="#3FAE2A" /></linearGradient><linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%"><stop offset="13.76%" stopColor="#41873F" /><stop offset="40.32%" stopColor="#54A044" /><stop offset="71.36%" stopColor="#66B848" /><stop offset="90.81%" stopColor="#6CC04A" /></linearGradient><linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%"><stop offset="9.192%" stopColor="#6CC04A" /><stop offset="28.64%" stopColor="#66B848" /><stop offset="59.68%" stopColor="#54A044" /><stop offset="86.24%" stopColor="#41873F" /></linearGradient><path id="b" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /><path id="e" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /></defs><path fill="url(#a)" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z" /><mask id="d" fill="#fff"><use xlinkHref="#b" /></mask><path fill="url(#c)" d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z" mask="url(#d)" /><mask id="g" fill="#fff"><use xlinkHref="#e" /></mask><path fill="url(#f)" d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z" mask="url(#g)" /></svg>
                       Node.js
                     </span>
 
-                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] bg-[#333552] p-1 rounded-2xl w-[80px]">
+                    <span className="flex flex-row gap-2 items-center justify-center text-[11px] dark:bg-[#333552] bg-[#555987] p-1 rounded-2xl w-[80px]">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-php"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 12m-10 0a10 9 0 1 0 20 0a10 9 0 1 0 -20 0" /><path d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" /><path d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" /><path d="M12 7.5l-1 5.5" /><path d="M11.6 10h2.4l-.5 3" /></svg>
                       php
                     </span>
@@ -126,20 +126,28 @@ export const Proyectos = () => {
                 )}
               </div>
 
-              <p className="max-w-[450px] text-[16px] mt-2 text-[#e2e0e0] text-pretty">
+              <p className="max-w-[450px] text-[16px] mt-2 dark:text-[#e2e0e0] text-[#515151] text-pretty">
                 {cardsData[activeCardIndex]?.content}
 
               </p>
 
               {cardsData[activeCardIndex]?.type == 'same' && (
-                <a href={cardsData[activeCardIndex]?.url} target='__blank' title='LinkedIn' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+                <a href={cardsData[activeCardIndex]?.url} target='__blank' title='Ver sitio' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center text-[#232323] dark:text-[#f4f4f4]
+              bg-gradient-to-br from-[#dedede] via-[#d2d2d2] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
+               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
+               dark:hover:font-semibold dark:hover:from-[#c6c6c6] dark:hover:via-[#c0c0c0] dark:hover:to-blue-400 dark:hover:text-[#181818]'>
                   <IconLink stroke={2} width={20} height={20} />
                   Preview
                 </a>
               )}
 
               {cardsData[activeCardIndex]?.type == 'dif' && (
-                <Link to={cardsData[activeCardIndex]?.url} target='__blank' title='LinkedIn' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-2 cursor-pointer border-1 border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
+                <Link to={cardsData[activeCardIndex]?.url} target='__blank' title='Ver más' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center text-[#232323] dark:text-[#f4f4f4]
+              bg-gradient-to-br from-[#dedede] via-[#d2d2d2] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
+               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
+               dark:hover:font-semibold dark:hover:from-[#c6c6c6] dark:hover:via-[#c0c0c0] dark:hover:to-blue-400 dark:hover:text-[#181818]'>
                   Ver más
                   <IconCaretRight stroke={2} width={20} height={20} />
                 </Link>
@@ -174,7 +182,7 @@ export const Proyectos = () => {
       )}
 
       {isMobile && (
-        <div className="w-full flex flex-col p-6 md:p-10">
+        <div id="projects" className="w-full flex flex-col p-6 md:p-10">
           <h1 className="flex items-center mb-6 text-3xl md:text-4xl font-semibold gap-x-3 text-black/80 dark:text-white">
             <IconCode width={25} height={25} stroke={2} />
             Proyectos
@@ -232,7 +240,7 @@ export const Proyectos = () => {
                 )}
               </div>
 
-              <p className="text-[14px] md:text-[16px] mt-2 text-[#e2e0e0] max-w-full">
+              <p className="text-[14px] md:text-[16px] mt-2 dark:text-[#e2e0e0] text-[#515151] max-w-full">
                 {card?.content}
               </p>
 
