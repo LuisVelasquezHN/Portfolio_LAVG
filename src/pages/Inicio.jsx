@@ -18,7 +18,7 @@ export const Inicio = () => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('<span class="text-[#0072ff]">Hey,</span> soy Luis Velasquez')
+                  .typeString('Hey, soy <span class="bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-clip-text text-transparent"> Luis Velasquez</span>')
                   .pauseFor(1000000)
                   .start();
               }}
@@ -29,12 +29,12 @@ export const Inicio = () => {
               }} />
           </h1>
 
-          <p className='text-base md:text-xl mt-4 md:mt-6 px-2 md:px-0 text-pretty hiddenObs'>
+          <p className='text-base md:text-xl mt-4 md:mt-6 px-2 md:px-0 text-pretty hiddenObs2'>
             <span className='text-[#009aff]'>Desarrollador Web</span> con más de 3 años de experiencia <span className='text-[#d0efff]'> en el diseño y desarrollo de sitios y aplicaciones web,</span>
             &nbsp;enfocado en rendimiento, accesibilidad y experiencia de usuario.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs">
+          <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs2">
             <div className='flex flex-row gap-3'>
               <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title='Descargar CV' className='flex text-base flex-row gap-2 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-4 mt-2 cursor-pointer border border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold'>
                 <IconDownload stroke={2} width={20} height={20} />
@@ -92,7 +92,7 @@ export const Inicio = () => {
         <Skills2 />
       </section>
 
-      <section id="about" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+      <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserScan width={30} height={30} stroke={2} />
           Sobre mí

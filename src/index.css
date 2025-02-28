@@ -30,7 +30,7 @@ body{
 
 .hiddenObs2 {
   opacity: 0;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 
 .show {

@@ -95,9 +95,8 @@ export const AboutUs = () => {
             </h2>
             <ol className="relative mt-4">
               {education.map((item, index) => (
-                <>
                   <li key={index}>
-                    <div className="relative hiddenObs mx-12 pb-10 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 md:grid-cols-5 md:gap-10 md:space-x-4">
+                    <div className="relative hiddenObs2 mx-12 pb-10 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 md:grid-cols-5 md:gap-10 md:space-x-4">
                       <div className="relative md:col-span-4">
                         <div className="sticky top-0">
                           <span className="text-[#0686ff] -left-[42px] absolute rounded-full text-5xl">•</span>
@@ -111,8 +110,6 @@ export const AboutUs = () => {
 
                     </div>
                   </li>
-
-                </>
 
               ))}
 
