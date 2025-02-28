@@ -44,14 +44,14 @@ export const Navbar = () => {
     <nav
       className={`fixed z-50 top-0 md:top-2 left-0 w-full transition-all duration-300`}
     >
-      <div className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-16 bg-[#041121d4] ${
+      <div className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 bg-[#041121d4] ${
         scrolling ? "md:bg-[#041121d4] bg-opacity-80 shadow-lg md:rounded-full" : "md:bg-transparent"
       }`}>
         {/* Logo */}
         <h1 className="md:hidden text-xl font-bold text-white">LAVG</h1>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 text-white">
+        <div className="hidden md:flex text-sm space-x-6 text-white">
           <a href="#experiencia" className="hover:text-gray-300">Experiencia</a>
           <a href="#proyectos" className="hover:text-gray-300">Proyectos</a>
           <a href="#skills" className="hover:text-gray-300">Skills</a>
@@ -70,7 +70,7 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-16 left-0 w-full bg-[#041121d4] bg-opacity-90 text-white p-6 space-y-4 flex flex-col items-center transition-all duration-300 ${
+        className={`absolute top-12 left-0 w-full bg-[#041121d4] bg-opacity-90 text-white p-6 space-y-4 flex flex-col items-center transition-all duration-300 ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
