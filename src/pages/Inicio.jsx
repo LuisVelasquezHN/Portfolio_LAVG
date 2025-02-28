@@ -7,12 +7,16 @@ import { Proyectos } from '../components/Proyectos';
 import { Skills2 } from '../components/Skills2';
 import { AboutUs } from '../components/AboutUs';
 import { ScrollDownIndicator } from '../components/ScrollDownIndicator';
+import { Footer } from '../components/Footer';
+import { ScrollToTop } from '../components/ScrollToTop';
+import { Navbar } from '../components/Navbar';
 
 export const Inicio = () => {
   return (
     <>
       <section className="flex flex-col-reverse md:flex-row justify-center h-[100dvh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
         {/* mt-[15vh] md:mt-[30vh] */}
+        <Navbar/>
         <div className="text-center md:text-left">
           <h1 className='text-2xl md:text-5xl font-bold'>
             <Typewriter
@@ -83,7 +87,7 @@ export const Inicio = () => {
       <Proyectos />
       {/* <Skills/> */}
 
-      <section id="experiencia" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+      <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserCode width={30} height={30} stroke={2} />
           Skills
@@ -101,6 +105,10 @@ export const Inicio = () => {
         <AboutUs />
         
       </section>
+
+      <ScrollToTop/>
+
+      <Footer/>
 
 
       {/* <Timeline /> */}

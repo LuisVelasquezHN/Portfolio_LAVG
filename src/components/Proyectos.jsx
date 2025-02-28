@@ -71,7 +71,7 @@ export const Proyectos = () => {
     <>
       {isDesktop && (
         <>
-          <div ref={stackAreaRef} className="w-full h-[300vh] relative flex flex-col-reverse sm:flex-row hiddenObs">
+          <div ref={stackAreaRef} id="proyectos" className="w-full h-[300vh] relative flex flex-col-reverse sm:flex-row hiddenObs">
             <div className="h-screen flex-1 sticky top-0 flex flex-col justify-center">
               <h1 className="flex items-center mb-6 text-4xl font-semibold gap-x-3 text-black/80 dark:text-white hiddenObs">
                 <IconCode width={30} height={30} stroke={2} />
