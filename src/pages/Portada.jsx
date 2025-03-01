@@ -53,7 +53,7 @@ export const Portada = () => {
                                     >
                                         <span className='dark:text-[#009aff] text-[#0875c5] '>Desarrollador Web</span> con más de 3 años de experiencia.
                                     </motion.p><motion.p
-                                        className='text-lg md:text-2xl text-center mt-2 p-2 md:p-0 text-[#1ec8ff]'
+                                        className='text-lg md:text-2xl text-center mt-2 md:p-0 text-[#1ec8ff]'
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
