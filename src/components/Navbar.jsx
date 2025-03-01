@@ -46,9 +46,8 @@ export const Navbar = () => {
   return (
     <nav className="fixed z-50 top-0 md:top-2 left-0 w-full transition-all duration-300">
       <div
-        className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 ${
-          scrolling ? "dark:bg-[#041121d4] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg md:rounded-full border border-[#f4f4f40e]" : "bg-transparent"
-        }`}
+        className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 ${scrolling ? "dark:bg-[#171f2fe0] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg md:rounded-full border border-[#f4f4f40e]" : "bg-transparent"
+          }`}
       >
         <h1 className="md:hidden text-xl font-bold dark:text-white text-[#515151]">LAVG</h1>
 
@@ -74,7 +73,7 @@ export const Navbar = () => {
               </motion.span>
             </motion.a>
           ))}
-
+          <div className="h-5 w-[1px] bg-gray-400 dark:bg-gray-600 "></div>
           <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{language === "es" ? "ES" : "EN"}</button>
           <button onClick={toggleTheme} className="hover:text-[#969696] cursor-pointer">
             {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-4 h-4" /> : darkMode === "light" ? <IconSun stroke={2} className="w-4 h-4" /> : <IconDeviceDesktop stroke={2} className="w-4 h-4" />}
@@ -87,9 +86,8 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-12 left-0 w-full bg-opacity-90 dark:text-[#e2e0e0] text-[#515151] p-6 space-y-4 flex flex-col items-left transition-all duration-300 ${
-          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        } ${scrolling ? "dark:bg-[#041121d4] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg" : "bg-transparent"}`}
+        className={`absolute top-12 left-0 w-full bg-opacity-90 dark:text-[#e2e0e0] text-[#515151] p-6 space-y-4 flex flex-col items-left transition-all duration-300 ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          } ${scrolling ? "dark:bg-[#041121d4] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg" : "bg-transparent"}`}
       >
         {navLinks.map((link) => (
           <motion.a

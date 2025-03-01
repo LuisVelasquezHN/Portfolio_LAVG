@@ -5,12 +5,12 @@ export const BotonIngresar = ({onClick}) => {
         <div className="flex items-center justify-center pt-6">
             <div className="relative group">
                 <button onClick={onClick}
-                    className="relative inline-block p-px font-semibold leading-6 text-[#f4f4f4] bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-[#f4f4f4] transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-[#f4f4f4]"
+                    className="relative inline-block p-px font-semibold leading-6 text-[#515151] dark:text-[#f4f4f4] bg-[#e0e0e0] dark:bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-[#c4c4c4] dark:shadow-[#f4f4f4] transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-[#f4f4f4]"
                 >
                     <span
                         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#f4f4f4] via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     ></span>
-                    <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
+                    <span className="relative z-10 block px-6 py-3 rounded-2xl bg-[#fff] dark:bg-neutral-950">
                         <div className="relative z-10 flex items-center space-x-3">
                             <span
                                 className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-cyan-500"
