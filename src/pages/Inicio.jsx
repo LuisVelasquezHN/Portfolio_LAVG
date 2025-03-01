@@ -10,6 +10,7 @@ import { ScrollDownIndicator } from '../components/ScrollDownIndicator';
 import { Footer } from '../components/Footer';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { Navbar } from '../components/Navbar';
+import { Skills } from '../components/Skills';
 
 export const Inicio = () => {
   return (
@@ -116,7 +117,6 @@ export const Inicio = () => {
           <IconUserCode width={30} height={30} stroke={2} />
           Skills
         </h2>
-
         <Skills2 />
       </section>
 
