@@ -1,7 +1,8 @@
-import React from 'react'
-import Icons from './IconsSkills';
+import React, { useState } from 'react'
 import { useMediaQuery } from "react-responsive";
 import IconsText from './IconTextSkill';
+import { Modal } from './Modal';
+import { IconExternalLink, IconUserCode } from '@tabler/icons-react';
 
 const Slider = ({ images, width, height, quantity, reverse }) => {
   return (
@@ -38,9 +39,43 @@ const Slider = ({ images, width, height, quantity, reverse }) => {
 };
 
 export const Skills2 = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const skillsImages = [
+    <IconsText.HTML />,
+    <IconsText.TAILWIND />,
+    <IconsText.CSS />,
+    <IconsText.SASS />,
+    <IconsText.JS />,
+    <IconsText.TS />,
+    <IconsText.REACT />,
+    <IconsText.ANGULAR />,
+    <IconsText.PHP />,
+    <IconsText.ORACLE />,
+    <IconsText.XAMARIN />,
+    <IconsText.WORDPRESS />,
+    <IconsText.NODE />,
+    <IconsText.NEST />,
+    <IconsText.CHARP />,
+    <IconsText.PORTGRES />,
+    <IconsText.MYSQL />,
+    <IconsText.TALEND />,
+    <IconsText.UIPATH />,
+    <IconsText.OPENAI />,
+    <IconsText.ILLUSTRATOR />,
+    <IconsText.PHOTOSHOP />,
+    <IconsText.COREL />,
+  ];
+  
   return (
-    <main className="w-full max-w-[1100px] mx-auto">
+      <>
+      <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+      <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <IconUserCode width={30} height={30} stroke={2} />
+        Habilidades
+        <IconExternalLink className='cursor-pointer' width={30} height={30} stroke={2} title='Ver todas las skills' onClick={() => setIsModalOpen(true)} />
+      </h2>
       {isMobile && (
         <>
           <Slider
@@ -51,12 +86,10 @@ export const Skills2 = () => {
               <IconsText.SASS />,
               <IconsText.JS />,
               <IconsText.TS />,
-
             ]}
             width={isMobile ? 120 : 120}
             height={isMobile ? 80 : 90}
-            quantity={6}
-          />
+            quantity={6} />
           <Slider
             images={[
               <IconsText.REACT />,
@@ -65,13 +98,11 @@ export const Skills2 = () => {
               <IconsText.ORACLE />,
               <IconsText.XAMARIN />,
               <IconsText.WORDPRESS />,
-
             ]}
             width={isMobile ? 120 : 120}
             height={isMobile ? 80 : 90}
             quantity={6}
-            reverse
-          />
+            reverse />
 
           <Slider
             images={[
@@ -84,9 +115,7 @@ export const Skills2 = () => {
             ]}
             width={isMobile ? 120 : 120}
             height={isMobile ? 80 : 90}
-            quantity={6}
-            
-          />
+            quantity={6} />
 
           <Slider
             images={[
@@ -99,45 +128,43 @@ export const Skills2 = () => {
             width={isMobile ? 120 : 120}
             height={isMobile ? 80 : 90}
             quantity={5}
-            reverse
-          />
+            reverse />
         </>
-      )} 
+      )}
 
-      {!isMobile &&(
+      {!isMobile && (
 
         <>
-        <Slider
-          images={[
-            <IconsText.HTML />,
-            <IconsText.TAILWIND />,
-            <IconsText.CSS />,
-            <IconsText.SASS />,
-            <IconsText.JS />,
-            <IconsText.TS />,
-            <IconsText.REACT />,
-            <IconsText.ANGULAR />,
-            <IconsText.PHP />,
-            <IconsText.ORACLE />,
-            <IconsText.XAMARIN />,
-            <IconsText.WORDPRESS />,
-            // <Icons.HTML />,
-            // <Icons.TAILWIND />,
-            // <Icons.CSS />,
-            // <Icons.SASS />,
-            // <Icons.JS />,
-            // <Icons.TS />,
-            // <Icons.REACT />,
-            // <Icons.ANGULAR />,
-            // <Icons.PHP />,
-            // <Icons.ORACLE />,
-            // <Icons.XAMARIN />,
-            // <Icons.WORDPRESS />,
-          ]}
-          width={isMobile ? 120 : 120}
-          height={isMobile ? 80 : 90}
-          quantity={12} 
-          />
+          <Slider
+            images={[
+              <IconsText.HTML />,
+              <IconsText.TAILWIND />,
+              <IconsText.CSS />,
+              <IconsText.SASS />,
+              <IconsText.JS />,
+              <IconsText.TS />,
+              <IconsText.REACT />,
+              <IconsText.ANGULAR />,
+              <IconsText.PHP />,
+              <IconsText.ORACLE />,
+              <IconsText.XAMARIN />,
+              <IconsText.WORDPRESS />,
+              // <Icons.HTML />,
+              // <Icons.TAILWIND />,
+              // <Icons.CSS />,
+              // <Icons.SASS />,
+              // <Icons.JS />,
+              // <Icons.TS />,
+              // <Icons.REACT />,
+              // <Icons.ANGULAR />,
+              // <Icons.PHP />,
+              // <Icons.ORACLE />,
+              // <Icons.XAMARIN />,
+              // <Icons.WORDPRESS />,
+            ]}
+            width={isMobile ? 120 : 120}
+            height={isMobile ? 80 : 90}
+            quantity={12} />
           <Slider
             images={[
               <IconsText.NODE />,
@@ -166,13 +193,14 @@ export const Skills2 = () => {
             width={isMobile ? 120 : 120}
             height={isMobile ? 80 : 90}
             quantity={11}
-            reverse 
-            />
-            </>
+            reverse />
+        </>
       )}
-      
+    </section>
+    <Modal modalTitle="Habilidades" data={skillsImages} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      </>
+
     
 
-    </main>
   );
 }

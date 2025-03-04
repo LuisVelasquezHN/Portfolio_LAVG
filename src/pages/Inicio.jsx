@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserCode, IconUserScan } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconExternalLink, IconMailForward, IconUserCode, IconUserScan } from '@tabler/icons-react';
 import { Timeline } from '../components/Timeline';
 import { Proyectos } from '../components/Proyectos';
 import { Skills2 } from '../components/Skills2';
@@ -10,9 +10,11 @@ import { ScrollDownIndicator } from '../components/ScrollDownIndicator';
 import { Footer } from '../components/Footer';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { Navbar } from '../components/Navbar';
-import { Skills } from '../components/Skills';
+import { Modal } from '../components/Modal';
+
 
 export const Inicio = () => {
+
   return (
     <>
       <section className="flex flex-col-reverse md:flex-row justify-center h-[100dvh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
@@ -112,13 +114,15 @@ export const Inicio = () => {
       <Proyectos />
       {/* <Skills/> */}
 
-      <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+      {/* <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserCode width={30} height={30} stroke={2} />
           Skills
+          <IconExternalLink className='cursor-pointer' width={30} height={30} stroke={2} title='Ver todas las skills' onClick={() => setIsModalOpen(true)} />
         </h2>
-        <Skills2 />
-      </section>
+        
+      </section> */}
+      <Skills2 />
 
       <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
@@ -136,6 +140,8 @@ export const Inicio = () => {
 
 
       {/* <Timeline /> */}
+      {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
+
     </>
   )
 }
