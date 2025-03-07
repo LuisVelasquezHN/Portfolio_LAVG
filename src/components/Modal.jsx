@@ -35,7 +35,7 @@ export const Modal = ({ isOpen, onClose, modalTitle, data }) => {
 
                 <div className="grid grid-cols-2 md:grid-cols-2 gap-2 pt-4 overflow-auto max-h-[40vh] md:max-h-[60vh] p-4 scrollbar-thin" >
                     {data.map((items, idx) => (
-                        <div key={idx} className="flex hiddenObs2">
+                        <div key={idx} className="flex">
                             {items}
                         </div>
                     ))}

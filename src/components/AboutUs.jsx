@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Icons from './IconsSkills';
 import { IconBook, IconCertificate } from "@tabler/icons-react";
+import { ContactForm } from "./ContactForm";
 
 const tabs = [
   { id: "about", label: "Sobre mí" },
@@ -148,13 +149,11 @@ export const AboutUs = () => {
       case "contact":
         return (
           <div>
-            <p className="dark:text-white/80 text-gray-600/80">
-              Contact
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              aliquid quaerat, rerum laboriosam odio officiis ullam earum
-              officia maiores aut veniam ad assumenda voluptates hic voluptas,
-              tempora suscipit ipsam deserunt!
+            <p className="dark:text-white/80 text-gray-600/80 px-8 py-4 text-2xl">
+              ¿Tienes un Proyecto en mente? <span className="text-3xl font-bold dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent">¡Contáctame!</span>
             </p>
+
+            <ContactForm/>
           </div>
         );
       default:
