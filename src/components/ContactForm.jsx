@@ -77,11 +77,11 @@ export const ContactForm = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex text-base flex-row gap-2 text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eaeaea] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-3 px-5 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-               dark:hover:font-semibold dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]"
+          className="flex text-base flex-row gap-2 text-[#0d639b] dark:text-[#009aff]
+               rounded-3xl py-3 px-5 mt-2 cursor-pointer shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border dark:border-[#f4f4f40e] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
+               "
         >
           {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
           <svg
