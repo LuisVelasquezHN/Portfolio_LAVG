@@ -156,7 +156,7 @@ export const AboutUs = () => {
             <ContactForm />
 
             <p className="dark:text-white/80 text-gray-600/80 px-8 py-4 text-lg">
-              ¿Donde encontrarme?
+              ¿Dónde encontrarme?
             </p>
 
             <div className="px-8 py-2">
