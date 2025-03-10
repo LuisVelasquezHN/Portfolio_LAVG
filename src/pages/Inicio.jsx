@@ -44,22 +44,20 @@ export const Inicio = () => {
           <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs2">
             <div className='flex flex-row gap-3'>
               <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title='Descargar CV' className='
-              flex text-base flex-row gap-2 text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eaeaea] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-                dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]
+              flex text-base flex-row gap-2 
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                 <IconDownload stroke={2} width={20} height={20} />
                 Descargar CV
               </a>
 
               <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title='Contáctame' className='
-              flex text-base flex-row gap-2 text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eaeaea] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-               dark:hover:font-semibold dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]
+              flex text-base flex-row gap-2 
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                 <IconMailForward stroke={2} width={20} height={20} />
                 Contáctame
@@ -68,21 +66,19 @@ export const Inicio = () => {
 
             <div className='flex flex-row gap-3'>
               <a href='https://www.linkedin.com/in/luis-velasquez-768072284' target='__blank' title='LinkedIn' className='
-              flex text-base flex-row gap-2 text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eaeaea] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-               dark:hover:font-semibold dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]
+              flex text-base flex-row gap-2
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                 <IconBrandLinkedin stroke={2} width={20} height={20} />
               </a>
 
               <a href='https://github.com/LuisVelasquezHN' target='__blank' title='GitHub' className='
-              flex text-base flex-row text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eaeaea] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-               dark:hover:font-semibold dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]
+              flex text-base flex-row 
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                 <IconBrandGithub stroke={2} width={20} height={20} />
               </a>
