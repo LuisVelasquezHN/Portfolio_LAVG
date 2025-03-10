@@ -23,14 +23,14 @@ export const ContactForm = () => {
   const onSubmit = async (data) => {
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_GMAIL_SERVICE,
+        import.meta.env.VITE_ID_TEMPLATE,
         {
-          from_name: data.fullName,
-          from_email: data.email,
-          message: data.message,
+          user_name: data.fullName,
+          user_email: data.email,
+          user_message: data.message,
         },
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_APIKEY_EMAIL
       );
       alert("Message sent successfully!");
       reset();
@@ -41,7 +41,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4 md:p-8 text-white rounded-lg shadow-lg">
+    <div className="max-w-3xl mx-auto p-4 md:p-8 text-white rounded-lg">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
