@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconExternalLink, IconMailForward, IconUserCode, IconUserScan } from '@tabler/icons-react';
@@ -10,13 +10,16 @@ import { ScrollDownIndicator } from '../components/ScrollDownIndicator';
 import { Footer } from '../components/Footer';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { Navbar } from '../components/Navbar';
-import { Modal } from '../components/Modal';
+import { Toaster } from 'sonner'
+
 
 
 export const Inicio = () => {
 
   return (
     <>
+      <Toaster position="bottom-right" expand={false} />
+
       <section className="flex flex-col-reverse md:flex-row justify-center h-[100dvh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
         {/* mt-[15vh] md:mt-[30vh] */}
         <Navbar/>

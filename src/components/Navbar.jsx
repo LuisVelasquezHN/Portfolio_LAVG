@@ -39,7 +39,7 @@ export const Navbar = () => {
   const navLinks = [
     { id: "experiencia", label: "Experiencia" },
     { id: "projects", label: "Proyectos" },
-    { id: "skills", label: "Skills" },
+    { id: "skills", label: "Habilidades" },
     { id: "about", label: "Sobre mí" },
   ];
 

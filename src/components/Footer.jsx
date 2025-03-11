@@ -8,7 +8,7 @@ export const Footer = () => {
                 <div className="flex space-x-6 mt-2 md:mt-0">
                     <a href="#experiencia" className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8]">Experiencia</a>
                     <a href="#projects" className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8]">Proyectos</a>
-                    <a href="#skills" className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8]">Skills</a>
+                    <a href="#skills" className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8]">Habilidades</a>
                     <a href="#about" className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8]">Sobre mí</a>
                 </div>
             </div>

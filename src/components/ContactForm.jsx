@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import emailjs from "emailjs-com";
+import { toast } from 'sonner'
 
 const schema = yup.object().shape({
   fullName: yup.string().required("Nombre es requerido."),
@@ -32,15 +33,16 @@ export const ContactForm = () => {
         },
         import.meta.env.VITE_APIKEY_EMAIL
       );
-      alert("Message sent successfully!");
+      toast.success('Mensaje enviado exitosamente!')
       reset();
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Failed to send message. Try again later.");
+      toast.error('Fallo en el envío. Intenta de nuevo más tarde.')
     }
   };
 
   return (
+
     <div className="max-w-3xl mx-auto p-4 md:p-8 text-white rounded-lg">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

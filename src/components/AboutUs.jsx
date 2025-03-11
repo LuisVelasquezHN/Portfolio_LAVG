@@ -77,15 +77,42 @@ export const AboutUs = () => {
     switch (activeTab) {
       case "about":
         return (
-          <div>
-            <h2 className="text-xl font-bold dark:text-[#f4f4f4] text-gray-600">Hola</h2>
-            <p className="dark:text-white/80 text-gray-600/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              aliquid quaerat, rerum laboriosam odio officiis ullam earum
-              officia maiores aut veniam ad assumenda voluptates hic voluptas,
-              tempora suscipit ipsam deserunt!
-            </p>
-          </div>
+          <article className="flex flex-col-reverse md:flex-row gap-8 items-center justify-center hiddenObs2">
+            <div className="dark:text-white/80 text-gray-600/80 text-wrap">
+              <p className="pt-4">
+              ¡Hola! Me llamo <span className="font-bold">Luis Velasquez</span> , soy un ingeniero en sistemas con <span className="text-[#0073ff]">más de 3 años de experiencia en el desarrollo web</span> . 
+              Desde siempre, la tecnología ha sido mi pasión, 
+              y a lo largo de mi carrera he perfeccionado mis habilidades para construir aplicaciones dinámicas, 
+              escalables y centradas en la experiencia del usuario.
+              </p>
+
+              <p className="pt-4">
+              Me especializo en el desarrollo frontend y backend, trabajando con tecnologías 
+              modernas para crear soluciones eficientes e innovadoras.
+              Disfruto enfrentar nuevos desafíos y
+              aprender constantemente para seguir mejorando mis habilidades.
+              </p>
+
+              <p className="pt-4">
+              Una de mis mayores fortalezas es mi capacidad para trabajar en equipo, 
+              comunicarme efectivamente y aportar soluciones innovadoras a cada proyecto en el que participo.
+              </p>
+
+              <p className="pt-4">
+              Si estás buscando a alguien con un enfoque proactivo, 
+              detallista y orientado a resultados, estaré encantado de colaborar contigo. 
+              </p>
+
+
+            </div>
+
+            <img width="200" height="200" src="/about.webp" alt="Luis Velasquez" 
+            className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-[#f4f4f40e] dark:ring-[#f4f4f40e] " 
+            style={{objectPosition: "50% 50%"}}>
+
+            </img>
+
+          </article>
         );
       case "education":
         return (
@@ -148,7 +175,7 @@ export const AboutUs = () => {
         );
       case "contact":
         return (
-          <div>
+          <div className="hiddenObs2">
             <p className="dark:text-white/80 text-gray-600/80 px-8 py-4 text-2xl">
               ¿Tienes un Proyecto en mente? <span className="text-3xl font-bold dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent">¡Contáctame!</span>
             </p>
