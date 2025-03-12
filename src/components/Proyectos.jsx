@@ -16,7 +16,7 @@ export const Proyectos = () => {
     { title: "Cable Color", type: 'same', url: 'https://cablecolor.hn/', content: "Plataforma web multisitio para una empresa de telecomunicaciones, con dos líneas diferenciadas: residencial y corporativo. Los usuarios pueden explorar planes, servicios, pagos en línea y ubicar agencias de contacto según su segmento. Desarrollado con React, SASS, backend en Node.js y php.", color: "text-[#5b5a5a]", src: '/projects/corpo3.png' },
     {
       title: "Otros Proyectos",
-      url: "/proyectos",
+      url: "/projects",
       content: "Explora otros proyectos en los que he trabajado, plataformas empresariales y aplicaciones interactivas. Desarrollo soluciones a medida utilizando tecnologías modernas como React, Angular, Node.js y más.",
       color: "text-[#5b5a5a]",
       src: "/projects/proyectos.png",
