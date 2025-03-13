@@ -74,7 +74,7 @@ export const Navbar = () => {
             </motion.a>
           ))}
           <div className="h-5 w-[1px] bg-gray-400 dark:bg-gray-600"></div>
-          <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{language === "es" ? "ES" : "EN"}</button>
+          {/* <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{language === "es" ? "ES" : "EN"}</button> */}
           <button onClick={toggleTheme} className="hover:text-[#969696] cursor-pointer">
             {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-4 h-4" /> : darkMode === "light" ? <IconSun stroke={2} className="w-4 h-4" /> : <IconDeviceDesktop stroke={2} className="w-4 h-4" />}
           </button>
@@ -103,9 +103,9 @@ export const Navbar = () => {
           </motion.a>
         ))}
         <hr className="w-[65px] bg-gray-400 dark:bg-gray-600"/>
-        <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
+        {/* <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
           {language === "es" ? "ES" : "EN"}
-        </button>
+        </button> */}
         <button onClick={toggleTheme} className="hover:text-gray-300">
           {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-5 h-5" /> : darkMode === "light" ? <IconSun stroke={2} className="w-5 h-5" /> : <IconDeviceDesktop stroke={2} className="w-5 h-5" />}
         </button>
