@@ -80,35 +80,34 @@ export const AboutUs = () => {
           <article className="flex flex-col-reverse md:flex-row gap-8 items-center justify-center hiddenObs2">
             <div className="dark:text-white/80 text-gray-600/80 text-wrap">
               <p className="pt-4">
-              ¡Hola! Me llamo <span className="font-bold">Luis Velasquez</span> , soy un ingeniero en sistemas con <span className="text-[#0073ff]">más de 3 años de experiencia en el desarrollo web</span> . 
-              Desde siempre, la tecnología ha sido mi pasión, 
-              y a lo largo de mi carrera he perfeccionado mis habilidades para construir aplicaciones dinámicas, 
-              escalables y centradas en la experiencia del usuario.
+                ¡Hola! Me llamo <span className="font-bold">Luis Velásquez</span>, soy ingeniero en sistemas con <span className="text-[#0073ff]">más de 3 años de experiencia en desarrollo web</span>.
+                Desde siempre, la tecnología ha sido mi pasión y, a lo largo de mi carrera, he perfeccionado mis habilidades para construir aplicaciones dinámicas,
+                escalables y centradas en la experiencia del usuario.
               </p>
 
               <p className="pt-4">
-              Me especializo en el desarrollo frontend y backend, trabajando con tecnologías 
-              modernas para crear soluciones eficientes e innovadoras.
-              Disfruto enfrentar nuevos desafíos y
-              aprender constantemente para seguir mejorando mis habilidades.
+                Me especializo en desarrollo frontend y backend, trabajando con tecnologías
+                modernas para crear soluciones eficientes e innovadoras.
+                Disfruto enfrentar nuevos desafíos y aprender constantemente para seguir mejorando mis habilidades.
               </p>
 
               <p className="pt-4">
-              Una de mis mayores fortalezas es mi capacidad para trabajar en equipo, 
-              comunicarme efectivamente y aportar soluciones innovadoras a cada proyecto en el que participo.
+                Una de mis mayores fortalezas es mi capacidad para trabajar en equipo,
+                comunicarme efectivamente y aportar soluciones innovadoras a cada proyecto en el que participo.
               </p>
 
               <p className="pt-4">
-              Si estás buscando a alguien con un enfoque proactivo, 
-              detallista y orientado a resultados, estaré encantado de colaborar contigo. 
+                Si estás buscando a alguien con un enfoque proactivo,
+                detallista y orientado a resultados, estaré encantado de colaborar contigo.
               </p>
+
 
 
             </div>
 
-            <img width="200" height="200" src="/about.webp" alt="Luis Velasquez" 
-            className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-[#f4f4f40e] dark:ring-[#f4f4f40e] " 
-            style={{objectPosition: "50% 50%"}}>
+            <img width="200" height="200" src="/about.webp" alt="Luis Velasquez"
+              className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-[#f4f4f40e] dark:ring-[#f4f4f40e] "
+              style={{ objectPosition: "50% 50%" }}>
 
             </img>
 
