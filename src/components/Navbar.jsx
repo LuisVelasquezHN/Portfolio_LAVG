@@ -37,6 +37,7 @@ export const Navbar = () => {
   };
 
   const navLinks = [
+    { id: "inicio", label: "Inicio"},
     { id: "experiencia", label: "Experiencia" },
     { id: "projects", label: "Proyectos" },
     { id: "skills", label: "Habilidades" },
