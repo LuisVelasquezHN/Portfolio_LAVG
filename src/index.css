@@ -35,10 +35,6 @@
   color-scheme: light dark;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 
 body{
   display: flex;
