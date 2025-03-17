@@ -75,7 +75,7 @@ export const Portada = () => {
                             <motion.img
                                 loading="lazy"
                                 className="absolute top-0 left-0 w-full h-full object-cover opacity-90"
-                                src="/personal.jpg"
+                                src="/personal.webp"
                                 alt="lavg_foto_personal"
                                 variants={imageVariants}
                                 whileHover="hover"

@@ -102,7 +102,7 @@ export const Inicio = () => {
 
           <img
             className="w-[90%] h-[90%] object-cover rounded-full"
-            src="/personal.jpg"
+            src="/personal.webp"
             alt="foto_personal" />
         </div>
 
