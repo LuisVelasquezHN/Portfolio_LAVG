@@ -20,8 +20,8 @@ export const Inicio = () => {
     <>
       <Toaster position="bottom-right" expand={false} />
 
-      <section className="flex flex-col-reverse md:flex-row justify-center h-[100dvh] content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
-        {/* mt-[15vh] md:mt-[30vh] */}
+      <section className="flex flex-col-reverse md:flex-row justify-center min-h-screen content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
+      {/* mt-[15vh] md:mt-[30vh] */}
         <Navbar/>
         <div className="text-center md:text-left">
           <h1 className='text-2xl md:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4]'>
