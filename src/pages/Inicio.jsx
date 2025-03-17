@@ -1,7 +1,7 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconExternalLink, IconMailForward, IconUserCode, IconUserScan } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserScan } from '@tabler/icons-react';
 import { Timeline } from '../components/Timeline';
 import { Proyectos } from '../components/Proyectos';
 import { Skills2 } from '../components/Skills2';
@@ -111,16 +111,7 @@ export const Inicio = () => {
 
       <Timeline />
       <Proyectos />
-      {/* <Skills/> */}
 
-      {/* <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
-        <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-          <IconUserCode width={30} height={30} stroke={2} />
-          Skills
-          <IconExternalLink className='cursor-pointer' width={30} height={30} stroke={2} title='Ver todas las skills' onClick={() => setIsModalOpen(true)} />
-        </h2>
-        
-      </section> */}
       <Skills2 />
 
       <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
@@ -136,10 +127,6 @@ export const Inicio = () => {
       <ScrollToTop/>
 
       <Footer/>
-
-
-      {/* <Timeline /> */}
-      {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
 
     </>
   )

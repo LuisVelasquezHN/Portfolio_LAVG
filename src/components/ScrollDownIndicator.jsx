@@ -4,13 +4,22 @@ export const ScrollDownIndicator = () => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
+        let ticking = false;
+    
         const handleScroll = () => {
-            setIsVisible(window.scrollY < 200);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    setIsVisible(window.scrollY < 200);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
-
+    
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    
 
     return (
         <div className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
