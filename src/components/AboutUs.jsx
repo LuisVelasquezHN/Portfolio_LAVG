@@ -77,7 +77,7 @@ export const AboutUs = () => {
     switch (activeTab) {
       case "about":
         return (
-          <article className="flex flex-col-reverse md:flex-row gap-8 items-center justify-center hiddenObs2">
+          <article className="flex flex-col-reverse lg:flex-row gap-8 items-center justify-center hiddenObs2">
             <div className="dark:text-white/80 text-gray-600/80 text-wrap">
               <p className="pt-4">
                 ¡Hola! Me llamo <span className="font-bold">Luis Velásquez</span>, soy ingeniero en sistemas con <span className="text-[#0073ff]">más de 3 años de experiencia en desarrollo web</span>.

@@ -63,24 +63,24 @@ export const OtrosProyectos = () => {
 
     return (
         <>
-            <section className='section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-xl'>
+            <section className='section p-3 sm:p-4 md:p-6 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-3xl sm:max-w-xl'>
                 <Breadcrumb
                     items={[
                         { label: "Inicio", path: "/home" },
                         { label: "Proyectos", path: "/projects" },
                     ]}
                 />
-                <h1 className='dark:text-white/80 text-gray-600/80 px-8 py-4 text-2xl md:text-3xl'>
+                <h1 className='dark:text-white/80 text-gray-600/80 px-4 sm:px-8 py-4 text-2xl md:text-3xl'>
                     Proyectos y Colaboraciones.
                 </h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="relative rounded-2xl overflow-hidden shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] h-64 flex items-end cursor-pointer opacity-90 group"
+                            className="relative rounded-2xl overflow-hidden shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] min-h-56 md:h-64 flex items-end cursor-pointer opacity-90 group"
                             style={{ backgroundImage: `url(${project.portada})`, backgroundSize: "cover", backgroundPosition: "center" }}
                         >
-                            <div className="absolute inset-0 bg-[#2182c7] dark:bg-[#031d2f] opacity-50 h-20 md:h-15 mt-auto group-hover:opacity-70 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-[#2182c7] dark:bg-[#031d2f] opacity-50 h-18 md:h-18 mt-auto group-hover:opacity-70 transition-opacity duration-300"></div>
 
                             <div className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/20 dark:bg-black/40 text-white text-lg font-semibold rounded-lg md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                                 <a
@@ -117,8 +117,8 @@ export const OtrosProyectos = () => {
                             <h4 className="text-lg font-semibold mt-4 text-[#515151] dark:text-gray-200">Descripción</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-300 text-pretty">{selectedProject.descripcion}</p>
                         </div>
-                        <div className="flex justify-center items-center hiddenObs">
-                            <img src={selectedProject.portada} alt={selectedProject.name} className="relative rounded-2xl overflow-hidden shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] h-64 flex items-end opacity-90" />
+                        <div className="flex justify-center items-center sm:block md:flex hiddenObs">
+                            <img src={selectedProject.portada} alt={selectedProject.name} className="rounded-2xl overflow-hidden shadow-lg max-w-full h-auto md:h-64 object-cover opacity-90" />
                         </div>
                     </div>
                 ] : []}

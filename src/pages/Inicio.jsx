@@ -21,11 +21,11 @@ export const Inicio = () => {
       <Toaster position="bottom-right" expand={false} />
 
       <div id='inicio' className="relative flex flex-col items-center min-h-screen">
-        <section className="flex flex-col-reverse md:flex-row justify-center min-h-screen content-center items-center gap-[40px] md:gap-[100px] w-full max-w-[1000px] px-4 md:px-0">
+        <section className="flex flex-col-reverse lg:flex-row justify-center min-h-screen content-center items-center gap-[40px] lg:gap-[80px] w-full max-w-[1100px] px-4 md:px-8 lg:px-0">
           {/* mt-[15vh] md:mt-[30vh] */}
           <Navbar />
-          <div className="text-center md:text-left">
-            <h1 className='text-2xl md:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4]'>
+          <div className="text-center lg:text-left max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
+            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4]'>
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
