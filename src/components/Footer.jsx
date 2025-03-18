@@ -21,7 +21,7 @@ export const Footer = () => {
     <footer className="w-full mt-[10vw] dark:text-[#f4f4f4] text-[#515151] py-4 px-6 md:px-12 border dark:border-[#f4f4f40e] border-[#f4f4f4de] rounded-3xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
         <p className="text-gray-400">
-          &copy; 2025 Luis Velasquez.{" "}
+          &copy; {new Date().getFullYear()} Luis Velasquez.{" "}
           <span className="hover:text-[#58C4DC]">React</span> +{" "}
           <span className="hover:text-[#38bdf8]">TailwindCSS</span>
         </p>
