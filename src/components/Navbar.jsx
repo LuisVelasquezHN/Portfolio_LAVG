@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IconDeviceDesktop, IconMenu4, IconMoonStars, IconSun, IconXboxX } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [scrolling, setScrolling] = useState(false);
   const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") || "system");
   const [language, setLanguage] = useState(localStorage.getItem("language") || "es");
@@ -31,17 +33,17 @@ export const Navbar = () => {
   };
 
   const toggleLanguage = () => {
-    const newLang = language === "es" ? "en" : "es";
-    setLanguage(newLang);
+    const newLang = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLang);
     localStorage.setItem("language", newLang);
   };
 
   const navLinks = [
-    { id: "inicio", label: "Inicio"},
-    { id: "experiencia", label: "Experiencia" },
-    { id: "projects", label: "Proyectos" },
-    { id: "skills", label: "Habilidades" },
-    { id: "about", label: "Sobre mí" },
+    { id: "inicio", label: t("navbar.home")},
+    { id: "experiencia", label: t("navbar.experiencia") },
+    { id: "projects", label: t("navbar.projects") },
+    { id: "skills", label: t("navbar.skills") },
+    { id: "about", label: t("navbar.about") },
   ];
 
   return (
@@ -75,7 +77,7 @@ export const Navbar = () => {
             </motion.a>
           ))}
           <div className="h-5 w-[1px] bg-gray-400 dark:bg-gray-600"></div>
-          {/* <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{language === "es" ? "ES" : "EN"}</button> */}
+          <button onClick={toggleLanguage} className="hover:text-[#969696] cursor-pointer">{i18n.language === "es" ? "ES" : "EN"}</button>
           <button onClick={toggleTheme} className="hover:text-[#969696] cursor-pointer">
             {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-4 h-4" /> : darkMode === "light" ? <IconSun stroke={2} className="w-4 h-4" /> : <IconDeviceDesktop stroke={2} className="w-4 h-4" />}
           </button>
@@ -104,9 +106,9 @@ export const Navbar = () => {
           </motion.a>
         ))}
         <hr className="w-[65px] bg-gray-400 dark:bg-gray-600"/>
-        {/* <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
-          {language === "es" ? "ES" : "EN"}
-        </button> */}
+        <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
+          {i18n.language === "es" ? "ES" : "EN"}
+        </button>
         <button onClick={toggleTheme} className="hover:text-gray-300">
           {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-5 h-5" /> : darkMode === "light" ? <IconSun stroke={2} className="w-5 h-5" /> : <IconDeviceDesktop stroke={2} className="w-5 h-5" />}
         </button>

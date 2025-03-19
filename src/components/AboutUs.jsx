@@ -2,75 +2,78 @@ import React, { useState } from "react";
 import Icons from './IconsSkills';
 import { IconBook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp, IconBrandX, IconCertificate, IconMailForward, IconMapPin } from "@tabler/icons-react";
 import { ContactForm } from "./ContactForm";
-
-const tabs = [
-  { id: "about", label: "Sobre mí" },
-  { id: "education", label: "Educación" },
-  { id: "contact", label: "Contacto" },
-];
-
-const education = [
-  {
-    centro: 'Universidad Católica de Honduras',
-    titulo: 'Ingeniería en Ciencias de la Computación',
-    tiempo: '2017 - 2022'
-  },
-  {
-    centro: 'Educación Secundaria',
-    titulo: 'Bachillerato Técnico Profesional en Informática',
-    tiempo: '2011 - 2016'
-  }
-]
-
-const cursos = [
-
-  {
-    titulo: 'ReactJS',
-    lugar: 'Udemy',
-    icon: <Icons.REACTV2 />
-  },
-  {
-    titulo: 'AngularJS',
-    lugar: 'Udemy',
-    icon: <Icons.ANGULARV2 />
-  },
-  {
-    titulo: 'OpenAI',
-    lugar: 'Udemy',
-    icon: <Icons.OPENAIV2 />
-  },
-
-
-  {
-    titulo: 'Photoshop',
-    lugar: 'INFOP',
-    icon: <Icons.PHOTOSHOPV2 />
-  },
-
-  {
-    titulo: 'Ingles (Básico, Intermedio, Medio)',
-    lugar: 'INFOP',
-    icon: <Icons.INGLES />
-  },
-
-  {
-    titulo: 'Tester',
-    lugar: 'Capacitate.org',
-    icon: <Icons.TECNICO />
-  },
-  {
-    titulo: 'Técnico en instalación y reparación de equipo de cómputo',
-    lugar: 'Capacitate.org',
-    icon: <Icons.TECNICO />
-  },
-  {
-    titulo: 'CCNA 1',
-    lugar: 'CISCO',
-    icon: <Icons.CISCO />
-  },
-]
+import { useTranslation } from 'react-i18next';
 
 export const AboutUs = () => {
+  const { t } = useTranslation();
+
+  const tabs = [
+    { id: "about", label: t('about.titleAbout') },
+    { id: "education", label: t('about.titleEducation') },
+    { id: "contact", label: t('about.titleContact') },
+  ];
+  
+  const education = [
+    {
+      centro: t('about.centro'),
+      titulo: t('about.titulo'),
+      tiempo: '2017 - 2022'
+    },
+    {
+      centro: t('about.centro2'),
+      titulo: t('about.titulo2'),
+      tiempo: '2011 - 2016'
+    }
+  ]
+  
+  const cursos = [
+  
+    {
+      titulo: 'ReactJS',
+      lugar: 'Udemy',
+      icon: <Icons.REACTV2 />
+    },
+    {
+      titulo: 'AngularJS',
+      lugar: 'Udemy',
+      icon: <Icons.ANGULARV2 />
+    },
+    {
+      titulo: 'OpenAI',
+      lugar: 'Udemy',
+      icon: <Icons.OPENAIV2 />
+    },
+  
+  
+    {
+      titulo: 'Photoshop',
+      lugar: 'INFOP',
+      icon: <Icons.PHOTOSHOPV2 />
+    },
+  
+    {
+      titulo: t('about.courseIngles'),
+      lugar: 'INFOP',
+      icon: <Icons.INGLES />
+    },
+  
+    {
+      titulo: 'Tester',
+      lugar: 'Capacitate.org',
+      icon: <Icons.TECNICO />
+    },
+    {
+      titulo: t('about.courseTecnico'),
+      lugar: 'Capacitate.org',
+      icon: <Icons.TECNICO />
+    },
+    {
+      titulo: 'CCNA 1',
+      lugar: 'CISCO',
+      icon: <Icons.CISCO />
+    },
+  ]
+
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   const renderContent = () => {
@@ -80,35 +83,26 @@ export const AboutUs = () => {
           <article className="flex flex-col-reverse lg:flex-row gap-8 items-center justify-center hiddenObs2">
             <div className="dark:text-white/80 text-gray-600/80 text-wrap">
               <p className="pt-4">
-                ¡Hola! Me llamo <span className="font-bold">Luis Velásquez</span>, soy ingeniero en sistemas con <span className="text-[#0073ff]">más de 3 años de experiencia en desarrollo web</span>.
-                Desde siempre, la tecnología ha sido mi pasión y, a lo largo de mi carrera, he perfeccionado mis habilidades para construir aplicaciones dinámicas,
-                escalables y centradas en la experiencia del usuario.
+              {t('about.aboutFirst')} <span className="font-bold">Luis Velásquez</span>{t('about.aboutSecond')} <span className="text-[#0073ff]">{t('about.aboutThird')}</span>. &nbsp;
+              {t('about.aboutFour')}
               </p>
 
               <p className="pt-4">
-                Me especializo en desarrollo frontend y backend, trabajando con tecnologías
-                modernas para crear soluciones eficientes e innovadoras.
-                Disfruto enfrentar nuevos desafíos y aprender constantemente para seguir mejorando mis habilidades.
+              {t('about.aboutFive')}
               </p>
 
               <p className="pt-4">
-                Una de mis mayores fortalezas es mi capacidad para trabajar en equipo,
-                comunicarme efectivamente y aportar soluciones innovadoras a cada proyecto en el que participo.
+              {t('about.aboutSix')}
               </p>
 
               <p className="pt-4">
-                Si estás buscando a alguien con un enfoque proactivo,
-                detallista y orientado a resultados, estaré encantado de colaborar contigo.
+              {t('about.aboutSeven')}
               </p>
-
-
-
             </div>
 
             <img width="200" height="200" src="/about.webp" alt="Luis Velasquez"
               className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-[#f4f4f40e] dark:ring-[#f4f4f40e] "
               style={{ objectPosition: "50% 50%" }}>
-
             </img>
 
           </article>
@@ -118,7 +112,7 @@ export const AboutUs = () => {
           <>
             <h2 className="flex items-center mt-4 mb-4 text-xl font-semibold gap-x-3 text-black/80 dark:text-white">
               <IconBook width={30} height={30} stroke={2} />
-              Educación
+              {t('about.titleEducation')}
             </h2>
             <ol className="relative mt-4">
               {education.map((item, index) => (
@@ -143,7 +137,7 @@ export const AboutUs = () => {
             </ol>
             <h2 className="flex items-center mt-4 mb-4 text-xl font-semibold gap-x-3 text-black/80 dark:text-white">
               <IconCertificate width={30} height={30} stroke={1.6} />
-              Certificados
+              {t('about.certificado')}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -176,18 +170,18 @@ export const AboutUs = () => {
         return (
           <div className="hiddenObs2">
             <p className="dark:text-white/80 text-gray-600/80 px-8 py-4 text-2xl">
-              ¿Tienes un Proyecto en mente? <span className="text-3xl font-bold dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent">¡Contáctame!</span>
+            {t('about.projectContact')} <span className="text-3xl font-bold dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent">{t('about.projectContact2')}</span>
             </p>
 
             <ContactForm />
 
             <p className="dark:text-white/80 text-gray-600/80 px-8 py-4 text-lg">
-              ¿Dónde encontrarme?
+            {t('about.findMe')}
             </p>
 
             <div className="px-8 py-2">
 
-              <a href='https://maps.app.goo.gl/8MkrSJa1cbGVXHxJ9' target='__blank' title='Ubicación' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+              <a href='https://maps.app.goo.gl/8MkrSJa1cbGVXHxJ9' target='__blank' title={t('about.location')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                 <IconMapPin stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -200,7 +194,7 @@ export const AboutUs = () => {
 
             <div className="px-8 py-2">
 
-              <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title='Contáctame' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+              <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title={t('about.titleContact')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                 <IconMailForward stroke={2} width={20} height={20} className="inline-block align-middle" />

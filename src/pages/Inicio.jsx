@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserScan } from '@tabler/icons-react';
@@ -11,10 +11,17 @@ import { Footer } from '../components/Footer';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { Navbar } from '../components/Navbar';
 import { Toaster } from 'sonner'
+import { useTranslation } from 'react-i18next';
 
 
 
 export const Inicio = () => {
+  const { t, i18n } = useTranslation();
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [i18n.language]);
 
   return (
     <>
@@ -27,9 +34,10 @@ export const Inicio = () => {
           <div className="text-center lg:text-left max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
             <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4]'>
               <Typewriter
+                key={key}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('Hey, soy <span class="dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent"> Luis Velasquez</span>')
+                    .typeString(`${t('home.greeting')} <span class="dark:bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#b5e8ff_0.89%,#83dbff_17.23%,#48c5ff_42.04%,#1ea5ff_55.12%,#0686ff_71.54%,#0686ff_100%)] bg-[radial-gradient(64.18%_64.18%_at_71.16%_35.69%,#48e2ff_0.89%,#1ec8ff_17.23%,#1ec8ff_42.04%,#06adff_55.12%,#009aff_71.54%,#0875c5_100%)] bg-clip-text text-transparent"> ${t('home.name')}</span>`)
                     .pauseFor(1000000)
                     .start();
                 }}
@@ -41,30 +49,30 @@ export const Inicio = () => {
             </h1>
 
             <p className='text-base md:text-xl mt-4 md:mt-6 px-2 md:px-0 text-pretty hiddenObs2 text-[#515151] dark:text-[#f4f4f4]'>
-              <span className='dark:text-[#009aff] text-[#0875c5] '>Desarrollador Web</span> con más de 3 años de experiencia <span className='dark:text-[#d0efff] text-[#1ec8ff]'> en el diseño y desarrollo de sitios y aplicaciones web,</span>
-              &nbsp;enfocado en rendimiento, accesibilidad y experiencia de usuario.
+              <span className='dark:text-[#009aff] text-[#0875c5] '>{t('home.job_title')}</span> {t('home.experience')} <span className='dark:text-[#d0efff] text-[#1ec8ff]'> {t('home.experience2')}</span>
+              &nbsp;{t('home.experience3')}
             </p>
 
             <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs2">
               <div className='flex flex-row gap-3'>
-                <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title='Descargar CV' className='
+                <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title={t('home.download_cv')} className='
               flex text-base flex-row gap-2 
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                   <IconDownload stroke={2} width={20} height={20} />
-                  Descargar CV
+                  {t('home.download_cv')}
                 </a>
 
-                <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title='Contáctame' className='
+                <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title={t('home.contact_me')} className='
               flex text-base flex-row gap-2 
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
                   <IconMailForward stroke={2} width={20} height={20} />
-                  Contáctame
+                  {t('home.contact_me')}
                 </a>
               </div>
 
@@ -120,7 +128,7 @@ export const Inicio = () => {
       <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserScan width={30} height={30} stroke={2} />
-          Sobre mí
+          {t('home.about_me')}
         </h2>
 
         <AboutUs />

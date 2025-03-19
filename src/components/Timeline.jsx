@@ -1,39 +1,36 @@
 import { IconBriefcase2 } from '@tabler/icons-react';
-import React from 'react'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export const Timeline = () => {
+      const { t } = useTranslation();
+    
     const info = [
         {
-            puesto: 'Analista de Inteligencia de Negocios',
+            puesto: t('experience.puestoCC'),
             empresa: 'Cable Color',
-            tiempo: 'Febrero 2022 - Actualidad',
-            descripcion: `Desarrollo, diseño y mantenimiento de sitios web oficiales a nivel regional. Involucrado en la creación e implementación
-                            de multiples soluciones tecnológicas. Desarrollo y mantenimiento de documentación técnica para los sistemas desarrollados.
-                            Extracción y manipulación de bases de datos, implementando rutinas automatizadas para la actualización diaria de reportes.
-                            Automatización de procesos para mejorar la eficiencia y el rendimiento de los sistemas.`
+            tiempo: t('experience.tiempoCC'),
+            descripcion: t('experience.descripcionCC')
         },
         {
-            puesto: 'Freelancer',
+            puesto: t('experience.puestoFree'),
             empresa: '',
-            tiempo: 'Actualidad',
-            descripcion: `Como desarrollador freelance, he trabajado en la creación y optimización de sitios web para diversas industrias, 
-                        asegurando interfaces intuitivas, alto rendimiento y experiencias de usuario eficientes. 
-                        Mi enfoque se basa en el uso de tecnologías como React, JavaScript, Tailwind CSS, APIs REST y optimización SEO, adaptando cada solución a las necesidades específicas del cliente.`
+            tiempo: t('experience.tiempoFree'),
+            descripcion: t('experience.descripcionFree')
         },
         {
-            puesto: 'Auxiliar de Soporte IT (Pasante)',
+            puesto: t('experience.puestoD'),
             empresa: 'DIUNSA',
-            tiempo: 'Agosto 2016 - Noviembre 2016',
-            descripcion: `Responsable de dar mantenimiento a equipos de computo, realizar formateos e instalación de sistemas operativos.
-                            Hacer un puente de red para área de bodega. Configuración de impresoras para la conexión mediante IP y lograr la ejecución de impresión desde diferentes áreas
-                            mejorando la productividad en los requerimientos de la empresa.`
+            tiempo: t('experience.tiempoD'),
+            descripcion: t('experience.descripcionD')
         },
     ]
     return (
         <section id="experiencia" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
             <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
                 <IconBriefcase2 width={30} height={30} stroke={2} />
-                Experiencia
+                {t('navbar.experiencia')}
             </h2>
             <ol className="relative mt-16">
                 {info.map((item, index) => (

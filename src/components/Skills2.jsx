@@ -3,6 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import IconsText from "./IconTextSkill";
 import { Modal } from "./Modal";
 import { IconExternalLink, IconUserCode } from "@tabler/icons-react";
+import { useTranslation } from 'react-i18next';
+
 
 const Slider = ({ images, width, height, quantity, reverse }) => (
   <div
@@ -33,6 +35,7 @@ const Slider = ({ images, width, height, quantity, reverse }) => (
 );
 
 export const Skills2 = () => {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -77,13 +80,13 @@ export const Skills2 = () => {
       <section id="skills" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserCode width={30} height={30} stroke={2} />
-          Habilidades
+          {t('navbar.skills')}
           <IconExternalLink
             className="cursor-pointer"
             width={30}
             height={30}
             stroke={2}
-            title="Ver todas las skills"
+            title={t('skills.titleToltip')}
             onClick={() => setIsModalOpen(true)}
           />
         </h2>
@@ -91,7 +94,7 @@ export const Skills2 = () => {
           <Slider key={index} images={data.images} width={120} height={isMobile ? 80 : 90} quantity={data.quantity} reverse={data.reverse} />
         ))}
       </section>
-      <Modal modalTitle="Habilidades" data={skillsImages} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Modal modalTitle={t('navbar.skills')} data={skillsImages} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 };

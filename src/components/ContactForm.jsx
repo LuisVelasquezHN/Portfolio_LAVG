@@ -3,15 +3,18 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import emailjs from "emailjs-com";
-import { toast } from 'sonner'
-
-const schema = yup.object().shape({
-  fullName: yup.string().required("Nombre es requerido."),
-  email: yup.string().email("Correo Inválido").required("Correo Electrónico es requerido."),
-  message: yup.string().required("El mensaje no puede estar vacío."),
-});
+import { toast } from 'sonner';
+import { useTranslation } from 'react-i18next';
 
 export const ContactForm = () => {
+  const { t } = useTranslation();
+
+  const schema = yup.object().shape({
+    fullName: yup.string().required(t('about.formErrorName')),
+    email: yup.string().email(t('about.formErrorEmail')).required(t('about.formErrorEmail2')),
+    message: yup.string().required(t('about.formErrorMessage')),
+  });
+  
   const {
     register,
     handleSubmit,
@@ -50,7 +53,7 @@ export const ContactForm = () => {
             <input
               {...register("fullName")}
               type="text"
-              placeholder="Nombre Completo"
+              placeholder={t('about.formName')}
               className="w-full px-4 py-2 dark:bg-[#1010106c] bg-[#f5f7f783] border border-[#f4f4f40e] dark:text-white/80 text-[#515151] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
             />
             <p className="text-[#ff8b8b] pl-2 text-sm">{errors.fullName?.message}</p>
@@ -59,7 +62,7 @@ export const ContactForm = () => {
             <input
               {...register("email")}
               type="email"
-              placeholder="Correo Electrónico"
+              placeholder={t('about.formEmail')}
               className="w-full px-4 py-2 dark:bg-[#1010106c] bg-[#f5f7f783] border border-[#f4f4f40e] dark:text-white/80 text-[#515151] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
             />
             <p className="text-[#ff8b8b] pl-2 text-sm">{errors.email?.message}</p>
@@ -69,7 +72,7 @@ export const ContactForm = () => {
         <div>
           <textarea
             {...register("message")}
-            placeholder="Mensaje"
+            placeholder={t('about.formMessage')}
             rows="4"
             className="w-full px-4 py-2 dark:bg-[#1010106c] bg-[#f5f7f783] border border-[#f4f4f40e] dark:text-white/80 text-[#515151] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
           />
@@ -85,7 +88,7 @@ export const ContactForm = () => {
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
                "
         >
-          {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+          {isSubmitting ? t('about.buttonSend') : t('about.buttonSend2')}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

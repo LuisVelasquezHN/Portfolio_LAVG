@@ -1,9 +1,11 @@
-import { IconBrandLinkedin, IconCaretRight, IconCode, IconLink } from "@tabler/icons-react";
+import { IconCaretRightFilled, IconCode, IconExternalLink } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export const Proyectos = () => {
+  const { t } = useTranslation();
   const cardsRef = useRef([]);
   const stackAreaRef = useRef(null);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -11,13 +13,34 @@ export const Proyectos = () => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
 
   const cardsData = [
-    { title: "Platinum Rent a Car HN", type: 'same', url: 'https://platinumrentacarhn.com/', content: "Plataforma web para una rentadora de vehículos en Honduras. Catálogo de autos disponibles con contacto directo a WhatsApp. Desarrollado desde cero con React y Sass.", color: "text-white", src: '/projects/platinum4.png' },
-    { title: "ISG Communications", type: 'same', url: 'https://www.isghn.net/', content: "Plataforma web para una empresa de telecomunicaciones, donde los clientes pueden explorar planes residenciales, conocer servicios y ubicar agencias de contacto. Desarrollado con React, SASS y WebServices con Node.js", color: "text-[#5b5a5a]", src: '/projects/isg2.png' },
-    { title: "Cable Color", type: 'same', url: 'https://cablecolor.hn/', content: "Plataforma web multisitio para una empresa de telecomunicaciones, con dos líneas diferenciadas: residencial y corporativo. Los usuarios pueden explorar planes, servicios, pagos en línea y ubicar agencias de contacto según su segmento. Desarrollado con React, SASS, backend en Node.js y php.", color: "text-[#5b5a5a]", src: '/projects/corpo3.png' },
     {
-      title: "Otros Proyectos",
+      title: "Platinum Rent a Car HN",
+      type: 'same',
+      url: 'https://platinumrentacarhn.com/',
+      content: t('projects.contentPlatinum'),
+      color: "text-white",
+      src: '/projects/platinum4.png'
+    },
+    {
+      title: "ISG Communications",
+      type: 'same',
+      url: 'https://www.isghn.net/',
+      content: t('projects.contentISG'),
+      color: "text-[#5b5a5a]",
+      src: '/projects/isg2.png'
+    },
+    {
+      title: "Cable Color",
+      type: 'same',
+      url: 'https://cablecolor.hn/',
+      content: t('projects.contentCC'),
+      color: "text-[#5b5a5a]",
+      src: '/projects/corpo3.png'
+    },
+    {
+      title: t('projects.titleOtherProject'),
       url: "/projects",
-      content: "Explora otros proyectos en los que he trabajado, plataformas empresariales y aplicaciones interactivas. Desarrollo soluciones a medida utilizando tecnologías modernas como React, Angular, Node.js y más.",
+      content: t('projects.contentProjects'),
       color: "text-[#5b5a5a]",
       src: "/projects/proyectos.png",
       type: 'dif'
@@ -75,7 +98,7 @@ export const Proyectos = () => {
             <div className="h-screen flex-1 sticky top-0 flex flex-col justify-center">
               <h1 className="flex items-center mb-6 text-4xl font-semibold gap-x-3 text-black/80 dark:text-white hiddenObs">
                 <IconCode width={30} height={30} stroke={2} />
-                Proyectos
+                {t('navbar.projects')}
               </h1>
               <p className="w-[420px] text-2xl font-semibold mt-6 dark:text-[#4484bf] text-[#0686ff]">
                 {cardsData[activeCardIndex]?.title}
@@ -132,22 +155,22 @@ export const Proyectos = () => {
               </p>
 
               {cardsData[activeCardIndex]?.type == 'same' && (
-                <a href={cardsData[activeCardIndex]?.url} target='__blank' title='Ver sitio' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center 
+                <a href={cardsData[activeCardIndex]?.url} target='__blank' title={t('projects.buttonPreview')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center 
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]'>
-                  <IconLink stroke={2} width={20} height={20} />
-                  Preview
+                  <IconExternalLink stroke={2} width={20} height={20} />
+                  {t('projects.buttonPreview')}
                 </a>
               )}
 
               {cardsData[activeCardIndex]?.type == 'dif' && (
-                <Link to={cardsData[activeCardIndex]?.url} target='__blank' title='Ver más' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center
+                <Link to={cardsData[activeCardIndex]?.url} target='__blank' title={t('projects.buttonOthers')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]'>
-                  Ver más
-                  <IconCaretRight stroke={2} width={20} height={20} />
+                  {t('projects.buttonOthers')}
+                  <IconCaretRightFilled stroke={2} width={20} height={20} />
                 </Link>
               )}
 
@@ -164,13 +187,7 @@ export const Proyectos = () => {
              `}
                   style={{ backgroundImage: `url(${card.src})` }}
                 >
-                  {/* <img src={card.src} alt="" className="w-full h-full" /> */}
-                  {/* {card.type == 'same' && (
-                    <div className={`text-xl font-bold ${card.color}`}>{card.title}</div>
-                  )} */}
-                  {/* <div className="text-4xl font-bold leading-[54px]">
-              {card.content}
-            </div> */}
+
                 </div>
               ))}
             </div>
@@ -183,7 +200,7 @@ export const Proyectos = () => {
         <div id="projects" className="w-full flex flex-col p-6 md:p-10">
           <h1 className="flex items-center mb-6 text-3xl md:text-4xl font-semibold gap-x-3 text-black/80 dark:text-white">
             <IconCode width={25} height={25} stroke={2} />
-            Proyectos
+            {t('navbar.projects')}
           </h1>
           {cardsData.map((card, index) => (
             <div key={index} className="flex flex-col justify-center pb-6">
@@ -243,44 +260,25 @@ export const Proyectos = () => {
               </p>
 
               {card?.type == 'same' && (
-                <a href={card?.url} target='__blank' title='LinkedIn' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center
+                <a href={card?.url} target='__blank' title={t('projects.buttonPreview')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]'>
-                  <IconLink stroke={2} width={20} height={20} />
-                  Preview
+                  <IconExternalLink stroke={2} width={20} height={20} />
+                  {t('projects.buttonPreview')}
                 </a>
               )}
 
               {card?.type == 'dif' && (
-                <Link to={card?.url} target='__blank' title='LinkedIn' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center
+                <Link to={card?.url} target='__blank' title={t('projects.buttonOthers')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]'>
-                  Ver más
-                  <IconCaretRight stroke={2} width={20} height={20} />
+                  {t('projects.buttonOthers')}
+                  <IconCaretRightFilled stroke={2} width={20} height={20} />
                 </Link>
               )}
 
-              {/* {card?.type == 'dif' && (
-                <Link to={card?.url} target='__blank' title='LinkedIn' className='flex text-sm max-w-[130px] gap-1 flex-row justify-center text-[#232323] dark:text-[#f4f4f4]
-              bg-gradient-to-br from-[#eeeeee] via-[#eeeeee] to-blue-400 dark:bg-gradient-to-br dark:from-[#313131] dark:via-[#020202] dark:to-[#181818]
-               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#505050] border-[#c6c6c6]
-               hover:from-[#313131] hover:via-[#020202] hover:to-[#181818] hover:text-[#f4f4f4] 
-               dark:hover:font-semibold dark:hover:from-[#eeeeee] dark:hover:via-[#eaeaea] dark:hover:to-blue-400 dark:hover:text-[#181818]'>
-                  Ver más
-                  <IconCaretRight stroke={2} width={20} height={20} />
-                </Link>
-              )} */}
-              {/* <a
-                href={card?.url}
-                target="__blank"
-                title="Preview"
-                className="flex items-center justify-center text-sm max-w-[130px] gap-1 bg-gradient-to-br from-[#313131] via-[#020202] to-[#181818] rounded-3xl py-2 px-3 mt-3 cursor-pointer border border-[#505050] hover:from-[#c6c6c6] hover:via-[#c0c0c0] hover:to-blue-400 hover:text-[#181818] hover:font-semibold"
-              >
-                <IconLink stroke={2} width={18} height={18} />
-                Preview
-              </a> */}
 
               <div className="w-full flex justify-center mt-4 hiddenObs">
                 <div
