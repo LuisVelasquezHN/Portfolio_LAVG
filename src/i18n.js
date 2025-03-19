@@ -103,6 +103,22 @@ i18n
             formErrorEmail: "Correo Inválido",
             formErrorEmail2: "Correo Electrónico es requerido.",
             formErrorMessage: "El mensaje no puede estar vacío."
+          },
+          otherProjects: {
+            namePortal: "Portal de Empleados",
+            descripcionPortal: "El Portal de Empleados es una plataforma interna diseñada para optimizar el acceso a información y recursos clave dentro de la empresa Cable Color. Permite a los colaboradores explorar enlaces directos a distintos sistemas empresariales, acceder al directorio de empleados para encontrar información de contacto, visualizar fotografías de eventos corporativos, enviar sugerencias a la empresa y generar firmas de correo electrónico de manera automatizada. Desarrollado con PHP y servicios API en Oracle APEX, este portal mejora la comunicación y eficiencia dentro de la organización.",
+            nameGestor: "Gestor Web",
+            descripcionGestor: "El Gestor Web es una herramienta de administración de contenido que permite gestionar dinámicamente diversas secciones de sitios web a nivel regional, incluyendo el Portal de Colaboradores. A través de esta plataforma, es posible modificar imágenes, textos, íconos, títulos y secciones de servicios, tanto residenciales como corporativos, además de gestionar información de agencias. Desarrollado íntegramente en Oracle APEX, este sistema ofrece una solución eficiente y centralizada para la gestión web empresarial.",
+            nameDMS: "DMS (Sistema de Gestión Documental)",
+            descripcionDMS: "El Sistema de Gestión Documental (DMS) es una plataforma diseñada para el manejo de documentos confidenciales dentro del área de Procesos. Facilita la administración de políticas empresariales, la aprobación de documentos mediante un sistema de tickets y la comunicación entre áreas clave, como gerencia y jefaturas. Mi aporte en este proyecto incluyó el desarrollo de un tablero Kanban interactivo para gestionar solicitudes, facilitando la trazabilidad de documentos y la colaboración en tiempo real. Además, implementé la funcionalidad de mantenimiento y aprobación de documentos, automatizando la generación de versiones. Proyecto desarrollado con Angular y Node.js.",
+            nameTH: "Sistema Talento Humano",
+            descripcionTH: "El Sistema de Talento Humano es una plataforma integral para la gestión de vacantes, tanto nuevas como de reemplazo. Conectado con sitios web externos y el Portal de Empleados, permite la publicación de ofertas laborales y la referencia de candidatos. Implementé un tablero Kanban que facilita la colaboración entre los jefes que solicitan personal y los especialistas encargados del proceso de selección. También desarrollé un módulo de documentación para candidatos, que permite la carga de documentos a través de un enlace público. Proyecto desarrollado con React y Node.js para el área de Recursos Humanos.",
+            nameDispatch: "Sistema Dispatch",
+            descripcionDispatch: "El Sistema Dispatch permite la organización eficiente de grupos y técnicos encargados de instalaciones en diferentes ubicaciones del país. Facilita la gestión y asignación de órdenes generadas en el sistema, optimizando el trabajo de los gestores y técnicos de campo. Mi aporte incluyó el desarrollo de una sección para la extracción y generación de órdenes de trabajo, asegurando una asignación eficiente de recursos. Proyecto desarrollado con React y Node.js para el área de Dispatch.",
+            title: "Proyectos y Colaboraciones.",
+            button: "Más Información",
+            tecnologias: "Tecnologías",
+            descripcion: "Descripción"
           }
         },
       },
@@ -201,6 +217,22 @@ i18n
             formErrorEmail: "Invalid email",
             formErrorEmail2: "Email is required.",
             formErrorMessage: "The message cannot be empty."
+          },
+          otherProjects: {
+            namePortal: "Employee Portal",
+            descripcionPortal: "The Employee Portal is an internal platform designed to optimize access to key company information and resources at Cable Color. It allows employees to explore direct links to various business systems, access the employee directory to find contact information, view corporate event photos, submit suggestions to the company, and generate email signatures automatically. Developed with PHP and API services in Oracle APEX, this portal enhances communication and efficiency within the organization.",
+            nameGestor: "Web Manager",
+            descripcionGestor: "The Web Manager is a content management tool that allows dynamic management of various website sections at a regional level, including the Employee Portal. Through this platform, users can modify images, text, icons, titles, and service sections for both residential and corporate clients, as well as manage agency information. Fully developed in Oracle APEX, this system offers an efficient and centralized solution for business web management.",
+            nameDMS: "DMS (Document Management System)",
+            descripcionDMS: "The Document Management System (DMS) is a platform designed for handling confidential documents within the Process department. It facilitates the management of company policies, document approval via a ticketing system, and communication between key areas such as management and leadership. My contribution to this project included the development of an interactive Kanban board for request management, improving document traceability and real-time collaboration. Additionally, I implemented maintenance and document approval functionalities, automating version generation. This project was developed using Angular and Node.js.",
+            nameTH: "Human Talent System",
+            descripcionTH: "The Human Talent System is a comprehensive platform for managing job vacancies, both new and replacement positions. Connected with external websites and the Employee Portal, it enables job posting and candidate referrals. I implemented a Kanban board that facilitates collaboration between hiring managers and specialists overseeing the selection process. I also developed a document module for candidates, allowing document uploads via a public link. This project was developed with React and Node.js for the Human Resources department.",
+            nameDispatch: "Dispatch System",
+            descripcionDispatch: "The Dispatch System efficiently organizes teams and technicians responsible for installations across different locations in the country. It streamlines the management and assignment of work orders generated within the system, optimizing the workflow for dispatch managers and field technicians. My contribution included developing a section for extracting and generating work orders, ensuring efficient resource allocation. This project was developed with React and Node.js for the Dispatch department.",
+            title: "Projects and Collaborations.",
+            button: "More Information",
+            tecnologias: "Technologies",
+            descripcion: "Description"
           }
         },
       },
