@@ -17,6 +17,12 @@ i18n
             about: "Sobre mí",
           },
           button: "Cambiar idioma",
+          portada: {
+            greeting: "Hey, ",
+            name: "soy Luis Velasquez",
+            welcome: "Bienvenido a mi Portfolio.",
+            explorar: "Explorar"
+          },
           home: {
             greeting: "Hey, soy",
             name: "Luis Velasquez",
@@ -110,6 +116,12 @@ i18n
             about: "About Me",
           },
           button: "Change Language",
+          portada: {
+            greeting: "Hey, ",
+            name: "I'm Luis Velasquez",
+            welcome: "Welcome to my Portfolio.",
+            explorar: "Explore"
+          },
           home: {
             greeting: "Hey, I'm",
             name: "Luis Velasquez",

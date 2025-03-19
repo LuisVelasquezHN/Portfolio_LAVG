@@ -1,6 +1,10 @@
 import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export const BotonIngresar = memo(({ onClick }) => {
+    const { t } = useTranslation();
+
     return (
         <div className="flex items-center justify-center pt-6">
             <div className="relative group">
@@ -16,7 +20,7 @@ export const BotonIngresar = memo(({ onClick }) => {
                     <span className="relative z-10 block px-6 py-3 rounded-2xl bg-[#fff] dark:bg-neutral-950">
                         <div className="relative z-10 flex items-center space-x-3">
                             <span className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-cyan-500">
-                                Explorar
+                            {t('portada.explorar')}
                             </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,10 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/home";
@@ -30,25 +33,25 @@ export const Footer = () => {
             onClick={() => handleNavigation("#experiencia")}
             className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8] cursor-pointer"
           >
-            Experiencia
+            {t('navbar.experiencia')}
           </button>
           <button
             onClick={() => handleNavigation("#projects")}
             className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8] cursor-pointer"
           >
-            Proyectos
+            {t('navbar.projects')}
           </button>
           <button
             onClick={() => handleNavigation("#skills")}
             className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8] cursor-pointer"
           >
-            Habilidades
+            {t('navbar.skills')}
           </button>
           <button
             onClick={() => handleNavigation("#about")}
             className="dark:hover:text-gray-300 hover:text-[#969696] text-[#515151] dark:text-[#b9b8b8] cursor-pointer"
           >
-            Sobre mí
+            {t('navbar.about')}
           </button>
         </div>
       </div>

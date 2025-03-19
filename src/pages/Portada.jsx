@@ -1,10 +1,18 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { BotonIngresar } from '../components/BotonIngresar';
 import Typewriter from 'typewriter-effect';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Portada = () => {
+    const { t, i18n } = useTranslation();
+    const [key, setKey] = useState(0);
+
+    useEffect(() => {
+        setKey((prevKey) => prevKey + 1);
+    }, [i18n.language]);
+
     const [exitAnimation, setExitAnimation] = useState(false);
     const [showParagraph, setShowParagraph] = useState(false);
     const navigate = useNavigate();
@@ -33,9 +41,10 @@ export const Portada = () => {
                         <div className="text-center md:text-left">
                             <h1 className='text-3xl text-center md:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4]'>
                                 <Typewriter
+                                    key={key}
                                     onInit={(typewriter) => {
                                         typewriter
-                                            .typeString('<span class="text-[#0072ff]">Hey,</span> soy Luis Velasquez')
+                                            .typeString(`<span class="text-[#0072ff]">${t('portada.greeting')}</span> ${t('portada.name')}`)
                                             .callFunction(() => {
                                                 if (!showParagraph) setShowParagraph(true);
                                             })
@@ -57,7 +66,7 @@ export const Portada = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                                     >
-                                        <span className='dark:text-[#009aff] text-[#0875c5]'>Desarrollador Web</span> con más de 3 años de experiencia.
+                                        <span className='dark:text-[#009aff] text-[#0875c5]'>{t('home.job_title')}</span> {t('home.experience')}.
                                     </motion.p>
                                     <motion.p
                                         className='text-lg md:text-2xl text-center mt-2 md:p-0 text-[#1ec8ff]'
@@ -65,7 +74,7 @@ export const Portada = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                                     >
-                                        Bienvenido a mi Portfolio.
+                                        {t('portada.welcome')}
                                     </motion.p>
                                 </>
                             )}
