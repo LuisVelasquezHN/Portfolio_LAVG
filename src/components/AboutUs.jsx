@@ -273,7 +273,7 @@ export const AboutUs = () => {
           <div
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`cursor-pointer h-[60px] sm:h-[70px] flex items-center px-5 py-2 dark:text-[#f4f4f4] text-[#515151] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${activeTab === tab.id
+            className={`cursor-pointer h-[60px] sm:h-[70px] w-full flex items-center px-3 md:px-5 py-2 dark:text-[#f4f4f4] text-[#515151] rounded-2xl border border-[#f4f4f40e] transition-all duration-300 ${activeTab === tab.id
               ? "bg-[#0073ff18] border-l-2 border-l-[#0073ff] shadow-md"
               : "hover:bg-[#0073ff18] hover:border-l-[#0073ff]"
               }`}

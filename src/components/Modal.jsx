@@ -15,7 +15,9 @@ export const Modal = ({ isOpen, onClose, modalTitle, data }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50"
+        onClick={onClose}
+        >
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -23,6 +25,7 @@ export const Modal = ({ isOpen, onClose, modalTitle, data }) => {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="dark:bg-[#1010106c] bg-[#f6f5f783] border border-[#f4f4f40e] 
                 rounded-lg shadow-xl w-[90%] sm:w-[500px] max-h-[90vh] overflow-y-auto p-6 relative"
+                onClick={(e) => e.stopPropagation()}
             >
                 <button
                     onClick={onClose}

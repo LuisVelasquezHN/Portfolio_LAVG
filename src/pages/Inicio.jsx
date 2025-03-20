@@ -12,6 +12,7 @@ import { ScrollToTop } from '../components/ScrollToTop';
 import { Navbar } from '../components/Navbar';
 import { Toaster } from 'sonner'
 import { useTranslation } from 'react-i18next';
+import LastVisit from '../components/LastVisit';
 
 
 
@@ -56,7 +57,7 @@ export const Inicio = () => {
             <div className="flex flex-col md:flex-row items-center gap-3 hiddenObs2">
               <div className='flex flex-row gap-3'>
                 <a href="CV_LuisVelasquez.pdf" download="CV_LuisVelasquez.pdf" title={t('home.download_cv')} className='
-              flex text-base flex-row gap-2 
+              flex text-[14px] md:text-base flex-row items-center gap-1 md:gap-2 
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
@@ -66,7 +67,7 @@ export const Inicio = () => {
                 </a>
 
                 <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title={t('home.contact_me')} className='
-              flex text-base flex-row gap-2 
+              flex text-[14px] md:text-base flex-row items-center gap-1 md:gap-2   
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
@@ -117,6 +118,7 @@ export const Inicio = () => {
 
         </section>
         <ScrollDownIndicator />
+        <LastVisit />
       </div>
 
 
