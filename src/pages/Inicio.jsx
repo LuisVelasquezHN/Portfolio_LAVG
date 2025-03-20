@@ -62,7 +62,7 @@ export const Inicio = () => {
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
-                  <IconDownload stroke={2} width={20} height={20} />
+                  <IconDownload stroke={2} width={20} height={20} className='hidden md:block'/>
                   {t('home.download_cv')}
                 </a>
 
@@ -72,7 +72,7 @@ export const Inicio = () => {
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]
               '>
-                  <IconMailForward stroke={2} width={20} height={20} />
+                  <IconMailForward stroke={2} width={20} height={20} className='hidden md:block' />
                   {t('home.contact_me')}
                 </a>
               </div>
