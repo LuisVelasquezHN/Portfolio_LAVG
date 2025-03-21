@@ -2,7 +2,7 @@ import React from 'react'
 
 export const SVGangular = () => {
     return (
-        <span className="flex flex-row gap-1 items-center justify-center text-[11px] dark:bg-[#4a2928] bg-[#f1c4c2] text-[#515151] dark:text-[#f4f4f4] p-1 rounded-2xl w-[70px] text-center">
+        <span className="flex flex-row gap-1 items-center justify-center text-[11px] dark:bg-[#4a2928] bg-[#f1c4c2] text-[#2b2b2b] dark:text-[#f4f4f4] p-1 rounded-2xl w-[70px] text-center">
             <svg viewBox="0 0 128 128" width="16" height="16">
                 <g id="surface1">
                     <path

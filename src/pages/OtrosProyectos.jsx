@@ -33,37 +33,53 @@ export const OtrosProyectos = () => {
             name: t('otherProjects.namePortal'),
             portada: "projects/otros/portalProject.png",
             descripcion: t('otherProjects.descripcionPortal'),
-            tecnologias: [<SVGphp />, <SVGoracle />]
+            tecnologias: [
+                <SVGphp key="php-1" />,
+                <SVGoracle key="oracle-1" />
+            ]
         },
         {
             id: 2,
             name: t('otherProjects.nameGestor'),
             portada: "projects/otros/gestorProject.png",
             descripcion: t('otherProjects.descripcionGestor'),
-            tecnologias: [<SVGoracle />]
+            tecnologias: [
+                <SVGoracle key="oracle-2" />
+            ]
         },
         {
             id: 3,
             name: t('otherProjects.nameDMS'),
             portada: "projects/otros/dmsProject.png",
             descripcion: t('otherProjects.descripcionDMS'),
-            tecnologias: [<SVGangular />, <SVGNode />]
+            tecnologias: [
+                <SVGangular key="angular-3" />,
+                <SVGNode key="node-3" />
+            ]
         },
         {
             id: 4,
             name: t('otherProjects.nameTH'),
             portada: "projects/otros/thProject.png",
             descripcion: t('otherProjects.descripcionTH'),
-            tecnologias: [<SVGreact />, <SVGNode />]
+            tecnologias: [
+                <SVGreact key="react-4" />,
+                <SVGNode key="node-4" />
+            ]
         },
         {
             id: 5,
             name: t('otherProjects.nameDispatch'),
             portada: "projects/otros/dispatchProject.png",
             descripcion: t('otherProjects.descripcionDispatch'),
-            tecnologias: [<SVGreact />, <SVGNode />]
+            tecnologias: [
+                <SVGreact key="react-5" />,
+                <SVGNode key="node-5" />
+            ]
         }
     ];
+
+
 
     return (
         <>
@@ -75,7 +91,7 @@ export const OtrosProyectos = () => {
                     ]}
                 />
                 <h1 className='dark:text-white/80 text-gray-600/80 px-4 sm:px-8 py-4 text-2xl md:text-3xl'>
-                {t('otherProjects.title')}
+                    {t('otherProjects.title')}
                 </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
                     {projects.map((project) => (
@@ -83,11 +99,12 @@ export const OtrosProyectos = () => {
                             key={project.id}
                             className="relative rounded-2xl overflow-hidden shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] min-h-56 md:h-64 flex items-end cursor-pointer opacity-90 group"
                             style={{ backgroundImage: `url(${project.portada})`, backgroundSize: "cover", backgroundPosition: "center" }}
+                            onClick={() => openModal(project)}
                         >
-                            <div className="absolute inset-0 bg-[#2182c7] dark:bg-[#031d2f] opacity-50 h-18 md:h-18 mt-auto group-hover:opacity-70 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 md:from-black/60 dark:from-black/80 to-transparent h-full md:h-full mt-auto group-hover:opacity-70 transition-opacity duration-300"></div>
 
                             <div className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/20 dark:bg-black/40 text-white text-lg font-semibold rounded-lg md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-                                <a
+                                {/* <a
 
                                     className=" text-base flex-row text-[#0d639b] dark:text-[#009aff] dark:md:bg-black/80 dark:bg-black/60 bg-white/80
                                                 rounded-3xl py-3 px-5 mt-2 cursor-pointer shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border dark:border-[#f4f4f40e] border-[#f4f4f4d0]
@@ -99,16 +116,24 @@ export const OtrosProyectos = () => {
                                     {t('otherProjects.button')}
                                     <IconExternalLink stroke={2}
                                         className="w-6 h-6 text-current inline-block align-middle ml-1" />
-                                </a>
+                                </a> */}
                             </div>
 
                             <div className="relative p-4 text-white w-full">
-                                <h3 className="text-lg font-semibold">{project.name}</h3>
+                                <h3 className="text-lg font-semibold inline-block text-balance">{project.name}
+                          
+                                    <IconExternalLink stroke={2}
+                                        className="w-5 h-5 text-current inline-block align-middle ml-1" />
+                                </h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 flex gap-2 pt-1">
+                                    {project.tecnologias}
+                                </p>
                             </div>
                         </div>
                     ))}
                 </div>
             </section>
+
             <ModalProjects
                 isOpen={isModalOpen}
                 onClose={closeModal}

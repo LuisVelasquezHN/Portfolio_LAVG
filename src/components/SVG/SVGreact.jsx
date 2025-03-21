@@ -2,7 +2,7 @@ import React from 'react'
 
 export const SVGreact = () => {
     return (
-        <span className="flex flex-row gap-1 items-center justify-center text-[11px] dark:bg-[#1f2729] bg-[#d2ebf2] text-[#515151] dark:text-[#f4f4f4] p-1 rounded-2xl w-[70px] text-center">
+        <span className="flex flex-row gap-1 items-center justify-center text-[11px] dark:bg-[#1f2729] bg-[#d2ebf2] text-[#2b2b2b] dark:text-[#f4f4f4] p-1 rounded-2xl w-[70px] text-center">
             <svg width="15" height="15" viewBox="0 0 569 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <g fill="none" fillRule="evenodd">
                     <g transform="translate(-227, -256)" fill="#58C4DC" fillRule="nonzero">
