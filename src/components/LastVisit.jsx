@@ -7,6 +7,41 @@ const LastVisit = () => {
   const [fadeOut, setFadeOut] = useState(false);
   const [showLast, setShowLast] = useState(false);
 
+  const getDeviceInfo = () => {
+    const userAgent = navigator.userAgent;
+    const platform = navigator.platform;
+    let browser = "Desconocido";
+
+    if (userAgent.includes("Chrome")) browser = "Google Chrome";
+    else if (userAgent.includes("Firefox")) browser = "Mozilla Firefox";
+    else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) browser = "Apple Safari";
+    else if (userAgent.includes("Edge")) browser = "Microsoft Edge";
+    else if (userAgent.includes("Opera") || userAgent.includes("OPR")) browser = "Opera";
+    else if (userAgent.includes("MSIE") || userAgent.includes("Trident")) browser = "Internet Explorer";
+
+    return { device: platform, browser };
+  };
+
+  const saveVisit = async (location) => {
+    const { device, browser } = getDeviceInfo();
+    const visitData = {
+      location,
+      timestamp: new Date().toISOString(),
+      device,
+      browser
+    };
+
+    try {
+      await fetch("https://sheetdb.io/api/v1/"+import.meta.env.VITE_VISITS_GOOGLE_SHEETS, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify([visitData])
+      });
+    } catch (error) {
+      console.error("Error al guardar en Google Sheets:", error);
+    }
+  };
+
   useEffect(() => {
     const storedVisit = localStorage.getItem("lastVisit");
     const storedLocation = localStorage.getItem("lastLocation");
@@ -28,11 +63,12 @@ const LastVisit = () => {
         localStorage.setItem("lastVisit", new Date().toLocaleString());
         localStorage.setItem("lastLocation", location);
 
-        setTimeout(() => {
-          setFadeOut(true); 
+        await saveVisit(location);
 
+        setTimeout(() => {
+          setFadeOut(true);
           setTimeout(() => {
-            setShowLast(true); 
+            setShowLast(true);
           }, 500);
         }, 1000);
       } catch (error) {
@@ -48,14 +84,10 @@ const LastVisit = () => {
       {!showLast ? (
         <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
           Visita anterior desde <span className="font-semibold">{lastLocation}</span>
-           {/* el{" "}
-          <span className="font-semibold">{prevVisit}</span>. */}
         </p>
       ) : (
         <p className="transition-opacity duration-1000 opacity-100">
           Última visita desde <span className="font-semibold">{lastLocation}</span>
-           {/* el{" "}
-          <span className="font-semibold">{lastVisit}</span>. */}
         </p>
       )}
     </div>
