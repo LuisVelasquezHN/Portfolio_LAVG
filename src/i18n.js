@@ -118,7 +118,13 @@ i18n
             title: "Proyectos y Colaboraciones.",
             button: "Más Información",
             tecnologias: "Tecnologías",
-            descripcion: "Descripción"
+            descripcion: "Descripción",
+            descripcionNoModalPortal: "Plataforma interna diseñada para optimizar el acceso a información y recursos clave dentro de la empresa Cable Color.",
+            descripcionNoModalGestor: "Herramienta de administración de contenido que permite gestionar dinámicamente diversas secciones de sitios web a nivel regional.",
+            descripcionNoModalDMS: "Plataforma diseñada para el manejo de documentos confidenciales dentro del área de Procesos.",
+            descripcionNoModalTH: "Plataforma integral para la gestión de vacantes, tanto nuevas como de reemplazo. Conectado con sitios web externos y Portal de Empleados.",
+            descripcionNoModalDispatch: "Herramienta que permite la organización eficiente de grupos y técnicos encargados de instalaciones en diferentes ubicaciones del país.",
+
           }
         },
       },
@@ -232,7 +238,13 @@ i18n
             title: "Projects and Collaborations.",
             button: "More Information",
             tecnologias: "Technologies",
-            descripcion: "Description"
+            descripcion: "Description",
+            descripcionNoModalPortal: "Internal platform designed to optimize access to key information and resources within the company Cable Color.",
+            descripcionNoModalGestor: "Content management tool that allows for the dynamic management of various sections of websites at the regional level.",
+            descripcionNoModalDMS: "Platform designed for managing confidential documents within the Processes department.",
+            descripcionNoModalTH: "Comprehensive platform for managing job vacancies, both new and replacement. Connected with external websites and the Employee Portal.",
+            descripcionNoModalDispatch: "Tool that enables the efficient organization of groups and technicians responsible for installations in various locations across the country.",
+
           }
         },
       },
