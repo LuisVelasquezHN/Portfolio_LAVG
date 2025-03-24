@@ -81,7 +81,7 @@ export const Bentox2 = () => {
     return (
         <>
 
-            <div className="grid grid-cols-1 gap-4 pt-10 w-full max-w-[1100px] md:grid-cols-6 md:grid-rows-60 p-2 md:p-0 hiddenObs2">
+            <div className="grid grid-cols-1 gap-4 pt-10 w-full max-w-[1100px] md:grid-cols-6 md:grid-rows-60 p-2 md:p-1 hiddenObs2">
                 {projects.map((project) => {
                     if (project.id === 1) {
                         return (
@@ -108,7 +108,7 @@ export const Bentox2 = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/60 to-transparent dark:from-gray-900/90 dark:via-gray-900/60 dark:to-transparent pointer-events-none"></div>
 
                                     <div className="absolute inset-0 overflow-hidden">
-                                        <img src={project.portadaNoModal} alt={project.name} className="w-full md:w-[90%] h-auto absolute bottom-[-70px] right-[-50px] md:bottom-[-250px] md:right-[20px] opacity-60 dark:opacity-40" />
+                                        <img src={project.portadaNoModal} alt={project.name} className="w-full md:w-[90%] h-auto absolute bottom-[-70px] right-[-50px] md:bottom-[-250px] md:right-[40px] opacity-60 dark:opacity-40" />
                                     </div>
                                 </div>
                             </div>
@@ -135,10 +135,10 @@ export const Bentox2 = () => {
                                 <div className="p-4 flex flex-col h-full relative">
                                     <div className="flex flex-row items-center text-balance w-full max-w-[500px]">
                                         <div className="flex flex-col w-full flex-grow basis-0 min-w-0">
-                                            <p className="text-2xl md:text-2xl lg:text-2xl font-semibold px-4 text-[#515151] dark:text-gray-200">
+                                            <p className="text-2xl md:text-2xl lg:text-2xl font-semibold px-3 text-[#515151] dark:text-gray-200">
                                                 {project.name}
                                             </p>
-                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-4 w-full flex-shrink-0 overflow-hidden text-ellipsis">
+                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-3 w-full flex-shrink-0 overflow-hidden text-ellipsis">
                                                 {project.descripcionNoModal}
                                             </p>
                                         </div>
@@ -167,10 +167,10 @@ export const Bentox2 = () => {
                                 <div className="p-4 flex flex-col h-full relative">
                                     <div className="flex flex-row items-center text-balance w-full max-w-[500px]">
                                         <div className="flex flex-col w-full flex-grow basis-0 min-w-0">
-                                            <p className="text-2xl md:text-2xl lg:text-2xl font-semibold px-4 text-[#515151] dark:text-gray-200">
+                                            <p className="text-2xl md:text-2xl lg:text-2xl font-semibold px-3 text-[#515151] dark:text-gray-200">
                                                 {project.name}
                                             </p>
-                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-4 w-full flex-shrink-0 overflow-hidden text-ellipsis">
+                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-3 w-full flex-shrink-0 overflow-hidden text-ellipsis">
                                                 {project.descripcionNoModal}                                </p>
                                         </div>
 
@@ -215,10 +215,10 @@ export const Bentox2 = () => {
                                 <div className="p-4 flex flex-col h-full relative">
                                     <div className="flex flex-row items-center text-balance w-full max-w-[500px]">
                                         <div className="flex flex-col w-full flex-grow basis-0 min-w-0">
-                                            <p className="text-2xl md:text-2xl lg:text-3xl font-semibold px-4 text-[#515151] dark:text-gray-200">
+                                            <p className="text-2xl md:text-2xl lg:text-3xl font-semibold px-3 text-[#515151] dark:text-gray-200">
                                                 {project.name}
                                             </p>
-                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-4 w-full flex-shrink-0 overflow-hidden text-ellipsis">
+                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-3 w-full flex-shrink-0 overflow-hidden text-ellipsis">
                                                 {project.descripcionNoModal}                                </p>
                                         </div>
 
@@ -263,9 +263,9 @@ export const Bentox2 = () => {
                                 <div className="p-4 flex flex-col h-full relative">
                                     <div className="flex flex-row items-center text-balance w-full max-w-[500px]">
                                         <div className="flex flex-col w-full flex-grow basis-0 min-w-0">
-                                            <p className="text-2xl md:text-2xl lg:text-3xl font-semibold px-4 text-[#515151] dark:text-gray-200">
+                                            <p className="text-2xl md:text-2xl lg:text-3xl font-semibold px-3 text-[#515151] dark:text-gray-200">
                                                 {project.name}                                </p>
-                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-4 w-full flex-shrink-0 overflow-hidden text-ellipsis">
+                                            <p className="text-md text-gray-600/80 dark:text-white/80 px-3 w-full flex-shrink-0 overflow-hidden text-ellipsis">
                                                 {project.descripcionNoModal}                                </p>
                                         </div>
 
@@ -303,7 +303,7 @@ export const Bentox2 = () => {
                         )
                     }
 
-                    return null; // Si no coincide con ningún id, no se renderiza nada
+                    return null;
                 })}
             </div>
 
