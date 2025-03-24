@@ -32,7 +32,8 @@ i18n
             experience3: "enfocado en rendimiento, accesibilidad y experiencia de usuario.",
             download_cv: "Descargar CV",
             contact_me: "Contáctame",
-            about_me: "Sobre mí"
+            about_me: "Sobre mí",
+            CV: "CV_LuisVelasquez.pdf"
           },
           projects: {
             contentPlatinum: "Plataforma web para una rentadora de vehículos en Honduras. Catálogo de autos disponibles con contacto directo a WhatsApp. Desarrollado desde cero con React y Sass.",
@@ -153,7 +154,8 @@ i18n
             experience3: "focused on performance, accessibility, and user experience.",
             download_cv: "Download CV",
             contact_me: "Contact Me",
-            about_me: "About Me"
+            about_me: "About Me",
+            CV: "CV_LuisVelasquez_EN.pdf"
           },
           projects: {
             contentPlatinum: "Web platform for a car rental company in Honduras. Catalog of available cars with direct contact to WhatsApp. Developed from scratch with React and Sass.",
