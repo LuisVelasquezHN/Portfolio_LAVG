@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const LastVisit = () => {
   const [lastVisit, setLastVisit] = useState("");
   const [lastLocation, setLastLocation] = useState("");
-  const [prevVisit, setPrevVisit] = useState("");
   const [fadeOut, setFadeOut] = useState(false);
   const [showLast, setShowLast] = useState(false);
 
@@ -28,14 +27,14 @@ const LastVisit = () => {
       location,
       timestamp: new Date().toISOString(),
       device,
-      browser,
+      browser
     };
 
     try {
       await fetch("https://sheetdb.io/api/v1/" + import.meta.env.VITE_VISITS_GOOGLE_SHEETS, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify([visitData]),
+        body: JSON.stringify([visitData])
       });
     } catch (error) {
       console.error("Error al guardar en Google Sheets:", error);
@@ -45,10 +44,8 @@ const LastVisit = () => {
   useEffect(() => {
     const storedVisit = localStorage.getItem("lastVisit");
     const storedLocation = localStorage.getItem("lastLocation");
-    const storedPrevVisit = localStorage.getItem("prevVisit");
 
     if (storedVisit && storedLocation) {
-      setPrevVisit(storedPrevVisit || "Primera visita");
       setLastVisit(storedVisit);
       setLastLocation(storedLocation);
     }
@@ -59,41 +56,37 @@ const LastVisit = () => {
         const data = await response.json();
         const location = `${data.city}, ${data.country_name} ${data.country_code}`;
 
-        localStorage.setItem("prevVisit", storedVisit || "Primera visita");
         localStorage.setItem("lastVisit", new Date().toLocaleString());
         localStorage.setItem("lastLocation", location);
 
-        setPrevVisit(storedVisit || "Primera visita");
-        setLastVisit(new Date().toLocaleString());
         setLastLocation(location);
+        setLastVisit(new Date().toLocaleString());
 
         await saveVisit(location);
 
         setTimeout(() => {
-          setFadeOut(true);
+          setFadeOut(true); 
           setTimeout(() => {
-            setShowLast(true);
+            setShowLast(true); 
           }, 500);
-        }, 1000);
+        }, 1000); 
       } catch (error) {
         console.error("No se pudo obtener la ubicación:", error);
       }
     };
 
-    if (!storedVisit || !storedLocation) {
-      fetchLocation();
-    }
+    fetchLocation();
   }, []);
 
   return (
     <div className="text-[#1010106c] dark:text-[#f5f7f783] text-center py-2 text-sm relative">
       {!showLast ? (
         <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
-          Visita anterior desde <span className="font-semibold">{lastLocation || "Desconocido"}</span>
+          Visita anterior desde <span className="font-semibold">{lastLocation || "Cargando ubicación..."}</span>
         </p>
       ) : (
-        <p className="transition-opacity duration-1000 opacity-100">
-          Última visita desde <span className="font-semibold">{lastLocation || "Desconocido"}</span>
+        <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-100" : "opacity-0"}`}>
+          Última visita desde <span className="font-semibold">{lastLocation}</span>
         </p>
       )}
     </div>

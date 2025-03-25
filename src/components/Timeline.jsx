@@ -27,7 +27,7 @@ export const Timeline = () => {
         },
     ]
     return (
-        <section id="experiencia" className="section p-3 hiddenObs mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+        <section id="experiencia" className="container p-3 hiddenObs mt-[10vh] scroll-m-20 w-full lg:max-w-5xl md:max-w-2xl">
             <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
                 <IconBriefcase2 width={30} height={30} stroke={2} />
                 {t('navbar.experiencia')}
@@ -37,7 +37,7 @@ export const Timeline = () => {
                     <li key={index} className='hiddenObs'>
                         <div className="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 md:grid-cols-5 md:gap-10 md:space-x-4">
                             <div className="relative pb-12 md:col-span-2">
-                                <div className="sticky top-0">
+                                <div className="md:sticky md:top-0">
                                     <span className="text-[#0686ff] -left-[42px] absolute rounded-full text-5xl">•</span>
                                     <h3 className="text-xl font-bold text-[#0686ff]">{item.puesto}</h3>
                                     {item.empresa && (
