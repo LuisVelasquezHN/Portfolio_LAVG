@@ -28,14 +28,14 @@ const LastVisit = () => {
       location,
       timestamp: new Date().toISOString(),
       device,
-      browser
+      browser,
     };
 
     try {
-      await fetch("https://sheetdb.io/api/v1/"+import.meta.env.VITE_VISITS_GOOGLE_SHEETS, {
+      await fetch("https://sheetdb.io/api/v1/" + import.meta.env.VITE_VISITS_GOOGLE_SHEETS, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify([visitData])
+        body: JSON.stringify([visitData]),
       });
     } catch (error) {
       console.error("Error al guardar en Google Sheets:", error);
@@ -63,6 +63,10 @@ const LastVisit = () => {
         localStorage.setItem("lastVisit", new Date().toLocaleString());
         localStorage.setItem("lastLocation", location);
 
+        setPrevVisit(storedVisit || "Primera visita");
+        setLastVisit(new Date().toLocaleString());
+        setLastLocation(location);
+
         await saveVisit(location);
 
         setTimeout(() => {
@@ -76,18 +80,20 @@ const LastVisit = () => {
       }
     };
 
-    fetchLocation();
+    if (!storedVisit || !storedLocation) {
+      fetchLocation();
+    }
   }, []);
 
   return (
     <div className="text-[#1010106c] dark:text-[#f5f7f783] text-center py-2 text-sm relative">
       {!showLast ? (
         <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
-          Visita anterior desde <span className="font-semibold">{lastLocation}</span>
+          Visita anterior desde <span className="font-semibold">{lastLocation || "Desconocido"}</span>
         </p>
       ) : (
         <p className="transition-opacity duration-1000 opacity-100">
-          Última visita desde <span className="font-semibold">{lastLocation}</span>
+          Última visita desde <span className="font-semibold">{lastLocation || "Desconocido"}</span>
         </p>
       )}
     </div>
