@@ -28,8 +28,8 @@ export const Inicio = () => {
     <>
       <Toaster position="bottom-right" expand={false} />
 
-      <div id='inicio' className="relative flex flex-col items-center min-h-screen">
-        <section className="flex flex-col-reverse lg:flex-row justify-center min-h-screen content-center items-center gap-[40px] lg:gap-[80px] w-full max-w-[1100px] px-4 md:px-8 lg:px-0">
+      <div id='inicio' className="relative flex flex-col items-center justify-center min-h-screen">
+        <section className="flex flex-col-reverse lg:flex-row justify-center content-center items-center gap-[40px] lg:gap-[80px] w-full max-w-[1100px] px-4 md:px-8 lg:px-0">
           {/* mt-[15vh] md:mt-[30vh] */}
           <Navbar />
           <div className="text-center lg:text-left max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
@@ -118,8 +118,8 @@ export const Inicio = () => {
 
         </section>
         <ScrollDownIndicator />
-        <LastVisit />
       </div>
+        <LastVisit />
 
 
       <Timeline />
