@@ -25,7 +25,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Onest Variable', sans-serif;
 
   font-synthesis: none;
@@ -40,13 +39,10 @@ body{
   display: flex;
   justify-content: center;
   align-items:center;
-  /* background: #181818; */
-  /* background: -webkit-linear-gradient(90deg, #0a1a33,#00163d);                       
-  background: linear-gradient(90deg, #0a1a33,#00163d);        */
   min-height: 100dvh;
   height: 100%;
-  background-repeat: no-repeat; /* Evita que se repita el fondo */
-  background-size: cover; /* Hace que el gradiente cubra toda la pantalla */
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
