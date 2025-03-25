@@ -22,7 +22,7 @@ export const ScrollDownIndicator = () => {
     
 
     return (
-        <div className={`flex justify-center transition-opacity duration-300 mt-10 md:mt-0 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <div className={`flex justify-center transition-opacity duration-300 mt-10 md:mt-0 ${isVisible ? "opacity-40" : "opacity-0"}`}>
             <a href="#experiencia" className="flex flex-col items-center cursor-pointer">
                 <span className="text-sm text-gray-400">Scroll Down</span>
                 <div className="w-5 h-8 border-2 border-gray-500 rounded-full flex justify-center items-start relative mt-2">
