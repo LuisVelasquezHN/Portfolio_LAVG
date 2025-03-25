@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IconDeviceDesktop, IconMenu4, IconMoonStars, IconSun, IconXboxX } from "@tabler/icons-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -52,7 +53,7 @@ export const Navbar = () => {
         className={`w-full md:max-w-fit mx-auto px-4 flex justify-between items-center md:justify-center h-12 ${scrolling ? "dark:bg-[#171f2fe0] bg-[#f6f5f7e6] bg-opacity-80 shadow-lg md:rounded-full md:border md:border-[#f4f4f40e]" : "bg-transparent"
           }`}
       >
-        <h1 className="md:hidden text-xl font-bold dark:text-white text-[#515151]">LAVG</h1>
+        <a href="#inicio" className="md:hidden text-xl font-bold dark:text-white text-[#515151]">LAVG</a>
 
         <div className="hidden md:flex text-sm space-x-6 dark:text-white text-[#515151]">
           {navLinks.map((link) => (
