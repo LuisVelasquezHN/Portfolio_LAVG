@@ -144,7 +144,7 @@ export const AboutUs = () => {
               {cursos.map((item, index) => (
                 <div
                   key={index}
-                  className="dark:bg-[#1010106c] bg-[#f5f7f783] hiddenObs rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
+                  className="dark:bg-[#1010106c] bg-[#f5f7f783] hiddenObs2 md:hiddenObs rounded-2xl border border-[#f4f4f40e] p-2 min-h-[120px] flex items-center shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)]"
                 >
                   <div className="flex items-start pl-4">
                     <div className="w-12 h-12 md:w-8 md:h-8 flex md:pt-2 items-center">

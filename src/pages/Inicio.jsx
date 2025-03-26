@@ -127,7 +127,7 @@ export const Inicio = () => {
 
       <Skills2 />
 
-      <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl md:max-w-2xl">
+      <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
           <IconUserScan width={30} height={30} stroke={2} />
           {t('home.about_me')}

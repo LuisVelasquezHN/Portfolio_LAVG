@@ -280,7 +280,7 @@ export const Proyectos = () => {
               )}
 
 
-              <div className="w-full flex justify-center mt-4 hiddenObs">
+              <div className="w-full flex justify-center mt-4 hiddenObs2 md:hiddenObs">
                 <div
                   className="w-full max-w-[380px] h-[280px] md:h-[320px] rounded-lg shadow-lg bg-cover bg-center"
                   style={{ backgroundImage: `url(${card.src})` }}
