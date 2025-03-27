@@ -40,7 +40,7 @@ export const Navbar = () => {
   };
 
   const navLinks = [
-    { id: "inicio", label: t("navbar.home")},
+    { id: "inicio", label: t("navbar.home") },
     { id: "experiencia", label: t("navbar.experiencia") },
     { id: "projects", label: t("navbar.projects") },
     { id: "skills", label: t("navbar.skills") },
@@ -84,9 +84,23 @@ export const Navbar = () => {
           </button>
         </div>
 
-        <button className="md:hidden dark:text-[#e2e0e0] text-[#515151]" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <IconXboxX stroke={2} className="w-6 h-6" /> : <IconMenu4 stroke={2} className="w-6 h-6" />}
-        </button>
+        <div className="ms-0 flex flex-row gap-4 justify-center items-center">
+
+          <button onClick={toggleLanguage} className="hover:text-gray-300 text-left md:hidden dark:text-[#e2e0e0] text-[#515151] text-lg">
+            {i18n.language === "es" ? "ES" : "EN"}
+          </button>
+          <button onClick={toggleTheme} className="hover:text-gray-300 md:hidden dark:text-[#e2e0e0] text-[#515151]">
+            {darkMode === "dark" ? <IconMoonStars stroke={2} className="size-5" /> : darkMode === "light" ? <IconSun stroke={2} className="size-5" /> : <IconDeviceDesktop stroke={2} className="size-5" />}
+          </button>
+          <div className="h-5 w-[1px] bg-gray-400 dark:bg-gray-600"></div>
+
+          <button className="md:hidden dark:text-[#e2e0e0] text-[#515151]" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <IconXboxX stroke={2} className="size-6" /> : <IconMenu4 stroke={2} className="size-6" />}
+          </button>
+
+        </div>
+
+
       </div>
 
       <div
@@ -106,13 +120,8 @@ export const Navbar = () => {
             {link.label}
           </motion.a>
         ))}
-        <hr className="w-[65px] bg-gray-400 dark:bg-gray-600"/>
-        <button onClick={toggleLanguage} className="hover:text-gray-300 text-left">
-          {i18n.language === "es" ? "ES" : "EN"}
-        </button>
-        <button onClick={toggleTheme} className="hover:text-gray-300">
-          {darkMode === "dark" ? <IconMoonStars stroke={2} className="w-5 h-5" /> : darkMode === "light" ? <IconSun stroke={2} className="w-5 h-5" /> : <IconDeviceDesktop stroke={2} className="w-5 h-5" />}
-        </button>
+        {/* <hr className="w-[65px] bg-gray-400 dark:bg-gray-600" /> */}
+
       </div>
     </nav>
   );
