@@ -31,46 +31,46 @@ export const AboutUs = () => {
     {
       titulo: 'ReactJS',
       lugar: 'Udemy',
-      icon: <Icons.REACTV2 />
+      icon: () => <Icons.REACTV2 />
     },
     {
       titulo: 'AngularJS',
       lugar: 'Udemy',
-      icon: <Icons.ANGULARV2 />
+      icon: () => <Icons.ANGULARV2 />
     },
     {
       titulo: 'OpenAI',
       lugar: 'Udemy',
-      icon: <Icons.OPENAIV2 />
+      icon: () => <Icons.OPENAIV2 />
     },
   
   
     {
       titulo: 'Photoshop',
       lugar: 'INFOP',
-      icon: <Icons.PHOTOSHOPV2 />
+      icon: () => <Icons.PHOTOSHOPV2 />
     },
   
     {
       titulo: t('about.courseIngles'),
       lugar: 'INFOP',
-      icon: <Icons.INGLES />
+      icon: () => <Icons.INGLES />
     },
   
     {
       titulo: 'Tester',
       lugar: 'Capacitate.org',
-      icon: <Icons.TECNICO />
+      icon: () => <Icons.TECNICO />
     },
     {
       titulo: t('about.courseTecnico'),
       lugar: 'Capacitate.org',
-      icon: <Icons.TECNICO />
+      icon: () => <Icons.TECNICO />
     },
     {
       titulo: 'CCNA 1',
       lugar: 'CISCO',
-      icon: <Icons.CISCO />
+      icon: () => <Icons.CISCO />
     },
   ]
 
@@ -148,7 +148,7 @@ export const AboutUs = () => {
                 >
                   <div className="flex items-start pl-4">
                     <div className="w-12 h-12 md:w-8 md:h-8 flex md:pt-2 items-center">
-                      {item.icon}
+                      {item.icon()}
                     </div>
                     <div className="flex flex-col flex-1 pl-4">
                       <h2 className="dark:text-[#f4f4f4] text-gray-600 text-md font-semibold">
