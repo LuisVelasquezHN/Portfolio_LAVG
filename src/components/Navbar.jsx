@@ -92,7 +92,6 @@ export const Navbar = () => {
           <button onClick={toggleTheme} className="hover:text-gray-300 md:hidden dark:text-[#e2e0e0] text-[#515151]">
             {darkMode === "dark" ? <IconMoonStars stroke={2} className="size-5" /> : darkMode === "light" ? <IconSun stroke={2} className="size-5" /> : <IconDeviceDesktop stroke={2} className="size-5" />}
           </button>
-          <div className="h-5 w-[1px] bg-gray-400 dark:bg-gray-600"></div>
 
           <button className="md:hidden dark:text-[#e2e0e0] text-[#515151]" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <IconXboxX stroke={2} className="size-6" /> : <IconMenu4 stroke={2} className="size-6" />}
