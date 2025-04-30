@@ -29,12 +29,12 @@ export const AboutUs = () => {
   const cursos = [
   
     {
-      titulo: 'ReactJS',
+      titulo: 'React',
       lugar: 'Udemy',
       icon: () => <Icons.REACTV2 />
     },
     {
-      titulo: 'AngularJS',
+      titulo: 'Angular',
       lugar: 'Udemy',
       icon: () => <Icons.ANGULARV2 />
     },
