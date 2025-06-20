@@ -34,6 +34,11 @@ export const AboutUs = () => {
       icon: () => <Icons.REACTV2 />
     },
     {
+      titulo: 'React Native',
+      lugar: 'Udemy',
+      icon: () => <Icons.REACTV2 />
+    },
+    {
       titulo: 'Angular',
       lugar: 'Udemy',
       icon: () => <Icons.ANGULARV2 />

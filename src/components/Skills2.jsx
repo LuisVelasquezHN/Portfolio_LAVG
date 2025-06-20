@@ -47,6 +47,7 @@ export const Skills2 = () => {
     <IconsText.JS />,
     <IconsText.TS />,
     <IconsText.REACT />,
+    <IconsText.REACTNATIVE />,
     <IconsText.ANGULAR />,
     <IconsText.PHP />,
     <IconsText.UIPATH />,
@@ -67,12 +68,12 @@ export const Skills2 = () => {
 
   const sliderData = useMemo(() => (isMobile ? [
     { images: skillsImages.slice(0, 6), quantity: 6 },
-    { images: skillsImages.slice(6, 12), quantity: 6, reverse: true },
+    { images: skillsImages.slice(6, 13), quantity: 7, reverse: true },
     // { images: skillsImages.slice(12, 18), quantity: 6 },
     // { images: skillsImages.slice(18, 23), quantity: 5, reverse: true },
   ] : [
-    { images: skillsImages.slice(0, 12), quantity: 12 },
-    { images: skillsImages.slice(12, 23), quantity: 11, reverse: true },
+    { images: skillsImages.slice(0, 13), quantity: 13 },
+    { images: skillsImages.slice(12, 24), quantity: 12, reverse: true },
   ]), [isMobile, skillsImages]);
 
   return (
@@ -91,7 +92,7 @@ export const Skills2 = () => {
           />
         </h2>
         {sliderData.map((data, index) => (
-          <Slider key={index} images={data.images} width={120} height={isMobile ? 80 : 90} quantity={data.quantity} reverse={data.reverse} />
+          <Slider key={index} images={data.images} width={isMobile ? 110 : 120} height={isMobile ? 80 : 90} quantity={data.quantity} reverse={data.reverse} />
         ))}
       </section>
       <Modal modalTitle={t('navbar.skills')} data={skillsImages} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
