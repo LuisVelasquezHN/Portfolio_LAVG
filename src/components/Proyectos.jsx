@@ -407,6 +407,16 @@ export const Proyectos = () => {
                 </a>
               )}
 
+              {card?.title == 'MAXCOM' && (
+                <a href={card?.url} target='__blank' title={t('projects.buttonPreview')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center
+               rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
+               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]'>
+                  <IconExternalLink stroke={2} width={20} height={20} />
+                  {t('projects.buttonPreview')}
+                </a>
+              )}
+
               {card?.type == 'dif' && (
                 <Link to={card?.url} target='__blank' title={t('projects.buttonOthers')} className='flex text-sm max-w-[160px] gap-1 flex-row justify-center
                rounded-3xl py-2 px-4 mt-2 cursor-pointer border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
