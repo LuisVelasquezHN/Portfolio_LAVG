@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Footer } from '../components/Footer';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { useTranslation } from 'react-i18next';
 import { Bentox2 } from './Bentox2';
+import { useLocation } from 'react-router-dom';
 
 
 export const OtrosProyectos = () => {
     const { t } = useTranslation();
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, [pathname]);
 
     return (
         <>
@@ -22,7 +28,7 @@ export const OtrosProyectos = () => {
                 </h1>
             </section>
 
-            <Bentox2/>
+            <Bentox2 />
 
             <Footer />
         </>
