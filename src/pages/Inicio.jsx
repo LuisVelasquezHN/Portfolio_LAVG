@@ -13,6 +13,7 @@ import { Navbar } from '../components/Navbar';
 import { Toaster } from 'sonner'
 import { useTranslation } from 'react-i18next';
 import LastVisit from '../components/LastVisit';
+import { Skills3 } from '../components/Skills3';
 
 
 
@@ -125,7 +126,7 @@ export const Inicio = () => {
       <Timeline />
       <Proyectos />
 
-      <Skills2 />
+      <Skills3 />
 
       <section id="about" className="section p-3 hiddenObs2 mt-[10vh] scroll-m-20 w-full container lg:max-w-5xl">
         <h2 className="flex items-center mb-14 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
