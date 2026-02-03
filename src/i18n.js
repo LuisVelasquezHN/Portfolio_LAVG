@@ -20,7 +20,7 @@ i18n
           portada: {
             greeting: "Hey, ",
             name: "soy Luis Velasquez",
-            welcome: "Bienvenido a mi Portfolio.",
+            welcome: "Bienvenido a mi Portafolio.",
             explorar: "Explorar"
           },
           home: {
@@ -43,7 +43,9 @@ i18n
             contentProjects: "Explora otros proyectos en los que he trabajado, plataformas empresariales y aplicaciones interactivas. Desarrollo soluciones a medida utilizando tecnologías modernas como React, Angular, Node.js y más.",
             buttonPreview: "Ver sitio web",
             buttonOthers: "Ver más",
-            titleOtherProject: "Otros Proyectos"
+            titleOtherProject: "Otros Proyectos",
+            contentNovotechn: "Plataforma web para empresa de tecnología con servicios de ciberseguridad, redes, software a medida y soporte técnico. Desarreado con React y Tailwind.",
+            contentPlaza: "Sitio web oficial de Plaza Miraflores, uno de los centros comerciales más emblemáticos de Honduras. Explora comercios, promociones, eventos y servicios. Desarrollado con React, Tailwind y Node.js."
           },
           experience: {
             puestoCC: 'Analista de Inteligencia de Negocios',
@@ -166,7 +168,9 @@ i18n
             contentProjects: "Explore other projects I have worked on, including business platforms and interactive applications. I develop custom solutions using modern technologies such as React, Angular, Node.js, and more.",
             buttonPreview: "Live website",
             buttonOthers: "Explore more",
-            titleOtherProject: "Other Projects"
+            titleOtherProject: "Other Projects",
+            contentNovotechn: "Web platform for a technology company with cybersecurity, networking, custom software, and technical support services. Developed with React and Tailwind.",
+            contentPlaza: "Official website of Plaza Miraflores, one of the most emblematic shopping malls in Honduras. Explore stores, promotions, events, and services. Developed with React, Tailwind, and Node.js."
           },
           experience: {
             puestoCC: 'Business Intelligence Analyst',

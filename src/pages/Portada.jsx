@@ -29,6 +29,22 @@ export const Portada = () => {
         tap: { scale: 0.95 },
     };
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    };
+
     return (
         <AnimatePresence>
             {!exitAnimation && (
@@ -68,14 +84,25 @@ export const Portada = () => {
                                     >
                                         <span className='dark:text-[#009aff] text-[#0875c5]'>{t('home.job_title')}</span> {t('home.experience')}.
                                     </motion.p>
-                                    <motion.p
+                                    {/* <motion.p
                                         className='text-lg md:text-2xl text-center mt-2 md:p-0 text-[#1ec8ff]'
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                                     >
                                         {t('portada.welcome')}
-                                    </motion.p>
+                                    </motion.p> */}
+
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                                        className="inline-block px-4 py-2 mt-4 bg-blue-50 dark:bg-blue-900/20 rounded-full border border-blue-100 dark:border-blue-800"
+                                    >
+                                        <p className="text-blue-600 dark:text-blue-300 font-semibold tracking-wide uppercase text-sm">
+                                            {t('portada.welcome')}
+                                        </p>
+                                    </motion.div>
                                 </>
                             )}
                         </div>
