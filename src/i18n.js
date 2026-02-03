@@ -44,7 +44,7 @@ i18n
             buttonPreview: "Ver sitio web",
             buttonOthers: "Ver más",
             titleOtherProject: "Otros Proyectos",
-            contentNovotechn: "Plataforma web para empresa de tecnología con servicios de ciberseguridad, redes, software a medida y soporte técnico. Desarreado con React y Tailwind.",
+            contentNovotechn: "Plataforma web para empresa de tecnología con servicios de Inteligencia Artificial, Automatizaciones, Desarrollos a medida y Asesorias especializadas. Desarrollado con React y Tailwind.",
             contentPlaza: "Sitio web oficial de Plaza Miraflores, uno de los centros comerciales más emblemáticos de Honduras. Explora comercios, promociones, eventos y servicios. Desarrollado con React, Tailwind y Node.js."
           },
           experience: {
@@ -169,7 +169,7 @@ i18n
             buttonPreview: "Live website",
             buttonOthers: "Explore more",
             titleOtherProject: "Other Projects",
-            contentNovotechn: "Web platform for a technology company with cybersecurity, networking, custom software, and technical support services. Developed with React and Tailwind.",
+            contentNovotechn: "Web platform for a technology company with Artificial Intelligence, Automatizations, Custom Developments and specialized consulting services. Developed with React and Tailwind.",
             contentPlaza: "Official website of Plaza Miraflores, one of the most emblematic shopping malls in Honduras. Explore stores, promotions, events, and services. Developed with React, Tailwind, and Node.js."
           },
           experience: {
