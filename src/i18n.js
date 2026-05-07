@@ -33,7 +33,7 @@ i18n
             download_cv: "Descargar CV",
             contact_me: "Contáctame",
             about_me: "Sobre mí",
-            CV: "CV_LuisVelasquez.pdf"
+            CV: "CV_LuisVelasquez_ES.pdf"
           },
           projects: {
             contentPlatinum: "Plataforma web para una rentadora de vehículos en Honduras. Catálogo de autos disponibles con contacto directo a WhatsApp. Desarrollado desde cero con React y Sass.",
