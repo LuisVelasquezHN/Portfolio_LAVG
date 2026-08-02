@@ -1,5 +1,4 @@
 import { IconBriefcase2 } from '@tabler/icons-react';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 

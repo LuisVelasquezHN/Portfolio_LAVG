@@ -1,10 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { IconHome, IconRefresh } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
 
 const ErrorPage = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     return (
         <div className="min-h-screen flex items-center justify-center p-6 overflow-hidden relative">
@@ -60,10 +61,10 @@ const ErrorPage = () => {
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     <h2 className="text-3xl md:text-5xl font-bold text-[#515151] dark:text-[#f4f4f4] mb-4">
-                        Página no encontrada
+                        {t('errorPage.title')}
                     </h2>
                     <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-xl mx-auto">
-                        Parece que el camino que buscas no existe o ha sido movido a otra dimensión.
+                        {t('errorPage.description')}
                     </p>
                 </motion.div>
 
@@ -80,7 +81,7 @@ const ErrorPage = () => {
                         className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold shadow-lg shadow-blue-500/30 transition-all"
                     >
                         <IconHome size={24} />
-                        Ir al Inicio
+                        {t('errorPage.goHome')}
                     </motion.button>
 
                     <motion.button
@@ -90,7 +91,7 @@ const ErrorPage = () => {
                         className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-gray-200 dark:border-zinc-800 text-[#515151] dark:text-[#f4f4f4] rounded-full font-bold hover:bg-gray-50 dark:hover:bg-zinc-900 transition-all"
                     >
                         <IconRefresh size={24} />
-                        Reintentar
+                        {t('errorPage.retry')}
                     </motion.button>
                 </motion.div>
             </div>

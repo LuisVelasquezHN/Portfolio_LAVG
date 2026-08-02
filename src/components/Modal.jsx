@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { IconX } from "@tabler/icons-react";
-import IconsText from "./IconTextSkill";
+import IconsText from "./IconTextSkillv2";
 
 export const Modal = ({ isOpen, onClose, modalTitle }) => {
     useEffect(() => {
@@ -36,6 +36,12 @@ export const Modal = ({ isOpen, onClose, modalTitle }) => {
       <IconsText.CHARP />,
       <IconsText.TALEND />,
       <IconsText.OPENAI />,
+      <IconsText.AWS />,
+      <IconsText.DOCKER />,
+      <IconsText.NEXTJS />,
+      <IconsText.ASTRO />,
+      <IconsText.N8N />,
+      <IconsText.DOTNET />,
       <IconsText.ILLUSTRATOR />,
       <IconsText.PHOTOSHOP />,
       <IconsText.COREL />,

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Footer } from '../components/Footer';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { useTranslation } from 'react-i18next';

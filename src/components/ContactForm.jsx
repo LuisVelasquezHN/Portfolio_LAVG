@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -36,11 +35,11 @@ export const ContactForm = () => {
         },
         import.meta.env.VITE_APIKEY_EMAIL
       );
-      toast.success('Mensaje enviado exitosamente!')
+      toast.success(t('about.toastSuccess'))
       reset();
     } catch (error) {
       console.error("Error sending email:", error);
-      toast.error('Fallo en el envío. Intenta de nuevo más tarde.')
+      toast.error(t('about.toastError'))
     }
   };
 

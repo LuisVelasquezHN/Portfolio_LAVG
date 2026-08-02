@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Icons from './IconsSkills';
 import { IconBook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp, IconBrandX, IconCertificate, IconMailForward, IconMapPin } from "@tabler/icons-react";
 import { ContactForm } from "./ContactForm";
@@ -186,7 +186,7 @@ export const AboutUs = () => {
 
             <div className="px-8 py-2">
 
-              <a href='https://maps.app.goo.gl/8MkrSJa1cbGVXHxJ9' target='__blank' title={t('about.location')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+              <a href='https://maps.app.goo.gl/8MkrSJa1cbGVXHxJ9' target='_blank' rel='noopener noreferrer' title={t('about.location')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                 <IconMapPin stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -199,7 +199,7 @@ export const AboutUs = () => {
 
             <div className="px-8 py-2">
 
-              <a href='mailto:l.velasquez1617@gmail.com' target='__blank' title={t('about.titleContact')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+              <a href='mailto:l.velasquez1617@gmail.com' target='_blank' rel='noopener noreferrer' title={t('about.titleContact')} className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                 <IconMailForward stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -214,7 +214,7 @@ export const AboutUs = () => {
 
               <div className="py-2">
 
-                <a href='https://api.whatsapp.com/send?phone=50488918086&text=Hola%2C%20v%C3%AD%20tu%20Portfolio%2C%20y%20me%20gustar%C3%ADa%20cont%C3%A1ctarme%20contigo%20sobre%20un%20proyecto.' target='__blank' title='WhatsApp' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+                <a href='https://api.whatsapp.com/send?phone=50488918086&text=Hola%2C%20v%C3%AD%20tu%20Portfolio%2C%20y%20me%20gustar%C3%ADa%20cont%C3%A1ctarme%20contigo%20sobre%20un%20proyecto.' target='_blank' rel='noopener noreferrer' title='WhatsApp' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandWhatsapp stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -224,7 +224,7 @@ export const AboutUs = () => {
 
               <div className="py-2">
 
-                <a href='https://www.linkedin.com/in/luis-velasquez-768072284' target='__blank' title='LinkedIn' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+                <a href='https://www.linkedin.com/in/luis-velasquez-768072284' target='_blank' rel='noopener noreferrer' title='LinkedIn' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandLinkedin stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -234,7 +234,7 @@ export const AboutUs = () => {
 
               <div className="py-2">
 
-                <a href='https://github.com/LuisVelasquezHN' target='__blank' title='GitHub' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+                <a href='https://github.com/LuisVelasquezHN' target='_blank' rel='noopener noreferrer' title='GitHub' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandGithub stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -244,7 +244,7 @@ export const AboutUs = () => {
 
               <div className="py-2">
 
-                <a href='https://www.instagram.com/luisalfredo98/' target='__blank' title='Instagram' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+                <a href='https://www.instagram.com/luisalfredo98/' target='_blank' rel='noopener noreferrer' title='Instagram' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandInstagram stroke={2} width={20} height={20} className="inline-block align-middle" />
@@ -254,7 +254,7 @@ export const AboutUs = () => {
 
               <div className="py-2">
 
-                <a href='https://x.com/Luiss_Alfredoo' target='__blank' title='Twitter / X' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
+                <a href='https://x.com/Luiss_Alfredoo' target='_blank' rel='noopener noreferrer' title='Twitter / X' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandX stroke={2} width={20} height={20} className="inline-block align-middle" />

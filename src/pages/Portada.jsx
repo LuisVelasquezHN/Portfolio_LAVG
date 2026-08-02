@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { BotonIngresar } from '../components/BotonIngresar';
 import Typewriter from 'typewriter-effect';
 import { motion, AnimatePresence } from 'framer-motion';

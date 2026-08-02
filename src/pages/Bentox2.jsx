@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import IconsText from '../components/IconTextSkill';
 import { SVGphp } from '../components/SVG/SVGphp';

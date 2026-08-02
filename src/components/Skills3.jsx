@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { useMediaQuery } from "react-responsive";
 import IconsText from "./IconTextSkillv2";
 import { Modal } from "./Modal";
@@ -35,6 +35,12 @@ export const Skills3 = () => {
       <IconsText.CHARP />,
       <IconsText.TALEND />,
       <IconsText.OPENAI />,
+      <IconsText.AWS />,
+      <IconsText.DOCKER />,
+      <IconsText.NEXTJS />,
+      <IconsText.ASTRO />,
+      <IconsText.N8N />,
+      <IconsText.DOTNET />,
       <IconsText.ILLUSTRATOR />,
       <IconsText.PHOTOSHOP />,
       <IconsText.COREL />,
@@ -47,12 +53,13 @@ export const Skills3 = () => {
     () =>
       isMobile
         ? [
-          { images: skillsImages.slice(0, 6), reverse: false },
-          { images: skillsImages.slice(6, 13), reverse: true },
+          { images: skillsImages.slice(0, 8), reverse: false },
+          { images: skillsImages.slice(8, 16), reverse: true },
+          { images: skillsImages.slice(16, 24), reverse: false },
         ]
         : [
-          { images: skillsImages.slice(0, 13), reverse: false },
-          { images: skillsImages.slice(12, 24), reverse: true },
+          { images: skillsImages.slice(0, 15), reverse: false },
+          { images: skillsImages.slice(15, 30), reverse: true },
         ],
     [isMobile, skillsImages]
   );

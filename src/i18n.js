@@ -27,7 +27,7 @@ i18n
             greeting: "Hey, soy",
             name: "Luis Velasquez",
             job_title: "Desarrollador Web",
-            experience: "con más de 3 años de experiencia",
+            experience: "con más de 4 años de experiencia",
             experience2: "en el diseño y desarrollo de sitios y aplicaciones web,",
             experience3: "enfocado en rendimiento, accesibilidad y experiencia de usuario.",
             download_cv: "Descargar CV",
@@ -48,19 +48,14 @@ i18n
             contentPlaza: "Sitio web oficial de Plaza Miraflores, uno de los centros comerciales más emblemáticos de Honduras. Explora comercios, promociones, eventos y servicios. Desarrollado con React, Tailwind y Node.js."
           },
           experience: {
-            puestoCC: 'Analista de Inteligencia de Negocios',
+            puestoCC: 'Full Stack Developer',
             empresaCC: 'Cable Color',
             tiempoCC: 'Febrero 2022 - Actualidad',
-            descripcionCC: `Desarrollo, diseño y mantenimiento de sitios web oficiales a nivel regional. Involucrado en la creación e implementación
-                            de multiples soluciones tecnológicas. Desarrollo y mantenimiento de documentación técnica para los sistemas desarrollados.
-                            Extracción y manipulación de bases de datos, implementando rutinas automatizadas para la actualización diaria de reportes.
-                            Automatización de procesos para mejorar la eficiencia y el rendimiento de los sistemas.`,
-            puestoFree: 'Freelancer',
+            descripcionCC: `Liderazgo en el diseño, desarrollo y mantenimiento de los sitios web oficiales de la compañía a nivel regional. Creación de sistemas de gestión empresarial (ERP/CRM): Talento Humano, Dispatch & Logística, Negocios Corporativos, Gobernanza y Documentación (DMS), Portal Corporativo y CMS. Implementación de flujos ETL y rutinas automatizadas para la extracción y manipulación de bases de datos, asegurando la actualización diaria de reportes críticos. Elaboración y mantenimiento de documentación técnica detallada.`,
+            puestoFree: 'Desarrollador Full Stack & Consultor Tecnológico (Freelance)',
             empresaFree: '',
-            tiempoFree: 'Actualidad',
-            descripcionFree: `Como desarrollador freelance, he trabajado en la creación y optimización de sitios web para diversas industrias, 
-                              asegurando interfaces intuitivas, alto rendimiento y experiencias de usuario eficientes. 
-                              Mi enfoque se basa en el uso de tecnologías como React, JavaScript, Tailwind CSS, APIs REST y optimización SEO, adaptando cada solución a las necesidades específicas del cliente.`,
+            tiempoFree: 'Enero 2023 - Actualidad',
+            descripcionFree: `Desarrollo a la Medida: Diseño, arquitectura y mantenimiento de sitios web y aplicaciones web escalables utilizando frameworks modernos como React y Astro. Sistemas CRM & Gestión: Creación de sistemas CRM personalizados con visualización de procesos mediante tableros Kanban y gestión dinámica de leads. Integraciones & Automatización: Implementación de flujos de trabajo automatizados con n8n e Inteligencia Artificial (OpenAI) para la optimización de procesos de negocio. Análisis de Datos: Desarrollo de dashboards interactivos con actualización de datos en tiempo real para la toma de decisiones estratégicas. Ecosistema Cloud (AWS): Administración de infraestructura en la nube, incluyendo gestión de identidades (IAM), almacenamiento en S3, despliegue en instancias EC2 y configuraciones de CloudFront.`,
             puestoD: 'Auxiliar de Soporte IT (Pasante)',
             empresaD: 'DIUNSA',
             tiempoD: 'Agosto 2016 - Noviembre 2016',
@@ -76,14 +71,14 @@ i18n
             titleEducation: "Educación",
             titleContact: "Contáctame",
             centro: "Universidad Católica de Honduras",
-            centro2: "Educación Secundaria",
+            centro2: "Instituto San Francisco",
             titulo: "Ingeniería en Ciencias de la Computación",
             titulo2: "Bachillerato Técnico Profesional en Informática",
             courseIngles: "Ingles (Básico, Intermedio, Medio)",
             courseTecnico: "Técnico en instalación y reparación de equipo de cómputo",
             aboutFirst: "¡Hola! Me llamo",
             aboutSecond: ", soy ingeniero en sistemas con",
-            aboutThird: "más de 3 años de experiencia en desarrollo web",
+            aboutThird: "más de 4 años de experiencia en desarrollo web",
             aboutFour: `Desde siempre, la tecnología ha sido mi pasión y, a lo largo de mi carrera, he perfeccionado mis habilidades para construir aplicaciones dinámicas,
                 escalables y centradas en la experiencia del usuario.`,
             aboutFive: `Me especializo en desarrollo frontend y backend, trabajando con tecnologías
@@ -106,7 +101,24 @@ i18n
             formErrorName: "Nombre es requerido.",
             formErrorEmail: "Correo Inválido",
             formErrorEmail2: "Correo Electrónico es requerido.",
-            formErrorMessage: "El mensaje no puede estar vacío."
+            formErrorMessage: "El mensaje no puede estar vacío.",
+            toastSuccess: "¡Mensaje enviado exitosamente!",
+            toastError: "Fallo en el envío. Intenta de nuevo más tarde.",
+            courseAWS: "AWS (S3, CloudFront, EC2)",
+            languages: "Idiomas",
+            langSpanish: "Español (Nativo)",
+            langEnglish: "Inglés (Intermedio)"
+          },
+          errorPage: {
+            title: "Página no encontrada",
+            description: "Parece que el camino que buscas no existe o ha sido movido a otra dimensión.",
+            goHome: "Ir al Inicio",
+            retry: "Reintentar"
+          },
+          lastVisit: {
+            previousVisit: "Visita anterior desde",
+            lastVisit: "Última visita desde",
+            loading: "Cargando ubicación..."
           },
           otherProjects: {
             namePortal: "Portal de Empleados",
@@ -152,7 +164,7 @@ i18n
             greeting: "Hey, I'm",
             name: "Luis Velasquez",
             job_title: "Web Developer",
-            experience: "with more than 3 years of experience",
+            experience: "with more than 4 years of experience",
             experience2: "in designing and developing websites and web applications,",
             experience3: "focused on performance, accessibility, and user experience.",
             download_cv: "Download CV",
@@ -173,21 +185,14 @@ i18n
             contentPlaza: "Official website of Plaza Miraflores, one of the most emblematic shopping malls in Honduras. Explore stores, promotions, events, and services. Developed with React, Tailwind, and Node.js."
           },
           experience: {
-            puestoCC: 'Business Intelligence Analyst',
+            puestoCC: 'Full Stack Developer',
             empresaCC: 'Cable Color',
             tiempoCC: 'February 2022 - Present',
-            descripcionCC: `Development, design, and maintenance of official regional websites. 
-                      Involved in the creation and implementation of multiple technological solutions. 
-                      Development and maintenance of technical documentation for the developed systems. 
-                      Data extraction and manipulation, implementing automated routines for the daily update of reports. 
-                      Process automation to improve system efficiency and performance.`,
-            puestoFree: 'Freelancer',
+            descripcionCC: `Leadership in the design, development, and maintenance of the company's official websites at a regional level. Creation of enterprise management systems (ERP/CRM): Human Talent, Dispatch & Logistics, Corporate Business, Governance and Documentation (DMS), Corporate Portal, and CMS. Implementation of ETL flows and automated routines for database extraction and manipulation, ensuring daily updates of critical reports. Development and maintenance of detailed technical documentation.`,
+            puestoFree: 'Full Stack Developer & Technology Consultant (Freelance)',
             empresaFree: '',
-            tiempoFree: 'Present',
-            descripcionFree: `As a freelance developer, I have worked on the creation and optimization of websites for various industries, 
-                      ensuring intuitive interfaces, high performance, and efficient user experiences. 
-                      My approach is based on technologies such as React, JavaScript, Tailwind CSS, REST APIs, and SEO optimization, 
-                      adapting each solution to the specific needs of the client.`,
+            tiempoFree: 'January 2023 - Present',
+            descripcionFree: `Custom Development: Design, architecture, and maintenance of scalable websites and web applications using modern frameworks like React and Astro. CRM & Management Systems: Creation of custom CRM systems with process visualization through Kanban boards and dynamic lead management. Integrations & Automation: Implementation of automated workflows with n8n and Artificial Intelligence (OpenAI) for business process optimization. Data Analytics: Development of interactive dashboards with real-time data updates for strategic decision-making. Cloud Ecosystem (AWS): Cloud infrastructure management, including identity management (IAM), S3 storage, EC2 instance deployment, and CloudFront configurations.`,
             puestoD: 'IT Support Assistant (Intern)',
             empresaD: 'DIUNSA',
             tiempoD: 'August 2016 - November 2016',
@@ -204,14 +209,14 @@ i18n
             titleEducation: "Education",
             titleContact: "Contact Me",
             centro: "Catholic University of Honduras",
-            centro2: "Secondary Education",
+            centro2: "Instituto San Francisco",
             titulo: "Computer Science Engineering",
             titulo2: "Technical Professional Baccalaureate in IT",
             courseIngles: "English (Basic, Intermediate, Upper-Intermediate)",
             courseTecnico: "Technician in Computer Equipment Installation and Repair",
             aboutFirst: "Hello! My name is",
             aboutSecond: ", I am a systems engineer with",
-            aboutThird: "over 3 years of experience in web development",
+            aboutThird: "over 4 years of experience in web development",
             aboutFour: `Technology has always been my passion, and throughout my career, I have refined my skills to build dynamic, scalable applications focused on user experience.`,
             aboutFive: `I specialize in both frontend and backend development, working with modern technologies to create efficient and innovative solutions.
                         I enjoy facing new challenges and constantly learning to continue improving my skills.`,
@@ -230,7 +235,24 @@ i18n
             formErrorName: "Name is required.",
             formErrorEmail: "Invalid email",
             formErrorEmail2: "Email is required.",
-            formErrorMessage: "The message cannot be empty."
+            formErrorMessage: "The message cannot be empty.",
+            toastSuccess: "Message sent successfully!",
+            toastError: "Failed to send. Please try again later.",
+            courseAWS: "AWS (S3, CloudFront, EC2)",
+            languages: "Languages",
+            langSpanish: "Spanish (Native)",
+            langEnglish: "English (Intermediate)"
+          },
+          errorPage: {
+            title: "Page not found",
+            description: "The path you are looking for does not exist or has been moved to another dimension.",
+            goHome: "Go Home",
+            retry: "Retry"
+          },
+          lastVisit: {
+            previousVisit: "Previous visit from",
+            lastVisit: "Last visit from",
+            loading: "Loading location..."
           },
           otherProjects: {
             namePortal: "Employee Portal",

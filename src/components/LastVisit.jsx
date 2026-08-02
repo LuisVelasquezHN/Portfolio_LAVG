@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const LastVisit = () => {
+  const { t } = useTranslation();
   const [lastVisit, setLastVisit] = useState("");
   const [lastLocation, setLastLocation] = useState("");
   const [fadeOut, setFadeOut] = useState(false);
@@ -82,11 +84,11 @@ const LastVisit = () => {
     <div className="text-[#1010106c] dark:text-[#f5f7f783] text-center py-2 text-sm relative">
       {!showLast ? (
         <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
-          Visita anterior desde <span className="font-semibold">{lastLocation || "Cargando ubicación..."}</span>
+          {t('lastVisit.previousVisit')} <span className="font-semibold">{lastLocation || t('lastVisit.loading')}</span>
         </p>
       ) : (
         <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-100" : "opacity-0"}`}>
-          Última visita desde <span className="font-semibold">{lastLocation}</span>
+          {t('lastVisit.lastVisit')} <span className="font-semibold">{lastLocation}</span>
         </p>
       )}
     </div>
