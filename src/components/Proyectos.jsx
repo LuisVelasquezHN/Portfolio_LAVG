@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { projectsData } from "../data/projectsData";
+import { LazyImage } from "./LazyImage";
 
 const TagIcon = ({ type }) => {
   switch (type) {
@@ -214,7 +215,7 @@ export const Proyectos = () => {
                 )}
               </div>
               <div className="mt-6 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-zinc-800">
-                <img src={project.src} alt={project.title} className="w-full h-auto aspect-video object-cover" />
+                <LazyImage src={project.src} alt={project.title} className="w-full h-auto aspect-video object-cover" skeletonClassName="w-full aspect-video" />
               </div>
             </div>
           ))}
