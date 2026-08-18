@@ -8,7 +8,7 @@ export const homeProjectsData = [
         src: "/projects/va/portada.webp",
         tags: [
             { name: "Astro", type: "astro" },
-            { name: "Tailwind", type: "tailwind" },
+            { name: "Tailwind", type: "tailwind" }, 
             { name: "Node.js", type: "node" },
             { name: "AWS", type: "aws" }
         ],
