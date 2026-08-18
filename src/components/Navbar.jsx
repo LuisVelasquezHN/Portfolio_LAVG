@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IconDeviceDesktop, IconMenu4, IconMoonStars, IconSun, IconXboxX } from "@tabler/icons-react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -10,6 +10,8 @@ export const Navbar = () => {
   const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") || "system");
   const [language, setLanguage] = useState(localStorage.getItem("language") || "es");
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 100);
@@ -47,6 +49,20 @@ export const Navbar = () => {
     { id: "about", label: t("navbar.about") },
   ];
 
+  const handleNavClick = (e, linkId) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    if (location.pathname === "/home") {
+      const element = document.getElementById(linkId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(`/home#${linkId}`);
+    }
+  };
+
   return (
     <nav className="fixed z-50 top-0 md:top-2 left-0 w-full transition-all duration-300">
       <div
@@ -61,7 +77,7 @@ export const Navbar = () => {
               key={link.id}
               href={`#${link.id}`}
               className="relative overflow-hidden group dark:text-white text-[#515151]"
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.id)}
               initial={{ opacity: 0.8 }}
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -111,7 +127,7 @@ export const Navbar = () => {
             key={link.id}
             href={`#${link.id}`}
             className="hover:text-gray-300"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, link.id)}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 * navLinks.indexOf(link) }}

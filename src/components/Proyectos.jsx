@@ -1,10 +1,13 @@
-import { IconBrandTailwind, IconCaretRightFilled, IconCode, IconExternalLink } from "@tabler/icons-react";
+import { IconBrandTailwind, IconCaretRightFilled, IconCode, IconExternalLink, IconLayoutGrid } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { projectsData } from "../data/projectsData";
+import { homeProjectsData } from "../data/projectsData";
 import { LazyImage } from "./LazyImage";
+
+// Proyectos que se muestran en el home principal
+const mainProjects = homeProjectsData;
 
 const TagIcon = ({ type }) => {
   switch (type) {
@@ -53,6 +56,22 @@ const TagIcon = ({ type }) => {
           <path d="M11.6 10h2.4l-.5 3" />
         </svg>
       );
+    case 'astro':
+      return (
+        <svg width="16" height="16" viewBox="0 0 256 366" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FF5D01" d="M182.022 9.147c2.982 3.702 4.502 8.44 7.543 17.916L226.28 144.97c-20.467-9.587-42.942-15.1-66.735-15.6l-27.18 82.418a7.92 7.92 0 0 1-7.524 5.441 7.92 7.92 0 0 1-7.523-5.441l-27.18-82.418c-23.708.5-46.1 5.98-66.516 15.51L60.435 27.063c3.04-9.476 4.56-14.214 7.542-17.916a20.15 20.15 0 0 1 9.762-7.073C82.233 0 87.267 0 97.336 0h61.329c10.068 0 15.103 0 19.596 2.074a20.15 20.15 0 0 1 9.762 7.073" />
+          <path fill="#FF5D01" d="M189.186 256.08c-6.907 5.96-20.724 10.02-36.755 10.02-20.15 0-36.997-6.1-41.074-14.24-1.446 4.394-1.774 9.453-1.774 12.732 0 0-.942 15.533 9.87 26.345 0-5.59 4.532-10.122 10.123-10.122 9.574 0 9.554 8.36 9.538 15.148v.6c0 10.109 6.178 18.782 14.97 22.425a21.4 21.4 0 0 1-2.122-9.344c0-13.2 7.743-18.117 16.928-23.87 7.39-4.631 15.68-9.826 21.296-20.054a41.4 41.4 0 0 0 4.488-18.264c-1.393 3.205-3.277 6.124-5.488 8.624" />
+        </svg>
+      );
+    case 'aws':
+      return (
+        <svg width="16" height="16" viewBox="0 0 256 153" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#252F3E" d="M72.392 55.438c0 3.137.34 5.68.933 7.545a45.4 45.4 0 0 0 2.712 6.103c.424.678.593 1.356.593 1.95 0 .847-.508 1.695-1.61 2.543l-5.34 3.56c-.763.508-1.526.762-2.205.762-.847 0-1.695-.424-2.543-1.187a26.5 26.5 0 0 1-3.051-3.984c-.848-1.44-1.695-3.052-2.628-4.917-6.612 7.799-14.92 11.698-24.922 11.698-7.12 0-12.8-2.035-16.954-6.103-4.153-4.07-6.272-9.497-6.272-16.278 0-7.206 2.543-13.054 7.714-17.462 5.17-4.408 12.038-6.612 20.768-6.612 2.882 0 5.849.254 8.985.678 3.137.424 6.358 1.102 9.749 1.865V29.33c0-6.442-1.356-10.935-3.984-13.563-2.712-2.627-7.29-3.9-13.817-3.9-2.967 0-6.018.34-9.155 1.102-3.136.763-6.188 1.695-9.155 2.882-.678.34-1.186.508-1.526.594a2.26 2.26 0 0 1-.933.17c-.847 0-1.271-.594-1.271-1.865v-4.154c0-.932.085-1.61.339-1.95.254-.338.763-.677 1.526-1.016 2.966-1.525 6.527-2.796 10.68-3.814C33.908.424 38.23 0 42.722 0c10.003 0 17.292 2.288 21.954 6.78 4.577 4.494 6.95 11.276 6.95 20.345v26.786h-.085z" />
+          <path fill="#252F3E" d="M25.752 66.11c2.797 0 5.68-.508 8.731-1.526 3.052-1.017 5.765-2.882 8.053-5.425 1.356-1.61 2.373-3.39 2.882-5.425.508-2.035.847-4.493.847-7.375v-3.56c-2.458-.593-5.086-1.1-7.799-1.44a64 64 0 0 0-7.884-.508c-5.68 0-9.834 1.102-12.63 3.39-2.797 2.289-4.154 5.51-4.154 9.749 0 3.984 1.017 6.951 3.136 8.985 2.035 2.12 5.002 3.136 8.816 3.136M72.307 55.438h.085z" />
+          <path fill="#FF9900" d="M230.993 120.964c-27.888 20.599-68.408 31.534-103.247 31.534-48.827 0-92.821-18.056-126.04-48.064-2.627-2.374-.254-5.596 2.881-3.73 35.942 20.854 80.276 33.484 126.126 33.484 30.94 0 64.932-6.442 96.212-19.666 4.748-2.034 8.731 3.052 4.068 6.442" />
+          <path fill="#FF9900" d="M242.606 107.57c-3.56-4.578-23.566-2.204-32.636-1.102-2.712.34-3.136-2.034-.678-3.814 15.938-11.19 42.13-7.968 45.182-4.239 3.052 3.814-.848 30.008-15.768 42.554-2.289 1.95-4.493.933-3.475-1.61 3.39-8.393 10.935-27.296 7.375-31.789" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -66,6 +85,8 @@ const Tag = ({ tag }) => {
       case 'sass': return 'dark:bg-[#39262f] bg-[#f7e2eb] text-[#515151] dark:text-[#f4f4f4]';
       case 'node': return 'dark:bg-[#1e2e1d] bg-[#d4f6d3] text-[#515151] dark:text-[#f4f4f4]';
       case 'php': return 'dark:bg-[#333552] bg-[#d5d8fb] text-[#515151] dark:text-[#f4f4f4]';
+      case 'astro': return 'dark:bg-[#3d1f0f] bg-[#ffe0cc] text-[#515151] dark:text-[#f4f4f4]';
+      case 'aws': return 'dark:bg-[#3d2e0f] bg-[#fff3cc] text-[#515151] dark:text-[#f4f4f4]';
       default: return 'bg-gray-200 dark:bg-gray-700';
     }
   };
@@ -98,7 +119,7 @@ export const Proyectos = () => {
         } else {
           card.style.transform = `rotate(${angle}deg)`;
           angle -= 10;
-          card.style.zIndex = projectsData.length - index;
+          card.style.zIndex = mainProjects.length - index;
           if (newActiveIndex === null) newActiveIndex = index;
         }
       });
@@ -130,7 +151,7 @@ export const Proyectos = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const activeProject = projectsData[activeCardIndex];
+  const activeProject = mainProjects[activeCardIndex];
 
   return (
     <>
@@ -154,23 +175,26 @@ export const Proyectos = () => {
               {t(activeProject?.contentKey)}
             </p>
 
-            <div className="mt-6">
-              {activeProject?.isMain ? (
+            <div className="mt-6 flex flex-row gap-3 items-center">
+              {activeProject?.url && activeProject.url !== '#' && (
                 <a href={activeProject.url} target='_blank' rel="noopener noreferrer" className='inline-flex text-sm gap-1 items-center rounded-3xl py-2 px-6 border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-md hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors'>
                   <IconExternalLink stroke={2} width={20} height={20} />
                   {t('projects.buttonPreview')}
                 </a>
-              ) : (
-                <Link to={activeProject.url} className='inline-flex text-sm gap-1 items-center rounded-3xl py-2 px-6 border dark:border-[#f4f4f436] text-[#0d639b] dark:text-[#f4f4f4] shadow-md hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors'>
-                  {t('projects.buttonOthers')}
-                  <IconCaretRightFilled stroke={2} width={20} height={20} />
-                </Link>
               )}
+            </div>
+
+            <div className="mt-10 flex flex-col gap-2">
+              <p className="text-xs text-gray-500 dark:text-gray-400">{t('projects.viewAllHint')}</p>
+              <Link to="/all-projects" className='inline-flex text-sm gap-2 items-center rounded-3xl py-2.5 px-7 bg-gradient-to-r from-[#0686ff] to-[#0d639b] dark:from-[#0d639b] dark:to-[#4484bf] text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300'>
+                <IconLayoutGrid stroke={2} width={18} height={18} />
+                {t('projects.viewAll')}
+              </Link>
             </div>
           </div>
 
           <div className="h-screen flex-1 sticky top-0 relative overflow-hidden">
-            {projectsData.map((project, index) => (
+            {mainProjects.map((project, index) => (
               <div
                 key={index}
                 ref={(el) => (cardsRef.current[index] = el)}
@@ -188,7 +212,7 @@ export const Proyectos = () => {
             <IconCode width={28} height={28} stroke={2} />
             {t('navbar.projects')}
           </h1>
-          {projectsData.map((project, index) => (
+          {mainProjects.map((project, index) => (
             <div key={index} className="flex flex-col mb-12 last:mb-0">
               <p className="text-xl font-semibold dark:text-[#4484bf] text-[#0686ff]">
                 {project.titleKey ? t(project.titleKey) : project.title}
@@ -202,16 +226,11 @@ export const Proyectos = () => {
                 {t(project.contentKey)}
               </p>
               <div className="mt-5">
-                {project.isMain ? (
+                {project.url && project.url !== '#' && (
                   <a href={project.url} target='_blank' rel="noopener noreferrer" className='inline-flex text-sm gap-1 items-center rounded-3xl py-2 px-5 border text-[#0d639b] dark:text-[#f4f4f4]'>
                     <IconExternalLink stroke={2} width={18} height={18} />
                     {t('projects.buttonPreview')}
                   </a>
-                ) : (
-                  <Link to={project.url} className='inline-flex text-sm gap-1 items-center rounded-3xl py-2 px-5 border text-[#0d639b] dark:text-[#f4f4f4]'>
-                    {t('projects.buttonOthers')}
-                    <IconCaretRightFilled stroke={2} width={18} height={18} />
-                  </Link>
                 )}
               </div>
               <div className="mt-6 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-zinc-800">
@@ -219,6 +238,14 @@ export const Proyectos = () => {
               </div>
             </div>
           ))}
+
+          <div className="mt-12 flex flex-col items-center gap-2">
+            <p className="text-xs text-gray-500 dark:text-gray-400">{t('projects.viewAllHint')}</p>
+            <Link to="/all-projects" className='inline-flex text-sm gap-2 items-center rounded-3xl py-3 px-8 bg-gradient-to-r from-[#0686ff] to-[#0d639b] dark:from-[#0d639b] dark:to-[#4484bf] text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300'>
+              <IconLayoutGrid stroke={2} width={18} height={18} />
+              {t('projects.viewAll')}
+            </Link>
+          </div>
         </div>
       )}
     </>

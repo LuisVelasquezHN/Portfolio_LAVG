@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserScan } from '@tabler/icons-react';
@@ -22,10 +23,23 @@ import { AnimatedSection, AnimatedItem } from '../components/AnimatedSection';
 export const Inicio = () => {
   const { t, i18n } = useTranslation();
   const [key, setKey] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     setKey((prevKey) => prevKey + 1);
   }, [i18n.language]);
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location.hash]);
 
   return (
     <>

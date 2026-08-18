@@ -45,7 +45,36 @@ i18n
             buttonOthers: "Ver más",
             titleOtherProject: "Otros Proyectos",
             contentNovotechn: "Plataforma web para empresa de tecnología con servicios de Inteligencia Artificial, Automatizaciones, Desarrollos a medida y Asesorias especializadas. Desarrollado con React y Tailwind.",
-            contentPlaza: "Sitio web oficial de Plaza Miraflores, uno de los centros comerciales más emblemáticos de Honduras. Explora comercios, promociones, eventos y servicios. Desarrollado con React, Tailwind y Node.js."
+            contentPlaza: "Sitio web oficial de Plaza Miraflores, uno de los centros comerciales más emblemáticos de Honduras. Explora comercios, promociones, eventos y servicios. Desarrollado con React, Tailwind y Node.js.",
+            contentVA: "Landing page para Vitaminas Americanas, tienda de suplementos y vitaminas. Diseño moderno y atractivo con catálogo de productos, información nutricional y contacto directo. Desarrollado con Astro y Tailwind, desplegado en infraestructura AWS.",
+            contentDisanca: "Sitio web para Disanca, empresa distribuidora en Honduras. Diseño moderno con catálogo de productos y servicios, información corporativa y contacto directo. Desarrollado con Astro y Tailwind, desplegado en infraestructura AWS.",
+            contentNovosales: "Landing page para Novosales, plataforma CRM de gestión de ventas. Diseño moderno con presentación de funcionalidades, planes y beneficios del sistema. Desarrollado con Astro y Tailwind, desplegado en infraestructura AWS.",
+            contentNovodent: "Landing page para Novodent, software de gestión para clínicas dentales. Presentación de módulos, funcionalidades y planes del sistema orientado al sector odontológico. Desarrollado con Astro y Tailwind, desplegado en infraestructura AWS.",
+            contentNovoseguros: "Landing page para Novoseguros, plataforma de gestión para corredurías de seguros. Presentación de funcionalidades, módulos y planes del sistema especializado en el sector asegurador. Desarrollado con Astro y Tailwind, desplegado en infraestructura AWS.",
+            viewAll: "Ver todos los proyectos",
+            viewAllHint: "¿Quieres ver más?"
+          },
+          allProjects: {
+            title: "Todos los Proyectos",
+            subtitle: "Una vista completa de mis proyectos web y sistemas de gestión",
+            tabWeb: "Páginas Web",
+            tabCRM: "Sistemas de Gestión",
+            seeMore: "Ver más",
+            seeLess: "Ver menos"
+          },
+          crm: {
+            contentMetal: "CRM de taller automotriz enfocado en la recepción y flujo de vehículos de clientes, cotización y facturación de productos y servicios. Gestión completa del ciclo de atención vehicular.",
+            contentProyecta: "CRM de proyectos de construcción con tracking en tiempo real, ubicación georreferenciada, bitácora de ingresos/egresos del presupuesto, solicitudes y órdenes de compra. Incluye portal de cliente para visualizar el estado del proyecto.",
+            contentNovosalesCRM: "CRM enfocado en inventario, control de caja chica, órdenes y seguimiento de clientes. Integrado con landing page ecommerce para gestión de ventas en línea.",
+            contentReportesBot: "Sistema de tracking de llamadas realizadas por un bot de dispatch. Incluye histórico de llamadas, audios, evaluaciones de calidad y control de gastos operativos.",
+            contentGrillas: "Sistema de gestión de guías de canales a nivel regional. Administración centralizada de la programación y parrillas de contenido televisivo.",
+            contentCentral: "CRM de gestión de leads, solicitudes de servicios, control de personal y asignación de tickets. Seguimiento de KPIs y métricas de rendimiento del equipo corporativo.",
+            contentPlazaAdmin: "Sistema administrador del sitio web de Plaza Miraflores. Gestión dinámica de contenido, comercios, promociones, eventos y servicios del centro comercial.",
+            contentTH: "Plataforma integral de gestión de vacantes con tablero Kanban interactivo. Publicación de ofertas laborales, referencia de candidatos y módulo de documentación con carga de archivos vía enlace público.",
+            contentPortal: "Portal interno para colaboradores con acceso a sistemas empresariales, directorio de empleados, galería de eventos corporativos, buzón de sugerencias y generador automatizado de firmas de correo.",
+            contentDispatch: "Sistema de organización de grupos y técnicos de campo para instalaciones. Gestión y asignación eficiente de órdenes de trabajo con extracción y generación automatizada de órdenes.",
+            contentDMS: "Sistema de Gestión Documental para documentos confidenciales. Tablero Kanban para solicitudes, aprobación de documentos mediante tickets y generación automatizada de versiones.",
+            contentGestor: "Herramienta de administración de contenido para gestionar dinámicamente secciones de sitios web a nivel regional. Modificación de imágenes, textos, íconos, servicios e información de agencias. Desarrollado en APEX y PL/SQL."
           },
           experience: {
             puestoCC: 'Full Stack Developer',
@@ -182,7 +211,36 @@ i18n
             buttonOthers: "Explore more",
             titleOtherProject: "Other Projects",
             contentNovotechn: "Web platform for a technology company with Artificial Intelligence, Automatizations, Custom Developments and specialized consulting services. Developed with React and Tailwind.",
-            contentPlaza: "Official website of Plaza Miraflores, one of the most emblematic shopping malls in Honduras. Explore stores, promotions, events, and services. Developed with React, Tailwind, and Node.js."
+            contentPlaza: "Official website of Plaza Miraflores, one of the most emblematic shopping malls in Honduras. Explore stores, promotions, events, and services. Developed with React, Tailwind, and Node.js.",
+            contentVA: "Landing page for Vitaminas Americanas, a supplements and vitamins store. Modern and attractive design with product catalog, nutritional information, and direct contact. Developed with Astro and Tailwind, deployed on AWS infrastructure.",
+            contentDisanca: "Website for Disanca, a distribution company in Honduras. Modern design with product and services catalog, corporate information, and direct contact. Developed with Astro and Tailwind, deployed on AWS infrastructure.",
+            contentNovosales: "Landing page for Novosales, a sales management CRM platform. Modern design showcasing features, plans, and system benefits. Developed with Astro and Tailwind, deployed on AWS infrastructure.",
+            contentNovodent: "Landing page for Novodent, dental clinic management software. Presentation of modules, features, and plans for the dental sector. Developed with Astro and Tailwind, deployed on AWS infrastructure.",
+            contentNovoseguros: "Landing page for Novoseguros, an insurance brokerage management platform. Presentation of features, modules, and plans specialized in the insurance sector. Developed with Astro and Tailwind, deployed on AWS infrastructure.",
+            viewAll: "View all projects",
+            viewAllHint: "Want to see more?"
+          },
+          allProjects: {
+            title: "All Projects",
+            subtitle: "A complete view of my web projects and management systems",
+            tabWeb: "Web Pages",
+            tabCRM: "Management Systems",
+            seeMore: "See more",
+            seeLess: "See less"
+          },
+          crm: {
+            contentMetal: "Automotive workshop CRM focused on vehicle reception and workflow, quoting and invoicing products and services. Complete management of the vehicle service cycle.",
+            contentProyecta: "Construction project CRM with real-time tracking, georeferenced location, budget income/expense log, purchase requests and orders. Includes a client portal to view project status.",
+            contentNovosalesCRM: "CRM focused on inventory, petty cash control, orders, and customer follow-up. Integrated with an ecommerce landing page for online sales management.",
+            contentReportesBot: "Call tracking system for a dispatch bot. Includes call history, audio recordings, quality evaluations, and operational expense control.",
+            contentGrillas: "Regional TV channel guide management system. Centralized administration of programming schedules and content grids.",
+            contentCentral: "Lead management CRM with service requests, personnel control, and ticket assignment. KPI tracking and corporate team performance metrics.",
+            contentPlazaAdmin: "Admin system for the Plaza Miraflores website. Dynamic content management for stores, promotions, events, and mall services.",
+            contentTH: "Comprehensive vacancy management platform with interactive Kanban board. Job posting, candidate referrals, and document module with file upload via public link.",
+            contentPortal: "Internal employee portal with access to business systems, employee directory, corporate event gallery, suggestion box, and automated email signature generator.",
+            contentDispatch: "Field technician and team organization system for installations. Efficient work order management and assignment with automated order extraction and generation.",
+            contentDMS: "Document Management System for confidential documents. Kanban board for requests, document approval via tickets, and automated version generation.",
+            contentGestor: "Content management tool for dynamically managing regional website sections. Modification of images, text, icons, services, and agency information. Developed with APEX and PL/SQL."
           },
           experience: {
             puestoCC: 'Full Stack Developer',
