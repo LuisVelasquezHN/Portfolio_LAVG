@@ -79,7 +79,7 @@ i18n
           experience: {
             puestoCC: 'Full Stack Developer',
             empresaCC: 'Cable Color',
-            tiempoCC: 'Febrero 2022 - Actualidad',
+            tiempoCC: 'Febrero 2022 - Agosto 2026',
             descripcionCC: `Liderazgo en el diseño, desarrollo y mantenimiento de los sitios web oficiales de la compañía a nivel regional. Creación de sistemas de gestión empresarial (ERP/CRM): Talento Humano, Dispatch & Logística, Negocios Corporativos, Gobernanza y Documentación (DMS), Portal Corporativo y CMS. Implementación de flujos ETL y rutinas automatizadas para la extracción y manipulación de bases de datos, asegurando la actualización diaria de reportes críticos. Elaboración y mantenimiento de documentación técnica detallada.`,
             puestoFree: 'Desarrollador Full Stack & Consultor Tecnológico (Freelance)',
             empresaFree: '',
@@ -245,7 +245,7 @@ i18n
           experience: {
             puestoCC: 'Full Stack Developer',
             empresaCC: 'Cable Color',
-            tiempoCC: 'February 2022 - Present',
+            tiempoCC: 'February 2022 - August 2026',
             descripcionCC: `Leadership in the design, development, and maintenance of the company's official websites at a regional level. Creation of enterprise management systems (ERP/CRM): Human Talent, Dispatch & Logistics, Corporate Business, Governance and Documentation (DMS), Corporate Portal, and CMS. Implementation of ETL flows and automated routines for database extraction and manipulation, ensuring daily updates of critical reports. Development and maintenance of detailed technical documentation.`,
             puestoFree: 'Full Stack Developer & Technology Consultant (Freelance)',
             empresaFree: '',
