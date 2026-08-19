@@ -17,20 +17,17 @@ export const ScrollDownIndicator = () => {
             }
         };
     
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     
 
     return (
-        <motion.div 
-            className={`flex justify-center transition-opacity duration-500 mt-10 md:mt-0 ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+        <div 
+            className={`flex justify-center mt-10 md:mt-0 transition-all duration-700 ease-in-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
         >
             <a href="#experiencia" className="group flex flex-col items-center cursor-pointer gap-2">
-                {/* Texto con glow */}
+                {/* Texto */}
                 <span className="text-xs font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500 group-hover:text-[#0686ff] dark:group-hover:text-[#4484bf] transition-colors duration-300">
                     Scroll
                 </span>
@@ -68,6 +65,6 @@ export const ScrollDownIndicator = () => {
                     </motion.svg>
                 </div>
             </a>
-        </motion.div>
+        </div>
     );
 };
