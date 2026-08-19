@@ -1,25 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
-  /* Safari flexbox gap fix */
-  @supports not (gap: 1rem) {
-    .flex > * + * {
-      margin-left: 0.5rem;
-    }
-  }
-
   /* iOS momentum scrolling */
   * {
     -webkit-tap-highlight-color: transparent;
-  }
-
-  /* Mobile viewport height fix (iOS Safari 100vh issue) */
-  html {
-    height: -webkit-fill-available;
-  }
-
-  body {
-    min-height: -webkit-fill-available;
   }
 
   /* Smooth scrolling cross-browser */
@@ -133,9 +117,7 @@
 body{
   display: flex;
   justify-content: center;
-  align-items:center;
   min-height: 100dvh;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
