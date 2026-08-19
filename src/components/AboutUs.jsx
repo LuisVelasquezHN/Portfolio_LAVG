@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icons from './IconsSkills';
-import { IconBook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp, IconBrandX, IconCertificate, IconMailForward, IconMapPin } from "@tabler/icons-react";
+import { IconBook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp, IconCertificate, IconMailForward, IconMapPin } from "@tabler/icons-react";
 import { ContactForm } from "./ContactForm";
 import { useTranslation } from 'react-i18next';
 
@@ -248,16 +248,6 @@ export const AboutUs = () => {
                dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
                hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
                   <IconBrandInstagram stroke={2} width={20} height={20} className="inline-block align-middle" />
-
-                </a>
-              </div>
-
-              <div className="py-2">
-
-                <a href='https://x.com/Luiss_Alfredoo' target='_blank' rel='noopener noreferrer' title='Twitter / X' className="inline-block align-middle border dark:border-[#f4f4f40e] p-2 rounded-lg text-[#0d639b] dark:text-[#009aff] shadow-[3px_3px_19px_4px_rgba(0,_0,_0,_0.1)] border-[#f4f4f4d0]
-               dark:hover:bg-gradient-to-br dark:hover:from-[#0d639b] dark:hover:via-[#020202] dark:hover:to-[#181818]
-               hover:bg-gradient-to-br hover:from-[#d6f7ff] hover:via-[#f7f7f7] hover:to-[#e7e7e7]">
-                  <IconBrandX stroke={2} width={20} height={20} className="inline-block align-middle" />
 
                 </a>
               </div>

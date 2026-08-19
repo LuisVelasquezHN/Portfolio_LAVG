@@ -1,8 +1,24 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { IconArrowLeft, IconWorld, IconServer, IconExternalLink, IconX } from '@tabler/icons-react';
+
+const ScrollRevealCard = ({ children, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const CrmCard = ({ project, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,11 +26,8 @@ const CrmCard = ({ project, index }) => {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.05 }}
-        className="flex flex-col rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900"
+      <div
+        className="flex flex-col h-full rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900"
       >
         {/* Imagen con click para expandir */}
         <div
@@ -65,7 +78,7 @@ const CrmCard = ({ project, index }) => {
 
           <ExpandableText text={t(project.contentKey)} />
         </div>
-      </motion.div>
+      </div>
 
       {/* Modal expandido */}
       <AnimatePresence>
@@ -241,13 +254,8 @@ export const AllProjects = () => {
             {activeTab === 'web' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {webProjects.map((project, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    className="flex flex-col rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900"
-                  >
+                  <ScrollRevealCard key={index} index={index}>
+                    <div className="flex flex-col h-full rounded-2xl border border-gray-200 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900">
                     {/* Slideshow */}
                     <ImageSlideshow
                       images={project.images}
@@ -282,7 +290,8 @@ export const AllProjects = () => {
                         </a>
                       )}
                     </div>
-                  </motion.div>
+                    </div>
+                  </ScrollRevealCard>
                 ))}
               </div>
             )}
@@ -290,7 +299,9 @@ export const AllProjects = () => {
             {activeTab === 'crm' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {crmProjectsData.map((project, index) => (
-                  <CrmCard key={index} project={project} index={index} />
+                  <ScrollRevealCard key={index} index={index}>
+                    <CrmCard project={project} index={index} />
+                  </ScrollRevealCard>
                 ))}
               </div>
             )}

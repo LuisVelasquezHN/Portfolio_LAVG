@@ -68,7 +68,19 @@ const TimelineItem = ({ item, index, isLast }) => {
           </div>
 
           <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 text-pretty leading-relaxed">
-            {item.descripcion}
+            {item.descripcion.includes('•') || item.descripcion.includes('\n') ? (
+              <ul className="list-disc list-inside space-y-1.5 marker:text-[#0686ff]">
+                {item.descripcion.split(/[.]\s+/).filter(s => s.trim()).map((sentence, i) => (
+                  <li key={i} className="text-sm md:text-base text-gray-600 dark:text-gray-300">{sentence.trim().replace(/\.$/, '')}.</li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="list-disc list-inside space-y-1.5 marker:text-[#0686ff]">
+                {item.descripcion.split(/[.]\s+/).filter(s => s.trim().length > 10).map((sentence, i) => (
+                  <li key={i} className="text-sm md:text-base text-gray-600 dark:text-gray-300">{sentence.trim().replace(/\.$/, '')}.</li>
+                ))}
+              </ul>
+            )}
           </p>
         </div>
       </motion.div>
