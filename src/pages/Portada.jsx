@@ -49,6 +49,7 @@ export const Portada = () => {
         <AnimatePresence>
             {!exitAnimation && (
                 <motion.div
+                    className="min-h-dvh w-full flex flex-col items-center justify-center px-4 md:px-8"
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0, y: -50 }}
                     transition={{ duration: 1 }}
