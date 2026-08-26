@@ -144,11 +144,6 @@ i18n
             goHome: "Ir al Inicio",
             retry: "Reintentar"
           },
-          lastVisit: {
-            previousVisit: "Visita anterior desde",
-            lastVisit: "Última visita desde",
-            loading: "Cargando ubicación..."
-          },
           otherProjects: {
             namePortal: "Portal de Empleados",
             descripcionPortal: "El Portal de Empleados es una plataforma interna diseñada para optimizar el acceso a información y recursos clave dentro de la empresa Cable Color. Permite a los colaboradores explorar enlaces directos a distintos sistemas empresariales, acceder al directorio de empleados para encontrar información de contacto, visualizar fotografías de eventos corporativos, enviar sugerencias a la empresa y generar firmas de correo electrónico de manera automatizada. Desarrollado con PHP y servicios API en Oracle APEX, este portal mejora la comunicación y eficiencia dentro de la organización.",
@@ -306,11 +301,6 @@ i18n
             description: "The path you are looking for does not exist or has been moved to another dimension.",
             goHome: "Go Home",
             retry: "Retry"
-          },
-          lastVisit: {
-            previousVisit: "Previous visit from",
-            lastVisit: "Last visit from",
-            loading: "Loading location..."
           },
           otherProjects: {
             namePortal: "Employee Portal",

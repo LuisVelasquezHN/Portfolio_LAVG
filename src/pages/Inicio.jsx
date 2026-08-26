@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserScan } from '@tabler/icons-react';
+import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconDownload, IconMailForward, IconUserScan } from '@tabler/icons-react';
 import { DownloadCVButton } from '../components/DownloadCVButton';
 import { TimelineHorizontal } from '../components/TimelineHorizontal';
 import { Proyectos } from '../components/Proyectos';
@@ -119,6 +119,14 @@ export const Inicio = () => {
                 </a>
               </div>
             </div>
+
+            <Link
+              to="/all-projects"
+              className="group inline-flex items-center gap-1 mt-4 text-sm text-gray-500 dark:text-gray-400 hover:text-[#0686ff] dark:hover:text-[#4484bf] transition-colors duration-300"
+            >
+              {t('projects.viewAll')}
+              <IconArrowRight stroke={2} width={16} height={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
             </AnimatedItem>
             </AnimatedSection>
           </div>

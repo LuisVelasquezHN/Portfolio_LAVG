@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const LastVisit = () => {
-  const { t } = useTranslation();
-  const [lastVisit, setLastVisit] = useState("");
-  const [lastLocation, setLastLocation] = useState("");
-  const [fadeOut, setFadeOut] = useState(false);
-  const [showLast, setShowLast] = useState(false);
-
   const getDeviceInfo = () => {
     const userAgent = navigator.userAgent;
     const platform = navigator.platform;
@@ -44,34 +37,13 @@ const LastVisit = () => {
   };
 
   useEffect(() => {
-    const storedVisit = localStorage.getItem("lastVisit");
-    const storedLocation = localStorage.getItem("lastLocation");
-
-    if (storedVisit && storedLocation) {
-      setLastVisit(storedVisit);
-      setLastLocation(storedLocation);
-    }
-
     const fetchLocation = async () => {
       try {
         const response = await fetch("https://ipapi.co/json/");
         const data = await response.json();
         const location = `${data.city}, ${data.country_name} ${data.country_code}`;
 
-        localStorage.setItem("lastVisit", new Date().toLocaleString());
-        localStorage.setItem("lastLocation", location);
-
-        setLastLocation(location);
-        setLastVisit(new Date().toLocaleString());
-
         await saveVisit(location);
-
-        setTimeout(() => {
-          setFadeOut(true); 
-          setTimeout(() => {
-            setShowLast(true); 
-          }, 500);
-        }, 1000); 
       } catch (error) {
         console.error("No se pudo obtener la ubicación:", error);
       }
@@ -80,19 +52,7 @@ const LastVisit = () => {
     fetchLocation();
   }, []);
 
-  return (
-    <div className="text-[#1010106c] dark:text-[#f5f7f783] text-center py-2 text-sm relative">
-      {!showLast ? (
-        <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
-          {t('lastVisit.previousVisit')} <span className="font-semibold">{lastLocation || t('lastVisit.loading')}</span>
-        </p>
-      ) : (
-        <p className={`transition-opacity duration-1000 ${fadeOut ? "opacity-100" : "opacity-0"}`}>
-          {t('lastVisit.lastVisit')} <span className="font-semibold">{lastLocation}</span>
-        </p>
-      )}
-    </div>
-  );
+  return null;
 };
 
 export default LastVisit;
