@@ -419,7 +419,7 @@ export const crmProjectsData = [
             { name: "Tailwind", type: "tailwind" }
         ],
         badge: null,
-        evolution: ["APEX / PL/SQL", "Angular / Node.js", "React / Node.js"]
+        evolution: ["Angular / Node.js", "React / Node.js"]
     },
     {
         title: "Portal de Empleados",
